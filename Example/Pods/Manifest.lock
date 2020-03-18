@@ -1,0 +1,16 @@
+PODS:
+  - ABcommon (0.1.0)
+
+DEPENDENCIES:
+  - ABcommon (from `../`)
+
+EXTERNAL SOURCES:
+  ABcommon:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ABcommon: 3e9defd6597b350c9c427a318866b517b6a0bb5f
+
+PODFILE CHECKSUM: 084c61132b6df831172dbd6d7f0d4896463a3617
+
+COCOAPODS: 1.8.4
