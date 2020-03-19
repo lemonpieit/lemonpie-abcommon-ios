@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ABcommon'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ABcommon.'
+  s.summary          = 'ABenergie iOS library.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +18,26 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+'A library of extensions used for iOS mobile development in ABenergie.'
                        DESC
 
   s.homepage         = 'https://github.com/Francesco Leoni/ABcommon'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
+  s.author           = { 'Luigi Aiello' => 'luigi.aiello@abenergie.it', 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
   s.source           = { :git => 'https://github.com/Francesco Leoni/ABcommon.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'ABcommon/Classes/**/*'
+  s.social_media_url = 'https://github.com/fraleo2406'
+  s.social_media_url = 'https://github.com/mo3bius
   
+  s.ios.deployment_target = '13.0'
+
+#  s.source_files = 'ABcommon/Classes/**/*'
+    s.source_files = 'Source/**/*.swift'
+    s.swift_version = '5.2'
+    s.platforms = {
+        "ios": "13.0"
+    }
+
   # s.resource_bundles = {
   #   'ABcommon' => ['ABcommon/Assets/*.png']
   # }
