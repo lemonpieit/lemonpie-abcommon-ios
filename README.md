@@ -1,5 +1,5 @@
 <p align="center">
-<img scr='https://abenergie.visualstudio.com/_git/ABcommon.ios?path=%2FExample%2FABcommon%2FImages.xcassets%2FABcommon_icon.imageset%2FABcommon_icon.png' width="200" />
+<img src='https://abenergie.visualstudio.com/_git/ABcommon.ios?path=%2FExample%2FABcommon%2FImages.xcassets%2FABcommon_icon.imageset%2FABcommon_icon.png' width="200" />
 </p>
 
 # ABcommon
