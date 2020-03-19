@@ -31,8 +31,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.source_files = 'Source/**/*.swift'
   s.swift_version = '5.2'
-  s.platforms = 'ios', '13.0'
-    
+  s.platforms = {
+    'ios': '13.0'
+  }
+  
   #  s.source_files = 'ABcommon/Classes/**/*'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   # s.resource_bundles = {
