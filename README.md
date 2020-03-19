@@ -1,3 +1,7 @@
+<p align="center">
+<img scr='https://abenergie.visualstudio.com/20c21ccb-42fc-4c99-a036-88bc2ecf876e/_apis/git/repositories/777b0c87-a97f-485e-b871-9a6d23625c71/items?path=%2FExample%2FABcommon%2FImages.xcassets%2FABcommon_icon.imageset%2FABcommon_icon.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=octetStream&api-version=5.0' width="200" />
+</p>
+
 # ABcommon
 
 [![CI Status](https://img.shields.io/travis/Francesco Leoni/ABcommon.svg?style=flat)](https://travis-ci.org/Francesco Leoni/ABcommon)
