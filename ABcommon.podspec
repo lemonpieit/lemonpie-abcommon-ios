@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'ABcommon'
   s.version          = '0.1.0'
   s.summary          = 'ABenergie iOS library.'
-
+  
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://abenergie.visualstudio.com/ABcommon.ios'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Luigi Aiello' => 'luigi.aiello@abenergie.it', 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
   s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v0.1.0' }
@@ -30,14 +29,12 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://github.com/mo3bius'
   
   s.ios.deployment_target = '13.0'
-
-#  s.source_files = 'ABcommon/Classes/**/*'
-    s.source_files = 'Source/**/*.swift'
-    s.swift_version = '5.2'
-    s.platforms = {
-        "ios": "13.0"
-    }
-
+  s.source_files = 'Source/**/*.swift'
+  s.swift_version = '5.2'
+  s.platforms = 'ios', '13.0'
+    
+  #  s.source_files = 'ABcommon/Classes/**/*'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   # s.resource_bundles = {
   #   'ABcommon' => ['ABcommon/Assets/*.png']
   # }

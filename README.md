@@ -22,6 +22,7 @@ pod 'ABcommon'
 
 ## Author
 
+Luigi Aiello, luigi.aiello@abenergie.it
 Francesco Leoni, francesco.leoni@abenergie.it
 
 ## License
