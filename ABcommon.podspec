@@ -21,13 +21,13 @@ Pod::Spec.new do |s|
 'A library of extensions used for iOS mobile development in ABenergie.'
                        DESC
 
-  s.homepage         = 'https://github.com/Francesco Leoni/ABcommon'
+  s.homepage         = 'https://abenergie.visualstudio.com/ABcommon.ios'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Luigi Aiello' => 'luigi.aiello@abenergie.it', 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
-  s.source           = { :git => 'https://github.com/Francesco Leoni/ABcommon.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://abenergie.visualstudio.com/ABcommon.ios', :tag => s.version.to_s }
   s.social_media_url = 'https://github.com/fraleo2406'
-  s.social_media_url = 'https://github.com/mo3bius
+  s.social_media_url = 'https://github.com/mo3bius'
   
   s.ios.deployment_target = '13.0'
 
