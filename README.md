@@ -14,7 +14,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-iOS 13.0 or newer
+iOS 11.0 or newer
 
 ## Installation
 
