@@ -28,7 +28,6 @@ public extension UIView {
         }
     }
     
-    
     /// Set the value for corner radius.
     /// - Parameter value: The corner radius value.
     func setRoundedCorners(value: CGFloat) {
@@ -45,5 +44,46 @@ public extension UIView {
         gradient.startPoint = CGPoint(x: 1, y: 0)
         gradient.endPoint = CGPoint(x: 0, y: 1)
         self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    /// Renders a UIView as an UIImage.
+    func asImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+    
+    /// Returns the constraint with the specified identifier.
+    /// - Parameter identifier: The identifier of the constraint.
+    func constraint(withIdentifier identifier: String) -> NSLayoutConstraint? {
+        return constraints.filter {
+            $0.identifier == identifier
+        }.first
+    }
+    
+    /// Loads a `Nib` file.
+    /// - Parameters:
+    ///   - nibName: The name of the `Nib` file.
+    ///   - type: The class of the `Nib` file.
+    func load<T>(fromNibNamed nibName: String, withType type: T.Type) -> T? {
+        return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)?.first as? T ?? nil
+    }
+    
+    /// Dismisses the receiver's  keyboard.
+    func dismissKeyboard() {
+        self.endEditing(true)
+    }
+    
+    /// Blurs out the view.
+    /// - Parameter style: The blur effect style.
+    func addBlur(style: UIBlurEffect.Style = .regular) -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(blurEffectView)
+        
+        return blurEffectView
     }
 }

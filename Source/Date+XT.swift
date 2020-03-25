@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mindtek srl. All rights reserved.
 //
 
-import Foundation
+import Foundation.NSDate
 
 public extension Date {
     
@@ -15,7 +15,7 @@ public extension Date {
     }
     
     // MARK: - From String to Date
-    /// Convert from String to a Date object.
+    /// Converts from String to a Date object.
     /// - Parameters:
     ///   - string: The string representation of a date.
     ///   - format: The desired format of the returned date.
@@ -26,8 +26,8 @@ public extension Date {
         return dateFormatter.date(from: string)
     }
     
-    // MARK: - From Date to formatted String
-    /// Convert from Date to a String.
+    // MARK: - From Date to String
+    /// Converts from Date to a String.
     /// - Parameters:
     ///   - format: The desired format of the returned date.
     func formatted(_ format: String) -> String {
@@ -37,7 +37,7 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
-    /// Convert from Date to a String with the current receiver Locale.
+    /// Converts from Date to a String with the current receiver Locale.
     /// - Parameters:
     ///   - format: The desired format of the returned date.
     func formattedWithCurrentLocale(_ format: String) -> String {
@@ -61,7 +61,6 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
-    // MARK: - From Date to String
     /// Returns a given date with the specified styles.
     /// - Parameter style: The style of the time.
     /// - Returns: Wednesday, March 18, 2020
@@ -127,7 +126,7 @@ public extension Date {
         timeInterval += 60 * 60 * Double(hours)
         timeInterval += 24 * 60 * 60 * Double(days)
         timeInterval += 24 * 60 * 60 * 365 * Double(years)
-
+        
         return addingTimeInterval(timeInterval)
     }
     
@@ -161,8 +160,8 @@ public extension Date {
     /// Year: 202
     func components(_ calendarUnits: [Calendar.Component]) -> [Calendar.Component: Int] {
         var result: [Calendar.Component: Int] = [:]
-            for unit in calendarUnits {
-                result[unit] = component(unit)
+        for unit in calendarUnits {
+            result[unit] = component(unit)
         }
         return result
     }
@@ -177,7 +176,7 @@ public extension Date {
     /// Month: 3
     ///
     /// Year: 202
-
+    
     func component(_ calendarUnit: Calendar.Component) -> Int {
         return Calendar.current.component(calendarUnit, from: self)
     }

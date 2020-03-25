@@ -24,6 +24,17 @@
 		A51B08202422675D009EC533 /* UIFont+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B08152422675D009EC533 /* UIFont+XT.swift */; };
 		A51B08222422675D009EC533 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B08172422675D009EC533 /* UIViewController+XT.swift */; };
 		A51B082624227804009EC533 /* NSAttributedString+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B082524227804009EC533 /* NSAttributedString+XT.swift */; };
+		A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A273A242B501F000E22D1 /* UIColor+XT.swift */; };
+		A58D8E282428AF6E000A6676 /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */; };
+		A58D8E2D2428AF6E000A6676 /* CNContact+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E1E2428AF6D000A6676 /* CNContact+XT.swift */; };
+		A58D8E2E2428AF6E000A6676 /* UIImage+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */; };
+		A58D8E302428AF6E000A6676 /* CLLocationCoordinate2D+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */; };
+		A58D8E322428AF6E000A6676 /* UICollectionView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */; };
+		A58D8E332428AF6E000A6676 /* Bundle+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E242428AF6E000A6676 /* Bundle+XT.swift */; };
+		A58D8E342428AF6E000A6676 /* StackView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E252428AF6E000A6676 /* StackView+XT.swift */; };
+		A58D8E352428AF6E000A6676 /* Array+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E262428AF6E000A6676 /* Array+XT.swift */; };
+		A58D8E362428AF6E000A6676 /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E272428AF6E000A6676 /* UIStoryboard+XT.swift */; };
+		A58D8E382428B384000A6676 /* UIAlertController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E372428B384000A6676 /* UIAlertController+XT.swift */; };
 		CC22710E61E19D259F0947398A8E186E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +88,17 @@
 		A51B08152422675D009EC533 /* UIFont+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+XT.swift"; sourceTree = "<group>"; };
 		A51B08172422675D009EC533 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		A51B082524227804009EC533 /* NSAttributedString+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+XT.swift"; sourceTree = "<group>"; };
+		A52A273A242B501F000E22D1 /* UIColor+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
+		A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XT.swift"; sourceTree = "<group>"; };
+		A58D8E1E2428AF6D000A6676 /* CNContact+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContact+XT.swift"; sourceTree = "<group>"; };
+		A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+XT.swift"; sourceTree = "<group>"; };
+		A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+XT.swift"; sourceTree = "<group>"; };
+		A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+XT.swift"; sourceTree = "<group>"; };
+		A58D8E242428AF6E000A6676 /* Bundle+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+XT.swift"; sourceTree = "<group>"; };
+		A58D8E252428AF6E000A6676 /* StackView+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StackView+XT.swift"; sourceTree = "<group>"; };
+		A58D8E262428AF6E000A6676 /* Array+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+XT.swift"; sourceTree = "<group>"; };
+		A58D8E272428AF6E000A6676 /* UIStoryboard+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+XT.swift"; sourceTree = "<group>"; };
+		A58D8E372428B384000A6676 /* UIAlertController+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+XT.swift"; sourceTree = "<group>"; };
 		A605A36237BC3879B036166F7D9C87C8 /* Pods-ABcommon_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ABcommon_Tests-dummy.m"; sourceTree = "<group>"; };
 		AEF4634415D8639E49A5CADBA0BD080D /* Pods-ABcommon_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ABcommon_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C57E61E30E6D5C53F0EEDC6EFC8137BF /* Pods-ABcommon_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ABcommon_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,15 +215,26 @@
 		A51B080C24226703009EC533 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A58D8E262428AF6E000A6676 /* Array+XT.swift */,
+				A58D8E242428AF6E000A6676 /* Bundle+XT.swift */,
 				A51B080D2422675C009EC533 /* CALayer+XT.swift */,
+				A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */,
+				A58D8E1E2428AF6D000A6676 /* CNContact+XT.swift */,
 				A51B08132422675D009EC533 /* Date+XT.swift */,
+				A51B082524227804009EC533 /* NSAttributedString+XT.swift */,
+				A58D8E252428AF6E000A6676 /* StackView+XT.swift */,
 				A51B08122422675D009EC533 /* String+XT.swift */,
+				A58D8E372428B384000A6676 /* UIAlertController+XT.swift */,
+				A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */,
 				A51B08142422675D009EC533 /* UIButton+XT.swift */,
+				A52A273A242B501F000E22D1 /* UIColor+XT.swift */,
+				A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */,
 				A51B08152422675D009EC533 /* UIFont+XT.swift */,
+				A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */,
+				A58D8E272428AF6E000A6676 /* UIStoryboard+XT.swift */,
 				A51B080F2422675D009EC533 /* UITextField+XT.swift */,
 				A51B08102422675D009EC533 /* UIView+XT.swift */,
 				A51B08172422675D009EC533 /* UIViewController+XT.swift */,
-				A51B082524227804009EC533 /* NSAttributedString+XT.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -410,14 +443,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58D8E362428AF6E000A6676 /* UIStoryboard+XT.swift in Sources */,
+				A58D8E2D2428AF6E000A6676 /* CNContact+XT.swift in Sources */,
+				A58D8E322428AF6E000A6676 /* UICollectionView+XT.swift in Sources */,
 				A51B08202422675D009EC533 /* UIFont+XT.swift in Sources */,
 				A51B081F2422675D009EC533 /* UIButton+XT.swift in Sources */,
+				A58D8E382428B384000A6676 /* UIAlertController+XT.swift in Sources */,
 				A51B081D2422675D009EC533 /* String+XT.swift in Sources */,
+				A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */,
+				A58D8E352428AF6E000A6676 /* Array+XT.swift in Sources */,
+				A58D8E2E2428AF6E000A6676 /* UIImage+XT.swift in Sources */,
+				A58D8E282428AF6E000A6676 /* UIBarButtonItem+XT.swift in Sources */,
 				A51B08222422675D009EC533 /* UIViewController+XT.swift in Sources */,
 				032A7C9958802F548879EFFEBDD301A4 /* ABcommon-dummy.m in Sources */,
+				A58D8E302428AF6E000A6676 /* CLLocationCoordinate2D+XT.swift in Sources */,
 				A51B082624227804009EC533 /* NSAttributedString+XT.swift in Sources */,
 				A51B081A2422675D009EC533 /* UITextField+XT.swift in Sources */,
+				A58D8E332428AF6E000A6676 /* Bundle+XT.swift in Sources */,
 				A51B081B2422675D009EC533 /* UIView+XT.swift in Sources */,
+				A58D8E342428AF6E000A6676 /* StackView+XT.swift in Sources */,
 				A51B081E2422675D009EC533 /* Date+XT.swift in Sources */,
 				A51B08182422675D009EC533 /* CALayer+XT.swift in Sources */,
 			);
@@ -468,6 +512,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.2.0;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -725,6 +770,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 0.2.0;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;

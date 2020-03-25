@@ -10,7 +10,7 @@ import UIKit
 import ABcommon
 
 class ViewController: UIViewController {
-
+let vview = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

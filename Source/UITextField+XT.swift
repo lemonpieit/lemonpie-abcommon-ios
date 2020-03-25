@@ -30,4 +30,16 @@ public extension UITextField {
         self.padding(left: 20, right: 20)
         self.layer.defaultShadows()
     }
+    
+    /// Sets a bottom border of a text field.
+    /// - Parameter color: The color of the border.
+    func setBottomBorder(withColor color: UIColor = .gray) {
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 0
+    }
 }
