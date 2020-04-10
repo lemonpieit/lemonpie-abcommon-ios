@@ -8,6 +8,10 @@
 
 import Foundation.NSDate
 
+/* date_format_you_want_in_string from
+* http://userguide.icu-project.org/formatparse/datetime
+*/
+
 public extension Date {
     
     var ticks: UInt64 {

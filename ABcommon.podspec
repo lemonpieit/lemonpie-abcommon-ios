@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABcommon'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'ABenergie iOS library.'
   
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://abenergie.visualstudio.com/ABcommon.ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Luigi Aiello' => 'luigi.aiello@abenergie.it', 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
-  s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v0.2.0' }
+  s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v0.3.0' }
   s.social_media_url = 'https://github.com/fraleo2406'
   s.social_media_url = 'https://github.com/mo3bius'
   
@@ -32,7 +32,24 @@ Pod::Spec.new do |s|
   s.swift_version = '5.2'
   s.platform = :ios, '11.0'
 
-  #  s.source_files = 'ABcommon/Classes/**/*'
+  s.subspec 'Extensions' do |extensions|
+    extensions.source_files = 'Source/Extensions/*.swift'
+  end
+  
+  s.subspec 'Managers' do |managers|
+    managers.source_files = 'Source/Managers/*.swift'
+  end
+  
+  # s.subspec 'MyLibrary' do |libOne|
+  #    libOne.source_files  = 'Headers", "Headers/**/*.h'
+  #    libOne.exclude_files = 'Headers/Exclude'
+  #    libOne.resources = 'SharedAssets/*'
+  #
+  #    libOne.libraries = 'z','sqlite3' #Zlib for gzip, sqlite3 for event store
+  #    libOne.vendored_library = 'libMyLibrary_A.a'
+  # end
+  
+  # s.source_files = 'ABcommon/Classes/**/*'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   # s.resource_bundles = {
   #   'ABcommon' => ['ABcommon/Assets/*.png']

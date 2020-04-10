@@ -20,6 +20,11 @@ public extension UIViewController {
         navigationItem.hidesBackButton = true
     }
     
+    /// Dismisses the keyboard
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     /// Set the navigation bar background and title.
     /// - Parameter title: The navigation bar title.
     /// - Parameter color: The navigation bar background color.
@@ -53,6 +58,16 @@ public extension UIViewController {
         
         DispatchQueue.main.async {
             self.present(safariVC, animated: true, completion: nil)
+        }
+    }
+    
+    /// Removes the first separator between header and cell.
+    /// - Parameters:
+    ///   - indexPath: The table view indexPath.
+    ///   - cell: The table view cell.
+    func removeHeaderSeparator(indexPath: IndexPath, cell: UITableViewCell) {
+        if indexPath.row == 0, let divider = cell.subviews.filter({ $0.frame.minY == 0 && $0 !== cell.contentView }).first {
+            divider.isHidden = true
         }
     }
     

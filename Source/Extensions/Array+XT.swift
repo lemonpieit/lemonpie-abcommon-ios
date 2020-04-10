@@ -16,4 +16,14 @@ public extension Array where Element: Equatable {
             remove(at: index)
         }
     }
+    
+    /// Removes  multiple`objects` from the array.
+    /// - Parameter objects: The objects to remove.
+    mutating func remove(objects: Element...) {
+        objects.forEach { (object) in
+            if let index = firstIndex(of: object) {
+                remove(at: index)
+            }
+        }
+    }
 }

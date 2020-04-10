@@ -30,4 +30,12 @@ public extension UIFont {
         
         return font
     }
+    
+    /// Returns a UIFont with a symbolic trait.
+    /// - Parameter traits: A symbolic description of the stylistic aspects of a font.
+    /// - Returns: UIFont
+    func withTraits(traits:UIFontDescriptor.SymbolicTraits) -> UIFont {
+        let descriptor = fontDescriptor.withSymbolicTraits(traits)
+        return UIFont(descriptor: descriptor!, size: 0)
+    }
 }

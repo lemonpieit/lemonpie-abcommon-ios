@@ -8,7 +8,21 @@
 
 import Foundation.NSString
 
+/* date_format_you_want_in_string from
+ * http://userguide.icu-project.org/formatparse/datetime
+ */
+
 public extension String {
+    /// Capitalizes the first letter.
+    func capitalizeFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    /// Capitalizes the first letter.
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizeFirstLetter()
+    }
+    
     /// Returns a localize string.
     /// - Parameters:
     ///   - tableName: The table name.
@@ -129,7 +143,6 @@ public extension String {
         }
     }
     
-    
     /// Converts a string to a date with a format.
     /// - Parameter formatted: The format of the date.
     func toDate(formatted: String) -> Date? {
@@ -139,8 +152,33 @@ public extension String {
         let date = dateFormatter.date(from: self)
         
         return date
-        /* date_format_you_want_in_string from
-         * http://userguide.icu-project.org/formatparse/datetime
-         */
+    }
+    
+    /// Converts the string to a `ISO8601` formatted `Date` object.
+    /// - Returns: 2020-04-10 14:52:04 +0000
+    func toISO8601Date() -> Date? {
+           let dateFormatter = ISO8601DateFormatter()
+           dateFormatter.formatOptions = [.withFullDate,
+                                          .withTime,
+                                          .withDashSeparatorInDate,
+                                          .withColonSeparatorInTime]
+           
+           let date = dateFormatter.date(from: self)
+           
+           return date
+    }
+    
+    /// Converts a string encoded in `Base64` to a normal string.
+    func fromBase64() -> String? {
+        guard let data = Data(base64Encoded: self) else {
+            return nil
+        }
+        
+        return String(data: data, encoding: .utf8)
+    }
+    
+    /// Converts a string to a `Base64` encoded string.
+    func toBase64() -> String {
+        return Data(self.utf8).base64EncodedString()
     }
 }
