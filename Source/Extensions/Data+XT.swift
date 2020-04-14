@@ -14,4 +14,9 @@ public extension Data {
             print(JSONString)
         }
     }
+    
+    /// Converts string to JSON format.
+    func toJSON() -> String? {
+        return String(data: self, encoding: .utf8)
+    }
 }
