@@ -22,7 +22,13 @@ ABcommon is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ABcommon'
+pod 'ABcommon', :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios'
+```
+
+## Submodules
+```ruby
+pod 'ABcommon/Extensions'
+pod 'ABcommon/Managers'
 ```
 
 ## Author

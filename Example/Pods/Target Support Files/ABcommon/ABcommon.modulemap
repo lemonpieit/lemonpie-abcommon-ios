@@ -2,5 +2,14 @@ framework module ABcommon {
   umbrella header "ABcommon-umbrella.h"
 
   export *
-  module * { export * }
+  
+  module Extensions {
+      header "Source/Extensions/*.swift"
+      export *
+  }
+  
+  module Managers {
+      header "Source/Managers/*.swift"
+      export *
+  }
 }

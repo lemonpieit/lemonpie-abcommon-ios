@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Source/**/*.swift'
   s.swift_version = '5.2'
   s.platform = :ios, '11.0'
-
+  
   s.subspec 'Extensions' do |extensions|
     extensions.source_files = 'Source/Extensions/*.swift'
   end
