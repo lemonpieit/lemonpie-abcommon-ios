@@ -15,14 +15,18 @@ public extension UITextField {
     /// - Parameters:
     ///   - leftAmount: The amount of padding for the left side.
     ///   - rightAmount: The amount of padding for the right side.
-    func padding(left leftAmount: CGFloat, right rightAmount: CGFloat) {
-        let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: leftAmount, height: self.frame.height))
-        self.leftView = leftPaddingView
-        self.leftViewMode = .always
+    func padding(left leftAmount: CGFloat? = nil, right rightAmount: CGFloat? = nil) {
+        if let leftAmount = leftAmount {
+            let leftPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: leftAmount, height: self.frame.height))
+            self.leftView = leftPaddingView
+            self.leftViewMode = .always
+        }
         
-        let rightPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: rightAmount, height: self.frame.height))
-        self.rightView = rightPaddingView
-        self.rightViewMode = .always
+        if let rightAmount = rightAmount {
+            let rightPaddingView = UIView(frame: CGRect(x: 0, y: 0, width: rightAmount, height: self.frame.height))
+            self.rightView = rightPaddingView
+            self.rightViewMode = .always
+        }
     }
     
     /// ABenergie default text field

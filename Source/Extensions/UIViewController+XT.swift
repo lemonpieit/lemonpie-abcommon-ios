@@ -189,6 +189,28 @@ public extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    /// Present a view controller created in storyboard.
+    /// - Parameters:
+    ///   - class: The `class` of the view controller.
+    ///   - controllerId: The `id` of the view controller.
+    ///   - storyboardId: The `storyboardId` of the view controller.
+    ///   - navBarId: The `navBarId`.
+    func presentController<T>(_ class: T.Type, withIdentifier controllerId: String, storyboardId: String, navBarId: String) {
+        let storyboard = UIStoryboard(name: storyboardId, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as? T
+        let destinationNavigationController = storyboard.instantiateViewController(withIdentifier: navBarId) as? UINavigationController
+        guard
+            let viewController = controller as? UIViewController,
+            let navController = destinationNavigationController else { return }
+
+        navController.navigationBar.topItem?.title = ""
+        navController.pushViewController(viewController, animated: true)
+        navController.modalPresentationStyle = .fullScreen
+        navController.modalTransitionStyle = .crossDissolve
+
+        self.present(navController, animated: true, completion: nil)
+    }
+    
     // MARK: - Nested structs
     struct Keyboard {
         private (set) var animationCurve = UIView.AnimationCurve.linear

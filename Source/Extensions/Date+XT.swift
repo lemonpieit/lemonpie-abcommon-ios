@@ -51,6 +51,26 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
+    /// Returns a given date and time without considering the current time zone with the specified styles.
+    /// - Parameter dateStyle: The style of the time.
+    /// - Returns: Wednesday, March 18, 2020
+    ///
+    /// Full: Wednesday, March 18, 2020
+    ///
+    /// Long: March 18, 2020
+    ///
+    /// Medium: Mar 18, 2020
+    ///
+    /// Short: 3/18/20
+    func localizedStringWithoutTimeZone(withDateStyle dateStyle: DateFormatter.Style) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.dateStyle = dateStyle
+        dateFormatter.timeStyle = .none
+        
+        return dateFormatter.string(from: self)
+    }
+    
     /// Returns the  day of the week of a given date in full.
     func dayInWeek() -> String {
         let dateFormatter = DateFormatter()
@@ -142,7 +162,7 @@ public extension Date {
     ///   - days: The days component.
     ///   - years: The years component.
     func removing(seconds: Int, minutes: Int = 0, hours: Int = 0, days: Int = 0, years: Int = 0) -> Date {
-        var timeInterval = Double(seconds)
+        var timeInterval = Double(-seconds)
         
         timeInterval -= 60 * Double(minutes)
         timeInterval -= 60 * 60 * Double(hours)
