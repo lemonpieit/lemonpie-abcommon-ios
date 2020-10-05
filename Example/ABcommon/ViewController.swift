@@ -11,10 +11,32 @@ import ABcommon
 
 class ViewController: UIViewController {
 
+    enum Style: Navigatable {
+        case first
+
+        var tintColor: UIColor {
+            switch self {
+            case .first: return .blue
+            }
+        }
+        
+        var backgroundColor: UIColor {
+            switch self {
+            case .first: return .green
+            }
+        }
+                        
+        var titleColor: UIColor {
+            switch self {
+            case .first: return .red
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        navigationController?.configureNavigationBar(style: Style.first)
+        print(Date().toString(format: .isoDateTime, timeZone: .utc, locale: .current))
     }
 
 }
-

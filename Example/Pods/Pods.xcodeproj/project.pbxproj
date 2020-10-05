@@ -26,10 +26,15 @@
 		A51B082624227804009EC533 /* NSAttributedString+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B082524227804009EC533 /* NSAttributedString+XT.swift */; };
 		A526702024409C5E0030065E /* EventsCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526701F24409C5E0030065E /* EventsCalendarManager.swift */; };
 		A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A273A242B501F000E22D1 /* UIColor+XT.swift */; };
+		A58738F025247A40005CDC27 /* NEHotspotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738EF25247A40005CDC27 /* NEHotspotManager.swift */; };
+		A58738F525247A56005CDC27 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738F425247A56005CDC27 /* LocationManager.swift */; };
+		A58738FA25247A8E005CDC27 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738F925247A8E005CDC27 /* MailManager.swift */; };
+		A58738FF25247C1D005CDC27 /* UINavigationController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738FE25247C1D005CDC27 /* UINavigationController+XT.swift */; };
+		A58739042524826F005CDC27 /* Collection+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58739032524826F005CDC27 /* Collection+XT.swift */; };
+		A587390925248356005CDC27 /* Number+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587390825248356005CDC27 /* Number+XT.swift */; };
 		A58A0F222440BC9500D77592 /* UITableView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58A0F212440BC9500D77592 /* UITableView+XT.swift */; };
 		A58A0F242440BD8800D77592 /* Data+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58A0F232440BD8800D77592 /* Data+XT.swift */; };
 		A58D8E282428AF6E000A6676 /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */; };
-		A58D8E2D2428AF6E000A6676 /* CNContact+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E1E2428AF6D000A6676 /* CNContact+XT.swift */; };
 		A58D8E2E2428AF6E000A6676 /* UIImage+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */; };
 		A58D8E302428AF6E000A6676 /* CLLocationCoordinate2D+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */; };
 		A58D8E322428AF6E000A6676 /* UICollectionView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */; };
@@ -93,10 +98,15 @@
 		A51B082524227804009EC533 /* NSAttributedString+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+XT.swift"; sourceTree = "<group>"; };
 		A526701F24409C5E0030065E /* EventsCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarManager.swift; sourceTree = "<group>"; };
 		A52A273A242B501F000E22D1 /* UIColor+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
+		A58738EF25247A40005CDC27 /* NEHotspotManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEHotspotManager.swift; sourceTree = "<group>"; };
+		A58738F425247A56005CDC27 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A58738F925247A8E005CDC27 /* MailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
+		A58738FE25247C1D005CDC27 /* UINavigationController+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+XT.swift"; sourceTree = "<group>"; };
+		A58739032524826F005CDC27 /* Collection+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+XT.swift"; sourceTree = "<group>"; };
+		A587390825248356005CDC27 /* Number+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+XT.swift"; sourceTree = "<group>"; };
 		A58A0F212440BC9500D77592 /* UITableView+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+XT.swift"; sourceTree = "<group>"; };
 		A58A0F232440BD8800D77592 /* Data+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+XT.swift"; sourceTree = "<group>"; };
 		A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XT.swift"; sourceTree = "<group>"; };
-		A58D8E1E2428AF6D000A6676 /* CNContact+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CNContact+XT.swift"; sourceTree = "<group>"; };
 		A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+XT.swift"; sourceTree = "<group>"; };
 		A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+XT.swift"; sourceTree = "<group>"; };
 		A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+XT.swift"; sourceTree = "<group>"; };
@@ -230,6 +240,9 @@
 		A526701D244080BC0030065E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A58738F925247A8E005CDC27 /* MailManager.swift */,
+				A58738F425247A56005CDC27 /* LocationManager.swift */,
+				A58738EF25247A40005CDC27 /* NEHotspotManager.swift */,
 				A526701F24409C5E0030065E /* EventsCalendarManager.swift */,
 			);
 			path = Managers;
@@ -242,10 +255,11 @@
 				A58D8E242428AF6E000A6676 /* Bundle+XT.swift */,
 				A51B080D2422675C009EC533 /* CALayer+XT.swift */,
 				A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */,
-				A58D8E1E2428AF6D000A6676 /* CNContact+XT.swift */,
+				A58739032524826F005CDC27 /* Collection+XT.swift */,
 				A58A0F232440BD8800D77592 /* Data+XT.swift */,
 				A51B08132422675D009EC533 /* Date+XT.swift */,
 				A51B082524227804009EC533 /* NSAttributedString+XT.swift */,
+				A587390825248356005CDC27 /* Number+XT.swift */,
 				A58D8E252428AF6E000A6676 /* StackView+XT.swift */,
 				A51B08122422675D009EC533 /* String+XT.swift */,
 				A58D8E372428B384000A6676 /* UIAlertController+XT.swift */,
@@ -255,6 +269,7 @@
 				A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */,
 				A51B08152422675D009EC533 /* UIFont+XT.swift */,
 				A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */,
+				A58738FE25247C1D005CDC27 /* UINavigationController+XT.swift */,
 				A58D8E272428AF6E000A6676 /* UIStoryboard+XT.swift */,
 				A58A0F212440BC9500D77592 /* UITableView+XT.swift */,
 				A51B080F2422675D009EC533 /* UITextField+XT.swift */,
@@ -470,12 +485,14 @@
 			files = (
 				A58D8E362428AF6E000A6676 /* UIStoryboard+XT.swift in Sources */,
 				A58A0F242440BD8800D77592 /* Data+XT.swift in Sources */,
-				A58D8E2D2428AF6E000A6676 /* CNContact+XT.swift in Sources */,
+				A58738F525247A56005CDC27 /* LocationManager.swift in Sources */,
 				A58D8E322428AF6E000A6676 /* UICollectionView+XT.swift in Sources */,
 				A51B08202422675D009EC533 /* UIFont+XT.swift in Sources */,
 				A51B081F2422675D009EC533 /* UIButton+XT.swift in Sources */,
 				A58D8E382428B384000A6676 /* UIAlertController+XT.swift in Sources */,
 				A51B081D2422675D009EC533 /* String+XT.swift in Sources */,
+				A58738FA25247A8E005CDC27 /* MailManager.swift in Sources */,
+				A58739042524826F005CDC27 /* Collection+XT.swift in Sources */,
 				A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */,
 				A58D8E352428AF6E000A6676 /* Array+XT.swift in Sources */,
 				A58D8E2E2428AF6E000A6676 /* UIImage+XT.swift in Sources */,
@@ -485,9 +502,12 @@
 				A58D8E302428AF6E000A6676 /* CLLocationCoordinate2D+XT.swift in Sources */,
 				A51B082624227804009EC533 /* NSAttributedString+XT.swift in Sources */,
 				A51B081A2422675D009EC533 /* UITextField+XT.swift in Sources */,
+				A587390925248356005CDC27 /* Number+XT.swift in Sources */,
+				A58738F025247A40005CDC27 /* NEHotspotManager.swift in Sources */,
 				A526702024409C5E0030065E /* EventsCalendarManager.swift in Sources */,
 				A58D8E332428AF6E000A6676 /* Bundle+XT.swift in Sources */,
 				A51B081B2422675D009EC533 /* UIView+XT.swift in Sources */,
+				A58738FF25247C1D005CDC27 /* UINavigationController+XT.swift in Sources */,
 				A58A0F222440BC9500D77592 /* UITableView+XT.swift in Sources */,
 				A58D8E342428AF6E000A6676 /* StackView+XT.swift in Sources */,
 				A51B081E2422675D009EC533 /* Date+XT.swift in Sources */,

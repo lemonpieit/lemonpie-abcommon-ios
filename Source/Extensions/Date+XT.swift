@@ -12,7 +12,87 @@ import Foundation.NSDate
 * http://userguide.icu-project.org/formatparse/datetime
 */
 
+public enum TimeZoneType {
+    case local, `default`, utc, secondsFromGMT(Int)
+
+    var timeZone: TimeZone {
+        switch self {
+        case .local: return NSTimeZone.local
+        case .default: return NSTimeZone.default
+        case .utc: return TimeZone(secondsFromGMT: 0)!
+        case let .secondsFromGMT(gmt): return TimeZone(secondsFromGMT: gmt)!
+        }
+    }
+}
+
+public enum DateFormatType {
+
+    /// The ISO8601 formatted year "yyyy" i.e. 1997
+    case isoYear
+
+    /// The ISO8601 formatted year and month "yyyy-MM" i.e. 1997-07
+    case isoYearMonth
+
+    /// The ISO8601 formatted date "yyyy-MM-dd" i.e. 1997-07-16
+    case isoDate
+
+    /// The ISO8601 formatted date and time "yyyy-MM-dd'T'HH:mmZ" i.e. 1997-07-16T19:20+01:00
+    case isoDateTime
+
+    /// The ISO8601 formatted date, time and sec "yyyy-MM-dd'T'HH:mm:ssZ" i.e. 1997-07-16T19:20:30+01:00
+    case isoDateTimeSec
+
+    /// The ISO8601 formatted date, time and millisec "yyyy-MM-dd'T'HH:mm:ss.SSSZ" i.e. 1997-07-16T19:20:30.45+01:00
+    case isoDateTimeMilliSec
+
+    /// The http header formatted date "EEE, dd MM yyyy HH:mm:ss ZZZ" i.e. "Tue, 15 Nov 1994 12:45:26 GMT"
+    case httpHeader
+
+    /// A generic standard format date i.e. "EEE MMM dd HH:mm:ss Z yyyy"
+    case standard
+
+    /// A custom date format string
+    case custom(String)
+
+    var stringFormat: String {
+        switch self {
+        case .isoYear: return "yyyy"
+        case .isoYearMonth: return "yyyy-MM"
+        case .isoDate: return "yyyy-MM-dd"
+        case .isoDateTime: return "yyyy-MM-dd'T'HH:mmZ"
+        case .isoDateTimeSec: return "yyyy-MM-dd'T'HH:mm:ssZ"
+        case .isoDateTimeMilliSec: return "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        case .httpHeader: return "EEE, dd MM yyyy HH:mm:ss ZZZ"
+        case .standard: return "EEE MMM dd HH:mm:ss Z yyyy"
+        case .custom(let customFormat): return customFormat
+        }
+    }
+}
+
 public extension Date {
+    
+    /// Converts a `Date` object to a `String`.
+    /// - Parameters:
+    ///   - format: The format of the date.
+    ///   - timeZone: The time zone. Default `.local`
+    ///   - locale: The locale. Default `.current`
+    /// - Returns: The converted date to `String`.
+    ///
+    /// - Experiment:
+    ///
+    /// Convert a `Date` with no `timeZone`:
+    ///
+    ///     let date = Date()
+    ///     date.toString(format: .isoDateTime, timeZone: .utc)
+    ///
+    func toString(format: DateFormatType, timeZone: TimeZoneType = .local, locale: Locale = Locale.current) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format.stringFormat
+        formatter.locale = locale
+        formatter.timeZone = timeZone.timeZone
+        
+        return formatter.string(from: self)
+    }
     
     var ticks: UInt64 {
         return UInt64((self.timeIntervalSince1970 + 62_135_596_800) * 10_000_000)

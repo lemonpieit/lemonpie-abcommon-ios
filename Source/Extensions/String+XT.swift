@@ -12,7 +12,85 @@ import Foundation.NSString
  * http://userguide.icu-project.org/formatparse/datetime
  */
 
+public enum SanitizedError: Error {
+    case isEmpty
+}
+
 public extension String {
+    /// Trims leading and trailing spaces and new lines
+    func sanitized() -> String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    /// Trims leading and trailing spaces and new lines and check if the sanitized string is not empty
+    /// - Throws: If the sanitized string is empty
+    /// - Returns: The sanitized string
+    func sanitizedNonEmpty() throws -> String {
+        let strippedString = self.sanitized()
+        
+        guard !strippedString.isEmpty else {
+            throw SanitizedError.isEmpty
+        }
+        
+        return strippedString
+    }
+    
+    /// Converts the String to a Dictionary.
+    var asDict: [String: Any]? {
+        guard let data = self.data(using: .utf8) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+    }
+    
+    /// Converts the String to an Array.
+    var asArray: [Any]? {
+        guard let data = self.data(using: .utf8) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [Any]
+    }
+
+    /// Converts HTML to `NSAttributedString` and assign it to UILabel.attributedText.
+    var asAttributedString: NSAttributedString? {
+        guard let data = self.data(using: .utf8) else { return nil }
+        return try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+    }
+    
+    /// Takes the number from the String and calls it.
+    func makeCall() {
+        let number = self.replacingOccurrences(of: " ", with: "")
+        
+        if let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    /// Converts double or multiple spaces to a single space.
+    func condenseWhitespace() -> String {
+        let components = self.components(separatedBy: .whitespaces)
+        return components.filter { !$0.isEmpty }.joined(separator: " ")
+    }
+    
+    /// Takes every initial letter.
+    /// - Parameter separator: The separator between initials.
+    /// - Returns: Returns a string with the initials.
+    func getInitials(separator: String = "") -> String {
+        let trimmedString = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        let initials = trimmedString.components(separatedBy: " ").map { String($0.first!) }.joined(separator: separator)
+        return initials
+    }
+
+    /// Converts from SnakeCased to CamelCased.
+    func camelCased() -> String {
+        let newString = split(separator: "_").reduce(" ", { $0 + $1.capitalized })
+        return newString.stringFromCamelCased()
+    }
+    
+    /// Converts from SnakeCased to CamelCased.
+    func stringFromCamelCased() -> String {
+        return self.replacingOccurrences(of: "([a-z])([A-Z])",
+                                         with: "$1 $2",
+                                         options: .regularExpression,
+                                         range: self.startIndex ..< self.endIndex).capitalized
+    }
+
     /// Capitalizes the first letter.
     func capitalizeFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()

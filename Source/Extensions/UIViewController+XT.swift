@@ -25,6 +25,15 @@ public extension UIViewController {
         view.endEditing(true)
     }
     
+    /// Opens the app settings in the Settings app.
+    func openSettings() {
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+
     /// Set the navigation bar background and title.
     /// - Parameter title: The navigation bar title.
     /// - Parameter color: The navigation bar background color.
@@ -162,6 +171,24 @@ public extension UIViewController {
         return Keyboard(animationCurve: curve, duration: time, frameBegins: from, ends: to)
     }
     
+    /// Creates an `ActionSheet`.
+    /// - Parameters:
+    ///   - title: The title of the `UIAlertController`.
+    ///   - message: The message of the `UIAlertController`.
+    ///   - actions: The `UIAlertAction` to perform.
+    func createActionSheet(title: String? = nil, message: String? = nil, tintColor: UIColor, actions: [UIAlertAction]) {
+        createAlertController(title: title, message: message, style: .actionSheet, tintColor: tintColor, showCancel: true, actions: actions)
+    }
+    
+    /// Creates an `AlertController`.
+    /// - Parameters:
+    ///   - title: The title of the `UIAlertController`.
+    ///   - message: The message of the `UIAlertController`.
+    ///   - actions: The `UIAlertAction` to perform.
+    func createAlertController(title: String? = nil, message: String? = nil, tintColor: UIColor, actions: [UIAlertAction] = []) {
+        createAlertController(title: title, message: message, style: .alert, tintColor: tintColor, showCancel: true, actions: actions)
+    }
+
     /// Creates an `UIAlertController` with multiple actions.
     /// - Parameters:
     ///   - title: The title of the `UIAlertController`.
