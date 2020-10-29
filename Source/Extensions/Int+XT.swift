@@ -10,7 +10,6 @@ import Foundation
 /// This allows us to transform a literal number in a `DateComponents` and use it in math operations
 /// For example `5.days` will create a new `DateComponents` where `.day = 5`.
 public extension Int {
-
   /// Internal transformation function.
   ///
   /// - parameter type: component to use.
@@ -75,22 +74,22 @@ public extension Int {
   var seconds: TimeInterval {
     return TimeInterval(self)
   }
-  
+
   /// Create a `TimeInterval` with `self` value set as minutes.
   var minutes: TimeInterval {
     return TimeInterval(self) * 60.seconds
   }
-  
+
   /// Create a `TimeInterval` with `self` value set as hours.
   var hours: TimeInterval {
     return TimeInterval(self) * 60.minutes
   }
-  
+
   /// Create a `TimeInterval` with `self` value set as days.
   var days: TimeInterval {
     return TimeInterval(self) * 24.hours
   }
-  
+
   /// Create a `TimeInterval` with `self` value set as weeks.
   var weeks: TimeInterval {
     return TimeInterval(self) * 7.days

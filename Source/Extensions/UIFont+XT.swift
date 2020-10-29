@@ -9,33 +9,33 @@
 import UIKit.UIFont
 
 public extension UIFont {
-    /// Returns the rounded version of the system font.
-    /// - Parameters:
-    ///   - fontSize: The size of the font.
-    ///   - weight: The weigh of the font.
-    /// - Important: Available on iOS 13 or newer.
-    class func roundedFont(ofSize fontSize: CGFloat, weight: UIFont.Weight) -> UIFont {
-        let systemFont = UIFont.systemFont(ofSize: fontSize, weight: weight)
-        let font: UIFont
-        
-        if #available(iOS 13.0, *) {
-            if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {
-                font = UIFont(descriptor: descriptor, size: fontSize)
-            } else {
-                font = systemFont
-            }
-        } else {
-            font = systemFont
-        }
-        
-        return font
+  /// Returns the rounded version of the system font.
+  /// - Parameters:
+  ///   - fontSize: The size of the font.
+  ///   - weight: The weigh of the font.
+  /// - Important: Available on iOS 13 or newer.
+  class func roundedFont(ofSize fontSize: CGFloat, weight: UIFont.Weight) -> UIFont {
+    let systemFont = UIFont.systemFont(ofSize: fontSize, weight: weight)
+    let font: UIFont
+
+    if #available(iOS 13.0, *) {
+      if let descriptor = systemFont.fontDescriptor.withDesign(.rounded) {
+        font = UIFont(descriptor: descriptor, size: fontSize)
+      } else {
+        font = systemFont
+      }
+    } else {
+      font = systemFont
     }
-    
-    /// Returns a UIFont with a symbolic trait.
-    /// - Parameter traits: A symbolic description of the stylistic aspects of a font.
-    /// - Returns: UIFont
-    func withTraits(traits:UIFontDescriptor.SymbolicTraits) -> UIFont {
-        let descriptor = fontDescriptor.withSymbolicTraits(traits)
-        return UIFont(descriptor: descriptor!, size: 0)
-    }
+
+    return font
+  }
+
+  /// Returns a UIFont with a symbolic trait.
+  /// - Parameter traits: A symbolic description of the stylistic aspects of a font.
+  /// - Returns: UIFont
+  func withTraits(traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
+    let descriptor = fontDescriptor.withSymbolicTraits(traits)
+    return UIFont(descriptor: descriptor!, size: 0)
+  }
 }

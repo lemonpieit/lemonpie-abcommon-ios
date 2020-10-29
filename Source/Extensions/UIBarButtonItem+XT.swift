@@ -9,17 +9,17 @@
 import Foundation
 
 public extension UIBarButtonItem {
-    /// Hides the bar item.
-    func hidden() {
-        self.isEnabled = false
-        self.tintColor = .clear
-    }
-    
-    /// Shows the bar item.
-    /// - Parameters:
-    /// - Color: The tint color of the button.
-    func show(color: UIColor) {
-        self.isEnabled = true
-        self.tintColor = color
-    }
+  /// Hides the bar item.
+  func hidden() {
+    isEnabled = false
+    tintColor = .clear
+  }
+
+  /// Shows the bar item.
+  /// - Parameters:
+  /// - Color: The tint color of the button.
+  func show(color: UIColor) {
+    isEnabled = true
+    tintColor = color
+  }
 }

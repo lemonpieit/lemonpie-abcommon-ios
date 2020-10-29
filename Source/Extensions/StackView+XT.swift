@@ -9,23 +9,23 @@
 import UIKit
 
 public extension UIStackView {
-    /// Removes all the stack view subviews.
-    func removeAllArrangedSubviews() {
-        for view in self.arrangedSubviews {
-            self.removeArrangedSubview(view)
-            view.removeFromSuperview()
-        }
+  /// Removes all the stack view subviews.
+  func removeAllArrangedSubviews() {
+    for view in arrangedSubviews {
+      removeArrangedSubview(view)
+      view.removeFromSuperview()
     }
-    
-    /// Removes a subview at the specified index.
-    func removeArrangedSubviews(fromIndex index: Int) {
-        guard self.arrangedSubviews.count > 0, self.arrangedSubviews.count > index else {
-            return
-        }
-        for i in (index ..< self.arrangedSubviews.count).reversed() {
-            let view = self.arrangedSubviews[i]
-            self.removeArrangedSubview(view)
-            view.removeFromSuperview()
-        }
+  }
+
+  /// Removes a subview at the specified index.
+  func removeArrangedSubviews(fromIndex index: Int) {
+    guard arrangedSubviews.count > 0, arrangedSubviews.count > index else {
+      return
     }
+    for i in (index ..< arrangedSubviews.count).reversed() {
+      let view = arrangedSubviews[i]
+      removeArrangedSubview(view)
+      view.removeFromSuperview()
+    }
+  }
 }
