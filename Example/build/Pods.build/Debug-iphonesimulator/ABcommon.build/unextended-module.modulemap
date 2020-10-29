@@ -1,0 +1,10 @@
+framework module ABcommon {
+  umbrella header "ABcommon-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ABcommon.__Swift {
+    exclude header "ABcommon-Swift.h"
+}

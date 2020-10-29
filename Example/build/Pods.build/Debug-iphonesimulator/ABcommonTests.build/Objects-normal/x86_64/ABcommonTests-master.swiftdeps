@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "160539c378c5ad8ccaeb3d740ccff648"
+build_time: [1601888400, 69022000]
+inputs:
+  "/Users/francescoleoni/Desktop/ABcommon.ios/Example/Pods/ABcommonTests/ABcommonTests.swift": [1601888330, 234622958]

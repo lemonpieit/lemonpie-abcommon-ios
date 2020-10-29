@@ -1,0 +1,420 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MailManagerDelegate"
+- "MailManager"
+provides-nominal:
+- "8ABcommon19MailManagerDelegateP"
+- "8ABcommon11MailManagerC"
+provides-member:
+- ["8ABcommon19MailManagerDelegateP", ""]
+- ["8ABcommon11MailManagerC", ""]
+provides-dynamic-lookup:
+- "delegate"
+- "mailComposeController"
+- "sendEmail"
+- "viewController"
+depends-top-level:
+- "AnyObject"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "Error"
+- "MFMailComposeResult"
+- "MFMailComposeViewController"
+- "MFMailComposeViewControllerDelegate"
+- "MailManager"
+- "MailManagerDelegate"
+- "NSObject"
+- "String"
+- "StringLiteralType"
+- "UIViewController"
+- !private "delegate"
+- !private "print"
+- !private "viewController"
+depends-member:
+- !private ["s7CVarArgP", "MFMailComposeViewController"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "canSendMail"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "mailComposeController"]
+- !private ["s7CVarArgP", "mailComposeDelegate"]
+- !private ["s7CVarArgP", "present"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "setMessageBody"]
+- !private ["s7CVarArgP", "setSubject"]
+- !private ["s7CVarArgP", "setToRecipients"]
+- !private ["s7CVarArgP", "viewController"]
+- !private ["s28CustomDebugStringConvertibleP", "MFMailComposeViewController"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "canSendMail"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "mailComposeController"]
+- !private ["s28CustomDebugStringConvertibleP", "mailComposeDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "setMessageBody"]
+- !private ["s28CustomDebugStringConvertibleP", "setSubject"]
+- !private ["s28CustomDebugStringConvertibleP", "setToRecipients"]
+- !private ["s28CustomDebugStringConvertibleP", "viewController"]
+- !private ["s23CustomStringConvertibleP", "MFMailComposeViewController"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "canSendMail"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "mailComposeController"]
+- !private ["s23CustomStringConvertibleP", "mailComposeDelegate"]
+- !private ["s23CustomStringConvertibleP", "present"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "setMessageBody"]
+- !private ["s23CustomStringConvertibleP", "setSubject"]
+- !private ["s23CustomStringConvertibleP", "setToRecipients"]
+- !private ["s23CustomStringConvertibleP", "viewController"]
+- !private ["SQ", "MFMailComposeViewController"]
+- ["SQ", ""]
+- !private ["SQ", "canSendMail"]
+- ["SQ", "cancelled"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "dismiss"]
+- ["SQ", "failed"]
+- !private ["SQ", "init"]
+- ["SQ", "mailComposeController"]
+- !private ["SQ", "mailComposeDelegate"]
+- !private ["SQ", "present"]
+- !private ["SQ", "print"]
+- ["SQ", "saved"]
+- ["SQ", "sent"]
+- !private ["SQ", "setMessageBody"]
+- !private ["SQ", "setSubject"]
+- !private ["SQ", "setToRecipients"]
+- !private ["SQ", "viewController"]
+- !private ["SH", "MFMailComposeViewController"]
+- ["SH", ""]
+- !private ["SH", "canSendMail"]
+- ["SH", "cancelled"]
+- !private ["SH", "delegate"]
+- !private ["SH", "dismiss"]
+- ["SH", "failed"]
+- !private ["SH", "init"]
+- ["SH", "mailComposeController"]
+- !private ["SH", "mailComposeDelegate"]
+- !private ["SH", "present"]
+- !private ["SH", "print"]
+- ["SH", "saved"]
+- ["SH", "sent"]
+- !private ["SH", "setMessageBody"]
+- !private ["SH", "setSubject"]
+- !private ["SH", "setToRecipients"]
+- !private ["SH", "viewController"]
+- ["So19MFMailComposeResultV", "cancelled"]
+- ["So19MFMailComposeResultV", "failed"]
+- ["So19MFMailComposeResultV", "saved"]
+- ["So19MFMailComposeResultV", "sent"]
+- !private ["So27MFMailComposeViewControllerC", "canSendMail"]
+- !private ["So27MFMailComposeViewControllerC", "dismiss"]
+- !private ["So27MFMailComposeViewControllerC", "init"]
+- !private ["So27MFMailComposeViewControllerC", "mailComposeDelegate"]
+- !private ["So27MFMailComposeViewControllerC", "setMessageBody"]
+- !private ["So27MFMailComposeViewControllerC", "setSubject"]
+- !private ["So27MFMailComposeViewControllerC", "setToRecipients"]
+- !private ["So35MFMailComposeViewControllerDelegateP", "MFMailComposeViewController"]
+- ["So35MFMailComposeViewControllerDelegateP", ""]
+- ["So35MFMailComposeViewControllerDelegateP", "deinit"]
+- ["So35MFMailComposeViewControllerDelegateP", "delegate"]
+- ["So35MFMailComposeViewControllerDelegateP", "init"]
+- ["So35MFMailComposeViewControllerDelegateP", "mailComposeController"]
+- !private ["So35MFMailComposeViewControllerDelegateP", "print"]
+- ["So35MFMailComposeViewControllerDelegateP", "sendEmail"]
+- ["So35MFMailComposeViewControllerDelegateP", "viewController"]
+- ["8ABcommon11MailManagerC", "Error"]
+- ["8ABcommon11MailManagerC", "MFMailComposeResult"]
+- ["8ABcommon11MailManagerC", "MFMailComposeViewController"]
+- ["8ABcommon11MailManagerC", "MailManagerDelegate"]
+- ["8ABcommon11MailManagerC", "String"]
+- ["8ABcommon11MailManagerC", "UIViewController"]
+- ["8ABcommon11MailManagerC", ""]
+- ["8ABcommon11MailManagerC", "deinit"]
+- ["8ABcommon11MailManagerC", "delegate"]
+- ["8ABcommon11MailManagerC", "init"]
+- ["8ABcommon11MailManagerC", "mailComposeController"]
+- !private ["8ABcommon11MailManagerC", "print"]
+- ["8ABcommon11MailManagerC", "sendEmail"]
+- !private ["8ABcommon11MailManagerC", "viewController"]
+- ["8ABcommon19MailManagerDelegateP", "Error"]
+- ["8ABcommon19MailManagerDelegateP", "errorOccurred"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "canSendMail"]
+- !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "mailComposeDelegate"]
+- !private ["So8NSCodingP", "present"]
+- !private ["So8NSCodingP", "setMessageBody"]
+- !private ["So8NSCodingP", "setSubject"]
+- !private ["So8NSCodingP", "setToRecipients"]
+- !private ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "canSendMail"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "mailComposeDelegate"]
+- !private ["So26NSExtensionRequestHandlingP", "present"]
+- !private ["So26NSExtensionRequestHandlingP", "setMessageBody"]
+- !private ["So26NSExtensionRequestHandlingP", "setSubject"]
+- !private ["So26NSExtensionRequestHandlingP", "setToRecipients"]
+- ["So8NSObjectC", "Error"]
+- ["So8NSObjectC", "MFMailComposeResult"]
+- ["So8NSObjectC", "MFMailComposeViewController"]
+- ["So8NSObjectC", "MailManagerDelegate"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UIViewController"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "canSendMail"]
+- ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "dismiss"]
+- !private ["So8NSObjectC", "dismissViewControllerAnimated"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "mailComposeController"]
+- !private ["So8NSObjectC", "mailComposeDelegate"]
+- !private ["So8NSObjectC", "present"]
+- !private ["So8NSObjectC", "presentViewController"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "sendEmail"]
+- !private ["So8NSObjectC", "setMessageBody"]
+- !private ["So8NSObjectC", "setSubject"]
+- !private ["So8NSObjectC", "setToRecipients"]
+- ["So8NSObjectC", "viewController"]
+- ["So8NSObjectP", "Error"]
+- ["So8NSObjectP", "MFMailComposeResult"]
+- ["So8NSObjectP", "MFMailComposeViewController"]
+- ["So8NSObjectP", "MailManagerDelegate"]
+- ["So8NSObjectP", "String"]
+- ["So8NSObjectP", "UIViewController"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "canSendMail"]
+- ["So8NSObjectP", "deinit"]
+- ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "dismissViewControllerAnimated"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "mailComposeController"]
+- !private ["So8NSObjectP", "mailComposeDelegate"]
+- !private ["So8NSObjectP", "present"]
+- !private ["So8NSObjectP", "presentViewController"]
+- !private ["So8NSObjectP", "print"]
+- ["So8NSObjectP", "sendEmail"]
+- !private ["So8NSObjectP", "setMessageBody"]
+- !private ["So8NSObjectP", "setSubject"]
+- !private ["So8NSObjectP", "setToRecipients"]
+- ["So8NSObjectP", "viewController"]
+- ["SY", "cancelled"]
+- ["SY", "failed"]
+- ["SY", "saved"]
+- ["SY", "sent"]
+- !private ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "canSendMail"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "mailComposeDelegate"]
+- !private ["So21UIAppearanceContainerP", "present"]
+- !private ["So21UIAppearanceContainerP", "setMessageBody"]
+- !private ["So21UIAppearanceContainerP", "setSubject"]
+- !private ["So21UIAppearanceContainerP", "setToRecipients"]
+- !private ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "canSendMail"]
+- !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "mailComposeDelegate"]
+- !private ["So18UIContentContainerP", "present"]
+- !private ["So18UIContentContainerP", "setMessageBody"]
+- !private ["So18UIContentContainerP", "setSubject"]
+- !private ["So18UIContentContainerP", "setToRecipients"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "canSendMail"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "mailComposeDelegate"]
+- !private ["So18UIFocusEnvironmentP", "present"]
+- !private ["So18UIFocusEnvironmentP", "setMessageBody"]
+- !private ["So18UIFocusEnvironmentP", "setSubject"]
+- !private ["So18UIFocusEnvironmentP", "setToRecipients"]
+- ["So22UINavigationControllerC", ""]
+- !private ["So22UINavigationControllerC", "canSendMail"]
+- !private ["So22UINavigationControllerC", "dismiss"]
+- !private ["So22UINavigationControllerC", "init"]
+- !private ["So22UINavigationControllerC", "mailComposeDelegate"]
+- !private ["So22UINavigationControllerC", "setMessageBody"]
+- !private ["So22UINavigationControllerC", "setSubject"]
+- !private ["So22UINavigationControllerC", "setToRecipients"]
+- !private ["So30UIPasteConfigurationSupportingP", "canSendMail"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismissViewControllerAnimated"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "mailComposeDelegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "present"]
+- !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "setMessageBody"]
+- !private ["So30UIPasteConfigurationSupportingP", "setSubject"]
+- !private ["So30UIPasteConfigurationSupportingP", "setToRecipients"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "canSendMail"]
+- !private ["So11UIResponderC", "dismiss"]
+- !private ["So11UIResponderC", "dismissViewControllerAnimated"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "mailComposeDelegate"]
+- !private ["So11UIResponderC", "present"]
+- !private ["So11UIResponderC", "presentViewController"]
+- !private ["So11UIResponderC", "setMessageBody"]
+- !private ["So11UIResponderC", "setSubject"]
+- !private ["So11UIResponderC", "setToRecipients"]
+- !private ["So30UIResponderStandardEditActionsP", "canSendMail"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "dismissViewControllerAnimated"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "mailComposeDelegate"]
+- !private ["So30UIResponderStandardEditActionsP", "present"]
+- !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "setMessageBody"]
+- !private ["So30UIResponderStandardEditActionsP", "setSubject"]
+- !private ["So30UIResponderStandardEditActionsP", "setToRecipients"]
+- !private ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "canSendMail"]
+- !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "mailComposeDelegate"]
+- !private ["So16UIStateRestoringP", "present"]
+- !private ["So16UIStateRestoringP", "setMessageBody"]
+- !private ["So16UIStateRestoringP", "setSubject"]
+- !private ["So16UIStateRestoringP", "setToRecipients"]
+- !private ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "canSendMail"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "mailComposeDelegate"]
+- !private ["So18UITraitEnvironmentP", "present"]
+- !private ["So18UITraitEnvironmentP", "setMessageBody"]
+- !private ["So18UITraitEnvironmentP", "setSubject"]
+- !private ["So18UITraitEnvironmentP", "setToRecipients"]
+- !private ["So23UIUserActivityRestoringP", "canSendMail"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "dismissViewControllerAnimated"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "mailComposeDelegate"]
+- !private ["So23UIUserActivityRestoringP", "present"]
+- !private ["So23UIUserActivityRestoringP", "presentViewController"]
+- !private ["So23UIUserActivityRestoringP", "setMessageBody"]
+- !private ["So23UIUserActivityRestoringP", "setSubject"]
+- !private ["So23UIUserActivityRestoringP", "setToRecipients"]
+- ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "canSendMail"]
+- !private ["So16UIViewControllerC", "dismiss"]
+- !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "mailComposeDelegate"]
+- !private ["So16UIViewControllerC", "present"]
+- !private ["So16UIViewControllerC", "setMessageBody"]
+- !private ["So16UIViewControllerC", "setSubject"]
+- !private ["So16UIViewControllerC", "setToRecipients"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MFMailComposeViewController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "canSendMail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "mailComposeController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mailComposeDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setMessageBody"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setSubject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setToRecipients"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "MFMailComposeViewController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "canSendMail"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "delegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mailComposeController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "mailComposeDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "print"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setMessageBody"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setSubject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setToRecipients"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewController"]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "So19MFMailComposeResultV"
+- !private "So27MFMailComposeViewControllerC"
+- "So35MFMailComposeViewControllerDelegateP"
+- "8ABcommon11MailManagerC"
+- "8ABcommon19MailManagerDelegateP"
+- !private "So8NSCodingP"
+- !private "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "SY"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- !private "So18UIFocusEnvironmentP"
+- "So22UINavigationControllerC"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So16UIViewControllerC"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/Pods/Target Support Files/ABcommon/ABcommon-umbrella.h"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/build/Pods.build/Debug-iphonesimulator/ABcommon.build/unextended-module.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKitUI.framework/Headers/EventKitUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/Darwin.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NetworkExtension.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "e7fd64e1976f15e665fde0e3d0147761"

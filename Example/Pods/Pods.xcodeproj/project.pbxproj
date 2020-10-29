@@ -26,6 +26,9 @@
 		A51B082624227804009EC533 /* NSAttributedString+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B082524227804009EC533 /* NSAttributedString+XT.swift */; };
 		A526702024409C5E0030065E /* EventsCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526701F24409C5E0030065E /* EventsCalendarManager.swift */; };
 		A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52A273A242B501F000E22D1 /* UIColor+XT.swift */; };
+		A535482D254B071E001FA311 /* UIEdgeInsets+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */; };
+		A535482F254B08AC001FA311 /* Int+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535482E254B08AC001FA311 /* Int+XT.swift */; };
+		A5354831254B0981001FA311 /* DateComponents+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5354830254B0981001FA311 /* DateComponents+XT.swift */; };
 		A58738F025247A40005CDC27 /* NEHotspotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738EF25247A40005CDC27 /* NEHotspotManager.swift */; };
 		A58738F525247A56005CDC27 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738F425247A56005CDC27 /* LocationManager.swift */; };
 		A58738FA25247A8E005CDC27 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738F925247A8E005CDC27 /* MailManager.swift */; };
@@ -98,6 +101,9 @@
 		A51B082524227804009EC533 /* NSAttributedString+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+XT.swift"; sourceTree = "<group>"; };
 		A526701F24409C5E0030065E /* EventsCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarManager.swift; sourceTree = "<group>"; };
 		A52A273A242B501F000E22D1 /* UIColor+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
+		A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+XT.swift"; sourceTree = "<group>"; };
+		A535482E254B08AC001FA311 /* Int+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+XT.swift"; sourceTree = "<group>"; };
+		A5354830254B0981001FA311 /* DateComponents+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponents+XT.swift"; sourceTree = "<group>"; };
 		A58738EF25247A40005CDC27 /* NEHotspotManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEHotspotManager.swift; sourceTree = "<group>"; };
 		A58738F425247A56005CDC27 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A58738F925247A8E005CDC27 /* MailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
@@ -253,11 +259,13 @@
 			children = (
 				A58D8E262428AF6E000A6676 /* Array+XT.swift */,
 				A58D8E242428AF6E000A6676 /* Bundle+XT.swift */,
+				A5354830254B0981001FA311 /* DateComponents+XT.swift */,
 				A51B080D2422675C009EC533 /* CALayer+XT.swift */,
 				A58D8E212428AF6D000A6676 /* CLLocationCoordinate2D+XT.swift */,
 				A58739032524826F005CDC27 /* Collection+XT.swift */,
 				A58A0F232440BD8800D77592 /* Data+XT.swift */,
 				A51B08132422675D009EC533 /* Date+XT.swift */,
+				A535482E254B08AC001FA311 /* Int+XT.swift */,
 				A51B082524227804009EC533 /* NSAttributedString+XT.swift */,
 				A587390825248356005CDC27 /* Number+XT.swift */,
 				A58D8E252428AF6E000A6676 /* StackView+XT.swift */,
@@ -275,6 +283,7 @@
 				A51B080F2422675D009EC533 /* UITextField+XT.swift */,
 				A51B08102422675D009EC533 /* UIView+XT.swift */,
 				A51B08172422675D009EC533 /* UIViewController+XT.swift */,
+				A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,15 +494,18 @@
 			files = (
 				A58D8E362428AF6E000A6676 /* UIStoryboard+XT.swift in Sources */,
 				A58A0F242440BD8800D77592 /* Data+XT.swift in Sources */,
+				A535482D254B071E001FA311 /* UIEdgeInsets+XT.swift in Sources */,
 				A58738F525247A56005CDC27 /* LocationManager.swift in Sources */,
 				A58D8E322428AF6E000A6676 /* UICollectionView+XT.swift in Sources */,
 				A51B08202422675D009EC533 /* UIFont+XT.swift in Sources */,
 				A51B081F2422675D009EC533 /* UIButton+XT.swift in Sources */,
 				A58D8E382428B384000A6676 /* UIAlertController+XT.swift in Sources */,
 				A51B081D2422675D009EC533 /* String+XT.swift in Sources */,
+				A535482F254B08AC001FA311 /* Int+XT.swift in Sources */,
 				A58738FA25247A8E005CDC27 /* MailManager.swift in Sources */,
 				A58739042524826F005CDC27 /* Collection+XT.swift in Sources */,
 				A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */,
+				A5354831254B0981001FA311 /* DateComponents+XT.swift in Sources */,
 				A58D8E352428AF6E000A6676 /* Array+XT.swift in Sources */,
 				A58D8E2E2428AF6E000A6676 /* UIImage+XT.swift in Sources */,
 				A58D8E282428AF6E000A6676 /* UIBarButtonItem+XT.swift in Sources */,

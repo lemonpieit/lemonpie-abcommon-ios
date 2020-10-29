@@ -1,0 +1,11 @@
+framework module ABcommon {
+  umbrella header "ABcommon-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ABcommon.Swift {
+    header "ABcommon-Swift.h"
+    requires objc
+}

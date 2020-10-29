@@ -1,5 +1,5 @@
 import XCTest
-import ABcommon
+@testable import ABcommon
 
 class Tests: XCTestCase {
     
@@ -13,16 +13,63 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    // MARK: - Number+XT
+    
+    func testIntToDouble() {
+        let int: Int = 3
+        let double = int.toDouble()
+        XCTAssertEqual(String(double), "3.0")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
+    func testIntToString() {
+        let int: Int = 3
+        let string = int.toString()
+        XCTAssertEqual(string, "3")
+    }
+
+    func testDoubleToInt() {
+        let double: Double = 3.12
+        let int = double.toInt()
+        XCTAssertEqual(String(int), "3")
+    }
+    
+    func testDoubleToString() {
+        let double: Double = 3.12
+        let string = double.toString()
+        XCTAssertEqual(string, "3.12")
+    }
+
+    // MARK: - String+XT
+    
+    func testSanitized() {
+        let string = "  Ciao   "
+        let sanitizedString = string.sanitized()
+        XCTAssertEqual(sanitizedString, "Ciao")
+    }
+
+    func testSanitizedEmptyString() {
+        let string = "     "
+        XCTAssertThrowsError(try string.sanitizedNonEmpty()) { error in
+            let error = error as! SanitizedError
+            XCTAssertEqual(error, .isEmpty)
         }
     }
+
+    func testSanitizedNonEmptyString() {
+        let string = "  Ciao   "
+        XCTAssertNoThrow(try string.sanitizedNonEmpty())
+    }
     
+    func testCondensedSpace() {
+        let string = "  Ciao   come  va?"
+        let condensedString = string.condenseWhitespace()
+        XCTAssertEqual(condensedString, "Ciao come va?")
+    }
+    
+    func testGetInitials() {
+        let string = "Ciao come va?"
+        let initials = string.getInitials()
+        XCTAssertEqual(initials, "Ccv")
+    }
+
 }

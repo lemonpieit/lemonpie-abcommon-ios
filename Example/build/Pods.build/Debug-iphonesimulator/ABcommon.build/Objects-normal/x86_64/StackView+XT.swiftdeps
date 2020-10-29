@@ -1,0 +1,330 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["So11UIStackViewC", ""]
+- ["So11UIStackViewC", "removeAllArrangedSubviews"]
+- ["So11UIStackViewC", "removeArrangedSubviews"]
+provides-dynamic-lookup:
+- "removeAllArrangedSubviews"
+- "removeArrangedSubviews"
+depends-top-level:
+- !private "..<"
+- !private ">"
+- !private "FloatLiteralType"
+- "Int"
+- !private "IntegerLiteralType"
+- "UIStackView"
+depends-member:
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["SK", ""]
+- !private ["SK", "count"]
+- !private ["SK", "reversed"]
+- !private ["SK", "subscript"]
+- ["So15CALayerDelegateP", "Int"]
+- !private ["So15CALayerDelegateP", "arrangedSubviews"]
+- ["So15CALayerDelegateP", "removeAllArrangedSubviews"]
+- !private ["So15CALayerDelegateP", "removeArrangedSubview"]
+- ["So15CALayerDelegateP", "removeArrangedSubviews"]
+- !private ["So15CALayerDelegateP", "removeFromSuperview"]
+- !private ["s7CVarArgP", "arrangedSubviews"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "removeArrangedSubview"]
+- !private ["s7CVarArgP", "removeFromSuperview"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", ""]
+- !private ["Sl", "count"]
+- !private ["Sl", "reversed"]
+- !private ["Sl", "subscript"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "arrangedSubviews"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "removeArrangedSubview"]
+- !private ["s28CustomDebugStringConvertibleP", "removeFromSuperview"]
+- !private ["s28CustomDebugStringConvertibleP", "reversed"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "reversed"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "arrangedSubviews"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "removeArrangedSubview"]
+- !private ["s23CustomStringConvertibleP", "removeFromSuperview"]
+- !private ["s23CustomStringConvertibleP", "reversed"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
+- !private ["Se", "reversed"]
+- !private ["Se", "subscript"]
+- !private ["SE", "count"]
+- !private ["SE", "reversed"]
+- !private ["SE", "subscript"]
+- !private ["SQ", ""]
+- !private ["SQ", "arrangedSubviews"]
+- !private ["SQ", "count"]
+- !private ["SQ", "removeArrangedSubview"]
+- !private ["SQ", "removeFromSuperview"]
+- !private ["SQ", "reversed"]
+- !private ["SQ", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["SH", "arrangedSubviews"]
+- !private ["SH", "count"]
+- !private ["SH", "removeArrangedSubview"]
+- !private ["SH", "removeFromSuperview"]
+- !private ["SH", "reversed"]
+- !private ["SH", "subscript"]
+- !private ["SM", ""]
+- !private ["SM", "count"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- ["So8NSCodingP", "Int"]
+- !private ["So8NSCodingP", "arrangedSubviews"]
+- ["So8NSCodingP", "removeAllArrangedSubviews"]
+- !private ["So8NSCodingP", "removeArrangedSubview"]
+- ["So8NSCodingP", "removeArrangedSubviews"]
+- !private ["So8NSCodingP", "removeFromSuperview"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "arrangedSubviews"]
+- ["So8NSObjectC", "removeAllArrangedSubviews"]
+- !private ["So8NSObjectC", "removeArrangedSubview"]
+- ["So8NSObjectC", "removeArrangedSubviews"]
+- !private ["So8NSObjectC", "removeFromSuperview"]
+- !private ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "arrangedSubviews"]
+- ["So8NSObjectP", "removeAllArrangedSubviews"]
+- !private ["So8NSObjectP", "removeArrangedSubview"]
+- ["So8NSObjectP", "removeArrangedSubviews"]
+- !private ["So8NSObjectP", "removeFromSuperview"]
+- !private ["Sk", ""]
+- !private ["Sk", "count"]
+- !private ["Sk", "reversed"]
+- !private ["Sk", "subscript"]
+- !private ["Sn", "reversed"]
+- !private ["SX", "reversed"]
+- !private ["Sm", ""]
+- !private ["Sm", "count"]
+- !private ["Sm", "subscript"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- !private ["ST", ""]
+- !private ["ST", "count"]
+- !private ["ST", "makeIterator"]
+- !private ["ST", "reversed"]
+- !private ["ST", "subscript"]
+- ["So29UIAccessibilityIdentificationP", "Int"]
+- !private ["So29UIAccessibilityIdentificationP", "arrangedSubviews"]
+- ["So29UIAccessibilityIdentificationP", "removeAllArrangedSubviews"]
+- !private ["So29UIAccessibilityIdentificationP", "removeArrangedSubview"]
+- ["So29UIAccessibilityIdentificationP", "removeArrangedSubviews"]
+- !private ["So29UIAccessibilityIdentificationP", "removeFromSuperview"]
+- ["So12UIAppearanceP", "Int"]
+- !private ["So12UIAppearanceP", "arrangedSubviews"]
+- ["So12UIAppearanceP", "removeAllArrangedSubviews"]
+- !private ["So12UIAppearanceP", "removeArrangedSubview"]
+- ["So12UIAppearanceP", "removeArrangedSubviews"]
+- !private ["So12UIAppearanceP", "removeFromSuperview"]
+- ["So21UIAppearanceContainerP", "Int"]
+- !private ["So21UIAppearanceContainerP", "arrangedSubviews"]
+- ["So21UIAppearanceContainerP", "removeAllArrangedSubviews"]
+- !private ["So21UIAppearanceContainerP", "removeArrangedSubview"]
+- ["So21UIAppearanceContainerP", "removeArrangedSubviews"]
+- !private ["So21UIAppearanceContainerP", "removeFromSuperview"]
+- ["So17UICoordinateSpaceP", "Int"]
+- !private ["So17UICoordinateSpaceP", "arrangedSubviews"]
+- ["So17UICoordinateSpaceP", "removeAllArrangedSubviews"]
+- !private ["So17UICoordinateSpaceP", "removeArrangedSubview"]
+- ["So17UICoordinateSpaceP", "removeArrangedSubviews"]
+- !private ["So17UICoordinateSpaceP", "removeFromSuperview"]
+- ["So13UIDynamicItemP", "Int"]
+- !private ["So13UIDynamicItemP", "arrangedSubviews"]
+- ["So13UIDynamicItemP", "removeAllArrangedSubviews"]
+- !private ["So13UIDynamicItemP", "removeArrangedSubview"]
+- ["So13UIDynamicItemP", "removeArrangedSubviews"]
+- !private ["So13UIDynamicItemP", "removeFromSuperview"]
+- ["So18UIFocusEnvironmentP", "Int"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "arrangedSubviews"]
+- ["So18UIFocusEnvironmentP", "removeAllArrangedSubviews"]
+- !private ["So18UIFocusEnvironmentP", "removeArrangedSubview"]
+- ["So18UIFocusEnvironmentP", "removeArrangedSubviews"]
+- !private ["So18UIFocusEnvironmentP", "removeFromSuperview"]
+- ["So11UIFocusItemP", "Int"]
+- !private ["So11UIFocusItemP", "arrangedSubviews"]
+- ["So11UIFocusItemP", "removeAllArrangedSubviews"]
+- !private ["So11UIFocusItemP", "removeArrangedSubview"]
+- ["So11UIFocusItemP", "removeArrangedSubviews"]
+- !private ["So11UIFocusItemP", "removeFromSuperview"]
+- ["So20UIFocusItemContainerP", "Int"]
+- !private ["So20UIFocusItemContainerP", "arrangedSubviews"]
+- ["So20UIFocusItemContainerP", "removeAllArrangedSubviews"]
+- !private ["So20UIFocusItemContainerP", "removeArrangedSubview"]
+- ["So20UIFocusItemContainerP", "removeArrangedSubviews"]
+- !private ["So20UIFocusItemContainerP", "removeFromSuperview"]
+- ["So24UILargeContentViewerItemP", "Int"]
+- !private ["So24UILargeContentViewerItemP", "arrangedSubviews"]
+- ["So24UILargeContentViewerItemP", "removeAllArrangedSubviews"]
+- !private ["So24UILargeContentViewerItemP", "removeArrangedSubview"]
+- ["So24UILargeContentViewerItemP", "removeArrangedSubviews"]
+- !private ["So24UILargeContentViewerItemP", "removeFromSuperview"]
+- !private ["So30UIPasteConfigurationSupportingP", "arrangedSubviews"]
+- ["So30UIPasteConfigurationSupportingP", "removeAllArrangedSubviews"]
+- !private ["So30UIPasteConfigurationSupportingP", "removeArrangedSubview"]
+- ["So30UIPasteConfigurationSupportingP", "removeArrangedSubviews"]
+- !private ["So30UIPasteConfigurationSupportingP", "removeFromSuperview"]
+- ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "arrangedSubviews"]
+- ["So11UIResponderC", "removeAllArrangedSubviews"]
+- !private ["So11UIResponderC", "removeArrangedSubview"]
+- ["So11UIResponderC", "removeArrangedSubviews"]
+- !private ["So11UIResponderC", "removeFromSuperview"]
+- !private ["So30UIResponderStandardEditActionsP", "arrangedSubviews"]
+- ["So30UIResponderStandardEditActionsP", "removeAllArrangedSubviews"]
+- !private ["So30UIResponderStandardEditActionsP", "removeArrangedSubview"]
+- ["So30UIResponderStandardEditActionsP", "removeArrangedSubviews"]
+- !private ["So30UIResponderStandardEditActionsP", "removeFromSuperview"]
+- ["So11UIStackViewC", "Int"]
+- ["So11UIStackViewC", ""]
+- !private ["So11UIStackViewC", "arrangedSubviews"]
+- ["So11UIStackViewC", "removeAllArrangedSubviews"]
+- !private ["So11UIStackViewC", "removeArrangedSubview"]
+- ["So11UIStackViewC", "removeArrangedSubviews"]
+- ["So18UITraitEnvironmentP", "Int"]
+- !private ["So18UITraitEnvironmentP", "arrangedSubviews"]
+- ["So18UITraitEnvironmentP", "removeAllArrangedSubviews"]
+- !private ["So18UITraitEnvironmentP", "removeArrangedSubview"]
+- ["So18UITraitEnvironmentP", "removeArrangedSubviews"]
+- !private ["So18UITraitEnvironmentP", "removeFromSuperview"]
+- !private ["So23UIUserActivityRestoringP", "arrangedSubviews"]
+- ["So23UIUserActivityRestoringP", "removeAllArrangedSubviews"]
+- !private ["So23UIUserActivityRestoringP", "removeArrangedSubview"]
+- ["So23UIUserActivityRestoringP", "removeArrangedSubviews"]
+- !private ["So23UIUserActivityRestoringP", "removeFromSuperview"]
+- ["So6UIViewC", "Int"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "arrangedSubviews"]
+- ["So6UIViewC", "removeAllArrangedSubviews"]
+- !private ["So6UIViewC", "removeArrangedSubview"]
+- ["So6UIViewC", "removeArrangedSubviews"]
+- !private ["So6UIViewC", "removeFromSuperview"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "arrangedSubviews"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeArrangedSubview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeFromSuperview"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "arrangedSubviews"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeArrangedSubview"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeFromSuperview"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "arrangedSubviews"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "removeArrangedSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "removeFromSuperview"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- "So15CALayerDelegateP"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sk"
+- !private "Sn"
+- !private "SX"
+- !private "Sm"
+- !private "ST"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
+- "So24UILargeContentViewerItemP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So11UIStackViewC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/Pods/Target Support Files/ABcommon/ABcommon-umbrella.h"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/build/Pods.build/Debug-iphonesimulator/ABcommon.build/unextended-module.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKitUI.framework/Headers/EventKitUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/Darwin.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NetworkExtension.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "be0a2f97812fb0f118065a40c1865cc0"

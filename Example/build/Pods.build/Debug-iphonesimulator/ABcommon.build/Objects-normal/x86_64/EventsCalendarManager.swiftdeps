@@ -1,0 +1,1010 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Event"
+- "CustomError"
+- "EventsCalendarManagerResponse"
+- "EventsCalendarManager"
+provides-nominal:
+- "8ABcommon5EventV"
+- "8ABcommon11CustomErrorO"
+- "8ABcommon21EventsCalendarManagerC"
+provides-member:
+- ["8ABcommon5EventV", ""]
+- ["8ABcommon11CustomErrorO", ""]
+- ["8ABcommon21EventsCalendarManagerC", ""]
+provides-dynamic-lookup:
+- "addEvent"
+- "addEventToCalendar"
+- "eventAlreadyExists"
+- "eventEditViewController"
+- "eventStore"
+- "generateEvent"
+- "getAuthorizationStatus"
+- "presentCalendarModalToAddEvent"
+- "presentEventCalendarDetailModal"
+- "requestAccess"
+depends-top-level:
+- !private "!"
+- "&&"
+- !private "*"
+- !private "+"
+- "=="
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "BooleanLiteralType"
+- "CustomError"
+- "Date"
+- "EKAuthorizationStatus"
+- !private "EKEntityType"
+- "EKEvent"
+- "EKEventEditViewAction"
+- "EKEventEditViewController"
+- "EKEventEditViewDelegate"
+- "EKEventStore"
+- "EKEventStoreRequestAccessCompletionHandler"
+- !private "EKRecurrenceRule"
+- "Error"
+- "Event"
+- "EventsCalendarManager"
+- "EventsCalendarManagerResponse"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "NSObject"
+- "Result"
+- "String"
+- "StringLiteralType"
+- !private "TimeInterval"
+- !private "UIApplication"
+- "Void"
+- !private "_findStringSwitchCase"
+- !private "eventAlreadyExists"
+- !private "eventStore"
+- !private "generateEvent"
+- !private "getAuthorizationStatus"
+- !private "presentEventCalendarDetailModal"
+- !private "requestAccess"
+- !private "~="
+depends-member:
+- !private ["s18AdditiveArithmeticP", ""]
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "contains"]
+- !private ["SK", ""]
+- !private ["SK", "contains"]
+- !private ["SB", "init"]
+- !private ["So15CALayerDelegateP", "rootViewController"]
+- !private ["s7CVarArgP", "Date"]
+- !private ["s7CVarArgP", "EKEntityType"]
+- !private ["s7CVarArgP", "EKEvent"]
+- !private ["s7CVarArgP", "EKEventEditViewController"]
+- ["s7CVarArgP", "EKEventStore"]
+- !private ["s7CVarArgP", "EKRecurrenceRule"]
+- !private ["s7CVarArgP", "TimeInterval"]
+- !private ["s7CVarArgP", "UIApplication"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addEvent"]
+- !private ["s7CVarArgP", "addEventToCalendar"]
+- !private ["s7CVarArgP", "authorizationStatus"]
+- !private ["s7CVarArgP", "calendar"]
+- !private ["s7CVarArgP", "contains"]
+- !private ["s7CVarArgP", "defaultCalendarForNewEvents"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "editViewDelegate"]
+- !private ["s7CVarArgP", "endDate"]
+- !private ["s7CVarArgP", "event"]
+- !private ["s7CVarArgP", "eventAlreadyExists"]
+- ["s7CVarArgP", "eventEditViewController"]
+- ["s7CVarArgP", "eventEditViewControllerDefaultCalendar"]
+- ["s7CVarArgP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["s7CVarArgP", "eventStore"]
+- !private ["s7CVarArgP", "events"]
+- !private ["s7CVarArgP", "generateEvent"]
+- !private ["s7CVarArgP", "getAuthorizationStatus"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "keyWindow"]
+- !private ["s7CVarArgP", "predicateForEvents"]
+- !private ["s7CVarArgP", "present"]
+- !private ["s7CVarArgP", "presentCalendarModalToAddEvent"]
+- !private ["s7CVarArgP", "presentEventCalendarDetailModal"]
+- !private ["s7CVarArgP", "recurrenceRules"]
+- !private ["s7CVarArgP", "requestAccess"]
+- !private ["s7CVarArgP", "rootViewController"]
+- !private ["s7CVarArgP", "save"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "startDate"]
+- !private ["s7CVarArgP", "title"]
+- !private ["Sl", ""]
+- !private ["Sl", "contains"]
+- !private ["SL", ""]
+- !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "Date"]
+- !private ["s28CustomDebugStringConvertibleP", "EKEntityType"]
+- !private ["s28CustomDebugStringConvertibleP", "EKEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "EKEventEditViewController"]
+- ["s28CustomDebugStringConvertibleP", "EKEventStore"]
+- !private ["s28CustomDebugStringConvertibleP", "EKRecurrenceRule"]
+- !private ["s28CustomDebugStringConvertibleP", "TimeInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "addEventToCalendar"]
+- !private ["s28CustomDebugStringConvertibleP", "authorizationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "calendar"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "defaultCalendarForNewEvents"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "editViewDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "endDate"]
+- !private ["s28CustomDebugStringConvertibleP", "event"]
+- !private ["s28CustomDebugStringConvertibleP", "eventAlreadyExists"]
+- ["s28CustomDebugStringConvertibleP", "eventEditViewController"]
+- ["s28CustomDebugStringConvertibleP", "eventEditViewControllerDefaultCalendar"]
+- ["s28CustomDebugStringConvertibleP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["s28CustomDebugStringConvertibleP", "eventStore"]
+- !private ["s28CustomDebugStringConvertibleP", "events"]
+- !private ["s28CustomDebugStringConvertibleP", "generateEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "getAuthorizationStatus"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "keyWindow"]
+- !private ["s28CustomDebugStringConvertibleP", "predicateForEvents"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
+- !private ["s28CustomDebugStringConvertibleP", "presentCalendarModalToAddEvent"]
+- !private ["s28CustomDebugStringConvertibleP", "presentEventCalendarDetailModal"]
+- !private ["s28CustomDebugStringConvertibleP", "recurrenceRules"]
+- !private ["s28CustomDebugStringConvertibleP", "requestAccess"]
+- !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "save"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "startDate"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- ["8ABcommon11CustomErrorO", "=="]
+- ["8ABcommon11CustomErrorO", "Default_RawValue"]
+- ["8ABcommon11CustomErrorO", "RawValue"]
+- ["8ABcommon11CustomErrorO", ""]
+- ["8ABcommon11CustomErrorO", "_Default_RawValue"]
+- ["8ABcommon11CustomErrorO", "_code"]
+- ["8ABcommon11CustomErrorO", "_domain"]
+- !private ["8ABcommon11CustomErrorO", "_findStringSwitchCase"]
+- ["8ABcommon11CustomErrorO", "_getEmbeddedNSError"]
+- ["8ABcommon11CustomErrorO", "_rawHashValue"]
+- ["8ABcommon11CustomErrorO", "_userInfo"]
+- ["8ABcommon11CustomErrorO", "calendarAccessDeniedOrRestricted"]
+- ["8ABcommon11CustomErrorO", "code"]
+- ["8ABcommon11CustomErrorO", "domain"]
+- ["8ABcommon11CustomErrorO", "eventAlreadyExistsInCalendar"]
+- ["8ABcommon11CustomErrorO", "eventNotAddedToCalendar"]
+- !private ["8ABcommon11CustomErrorO", "findStringSwitchCase"]
+- ["8ABcommon11CustomErrorO", "hash"]
+- ["8ABcommon11CustomErrorO", "hashValue"]
+- ["8ABcommon11CustomErrorO", "init"]
+- ["8ABcommon11CustomErrorO", "rawValue"]
+- ["8ABcommon11CustomErrorO", "unknown"]
+- ["8ABcommon11CustomErrorO", "userInfo"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Date"]
+- !private ["s23CustomStringConvertibleP", "EKEntityType"]
+- !private ["s23CustomStringConvertibleP", "EKEvent"]
+- !private ["s23CustomStringConvertibleP", "EKEventEditViewController"]
+- ["s23CustomStringConvertibleP", "EKEventStore"]
+- !private ["s23CustomStringConvertibleP", "EKRecurrenceRule"]
+- !private ["s23CustomStringConvertibleP", "TimeInterval"]
+- !private ["s23CustomStringConvertibleP", "UIApplication"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addEvent"]
+- !private ["s23CustomStringConvertibleP", "addEventToCalendar"]
+- !private ["s23CustomStringConvertibleP", "authorizationStatus"]
+- !private ["s23CustomStringConvertibleP", "calendar"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "defaultCalendarForNewEvents"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "editViewDelegate"]
+- !private ["s23CustomStringConvertibleP", "endDate"]
+- !private ["s23CustomStringConvertibleP", "event"]
+- !private ["s23CustomStringConvertibleP", "eventAlreadyExists"]
+- ["s23CustomStringConvertibleP", "eventEditViewController"]
+- ["s23CustomStringConvertibleP", "eventEditViewControllerDefaultCalendar"]
+- ["s23CustomStringConvertibleP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["s23CustomStringConvertibleP", "eventStore"]
+- !private ["s23CustomStringConvertibleP", "events"]
+- !private ["s23CustomStringConvertibleP", "generateEvent"]
+- !private ["s23CustomStringConvertibleP", "getAuthorizationStatus"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "keyWindow"]
+- !private ["s23CustomStringConvertibleP", "predicateForEvents"]
+- !private ["s23CustomStringConvertibleP", "present"]
+- !private ["s23CustomStringConvertibleP", "presentCalendarModalToAddEvent"]
+- !private ["s23CustomStringConvertibleP", "presentEventCalendarDetailModal"]
+- !private ["s23CustomStringConvertibleP", "recurrenceRules"]
+- !private ["s23CustomStringConvertibleP", "requestAccess"]
+- !private ["s23CustomStringConvertibleP", "rootViewController"]
+- !private ["s23CustomStringConvertibleP", "save"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "startDate"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "contains"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["Se", "contains"]
+- !private ["Se", "init"]
+- !private ["Sd", "init"]
+- ["So21EKAuthorizationStatusV", "authorized"]
+- ["So21EKAuthorizationStatusV", "denied"]
+- ["So21EKAuthorizationStatusV", "notDetermined"]
+- ["So21EKAuthorizationStatusV", "restricted"]
+- ["So14EKCalendarItemC", ""]
+- !private ["So14EKCalendarItemC", "calendar"]
+- !private ["So14EKCalendarItemC", "endDate"]
+- !private ["So14EKCalendarItemC", "eventWithEventStore"]
+- !private ["So14EKCalendarItemC", "init"]
+- !private ["So14EKCalendarItemC", "recurrenceRules"]
+- !private ["So14EKCalendarItemC", "startDate"]
+- !private ["So14EKCalendarItemC", "title"]
+- !private ["So12EKEntityTypeV", "event"]
+- !private ["So7EKEventC", "calendar"]
+- !private ["So7EKEventC", "endDate"]
+- !private ["So7EKEventC", "init"]
+- !private ["So7EKEventC", "recurrenceRules"]
+- !private ["So7EKEventC", "startDate"]
+- !private ["So7EKEventC", "title"]
+- !private ["So25EKEventEditViewControllerC", "dismiss"]
+- !private ["So25EKEventEditViewControllerC", "editViewDelegate"]
+- !private ["So25EKEventEditViewControllerC", "event"]
+- !private ["So25EKEventEditViewControllerC", "eventStore"]
+- !private ["So25EKEventEditViewControllerC", "init"]
+- !private ["So23EKEventEditViewDelegateP", "Date"]
+- !private ["So23EKEventEditViewDelegateP", "EKEntityType"]
+- !private ["So23EKEventEditViewDelegateP", "EKEvent"]
+- !private ["So23EKEventEditViewDelegateP", "EKEventEditViewController"]
+- ["So23EKEventEditViewDelegateP", "EKEventStore"]
+- !private ["So23EKEventEditViewDelegateP", "EKRecurrenceRule"]
+- !private ["So23EKEventEditViewDelegateP", "TimeInterval"]
+- !private ["So23EKEventEditViewDelegateP", "UIApplication"]
+- ["So23EKEventEditViewDelegateP", ""]
+- ["So23EKEventEditViewDelegateP", "addEvent"]
+- ["So23EKEventEditViewDelegateP", "addEventToCalendar"]
+- ["So23EKEventEditViewDelegateP", "eventAlreadyExists"]
+- ["So23EKEventEditViewDelegateP", "eventEditViewController"]
+- ["So23EKEventEditViewDelegateP", "eventEditViewControllerDefaultCalendar"]
+- ["So23EKEventEditViewDelegateP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- ["So23EKEventEditViewDelegateP", "eventStore"]
+- ["So23EKEventEditViewDelegateP", "generateEvent"]
+- ["So23EKEventEditViewDelegateP", "getAuthorizationStatus"]
+- ["So23EKEventEditViewDelegateP", "init"]
+- ["So23EKEventEditViewDelegateP", "presentCalendarModalToAddEvent"]
+- ["So23EKEventEditViewDelegateP", "presentEventCalendarDetailModal"]
+- ["So23EKEventEditViewDelegateP", "requestAccess"]
+- !private ["So12EKEventStoreC", "authorizationStatus"]
+- !private ["So12EKEventStoreC", "defaultCalendarForNewEvents"]
+- !private ["So12EKEventStoreC", "events"]
+- ["So12EKEventStoreC", "init"]
+- !private ["So12EKEventStoreC", "predicateForEvents"]
+- !private ["So12EKEventStoreC", "requestAccess"]
+- !private ["So12EKEventStoreC", "save"]
+- ["So8EKObjectC", ""]
+- !private ["So8EKObjectC", "calendar"]
+- !private ["So8EKObjectC", "endDate"]
+- !private ["So8EKObjectC", "eventWithEventStore"]
+- !private ["So8EKObjectC", "init"]
+- !private ["So8EKObjectC", "recurrenceRules"]
+- !private ["So8EKObjectC", "startDate"]
+- !private ["So8EKObjectC", "title"]
+- !private ["So15EKRecurrenceEndC", "init"]
+- !private ["So21EKRecurrenceFrequencyV", "monthly"]
+- !private ["So16EKRecurrenceRuleC", "init"]
+- !private ["So6EKSpanV", "thisEvent"]
+- !private ["SE", "contains"]
+- !private ["SE", "init"]
+- ["SQ", "=="]
+- !private ["SQ", "Date"]
+- ["SQ", "Default_RawValue"]
+- !private ["SQ", "EKEntityType"]
+- !private ["SQ", "EKEvent"]
+- !private ["SQ", "EKEventEditViewController"]
+- ["SQ", "EKEventStore"]
+- !private ["SQ", "EKRecurrenceRule"]
+- ["SQ", "RawValue"]
+- !private ["SQ", "TimeInterval"]
+- !private ["SQ", "UIApplication"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- ["SQ", "_code"]
+- ["SQ", "_domain"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_getEmbeddedNSError"]
+- ["SQ", "_rawHashValue"]
+- ["SQ", "_userInfo"]
+- !private ["SQ", "addEvent"]
+- !private ["SQ", "addEventToCalendar"]
+- !private ["SQ", "authorizationStatus"]
+- ["SQ", "authorized"]
+- !private ["SQ", "calendar"]
+- !private ["SQ", "calendarAccessDeniedOrRestricted"]
+- ["SQ", "code"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "defaultCalendarForNewEvents"]
+- ["SQ", "denied"]
+- !private ["SQ", "dismiss"]
+- ["SQ", "domain"]
+- !private ["SQ", "editViewDelegate"]
+- !private ["SQ", "endDate"]
+- !private ["SQ", "event"]
+- !private ["SQ", "eventAlreadyExists"]
+- !private ["SQ", "eventAlreadyExistsInCalendar"]
+- ["SQ", "eventEditViewController"]
+- ["SQ", "eventEditViewControllerDefaultCalendar"]
+- ["SQ", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["SQ", "eventNotAddedToCalendar"]
+- !private ["SQ", "eventStore"]
+- !private ["SQ", "events"]
+- !private ["SQ", "failure"]
+- !private ["SQ", "findStringSwitchCase"]
+- !private ["SQ", "generateEvent"]
+- !private ["SQ", "getAuthorizationStatus"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- !private ["SQ", "keyWindow"]
+- !private ["SQ", "monthly"]
+- ["SQ", "notDetermined"]
+- !private ["SQ", "predicateForEvents"]
+- !private ["SQ", "present"]
+- !private ["SQ", "presentCalendarModalToAddEvent"]
+- !private ["SQ", "presentEventCalendarDetailModal"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "recurrenceRules"]
+- !private ["SQ", "requestAccess"]
+- ["SQ", "restricted"]
+- !private ["SQ", "rootViewController"]
+- !private ["SQ", "save"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "startDate"]
+- !private ["SQ", "success"]
+- !private ["SQ", "thisEvent"]
+- !private ["SQ", "title"]
+- !private ["SQ", "unknown"]
+- ["SQ", "userInfo"]
+- ["s5ErrorP", "=="]
+- ["s5ErrorP", "Default_RawValue"]
+- ["s5ErrorP", "RawValue"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_Default_RawValue"]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- !private ["s5ErrorP", "_findStringSwitchCase"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_rawHashValue"]
+- ["s5ErrorP", "_userInfo"]
+- !private ["s5ErrorP", "calendarAccessDeniedOrRestricted"]
+- ["s5ErrorP", "code"]
+- ["s5ErrorP", "domain"]
+- !private ["s5ErrorP", "eventAlreadyExistsInCalendar"]
+- !private ["s5ErrorP", "eventNotAddedToCalendar"]
+- !private ["s5ErrorP", "findStringSwitchCase"]
+- ["s5ErrorP", "hash"]
+- ["s5ErrorP", "hashValue"]
+- ["s5ErrorP", "init"]
+- ["s5ErrorP", "rawValue"]
+- !private ["s5ErrorP", "unknown"]
+- ["s5ErrorP", "userInfo"]
+- ["8ABcommon5EventV", "Date"]
+- ["8ABcommon5EventV", "String"]
+- ["8ABcommon5EventV", "endDate"]
+- ["8ABcommon5EventV", "init"]
+- ["8ABcommon5EventV", "name"]
+- ["8ABcommon5EventV", "startDate"]
+- ["8ABcommon21EventsCalendarManagerC", "Bool"]
+- !private ["8ABcommon21EventsCalendarManagerC", "Date"]
+- ["8ABcommon21EventsCalendarManagerC", "EKAuthorizationStatus"]
+- !private ["8ABcommon21EventsCalendarManagerC", "EKEntityType"]
+- ["8ABcommon21EventsCalendarManagerC", "EKEvent"]
+- ["8ABcommon21EventsCalendarManagerC", "EKEventEditViewAction"]
+- ["8ABcommon21EventsCalendarManagerC", "EKEventEditViewController"]
+- ["8ABcommon21EventsCalendarManagerC", "EKEventStore"]
+- ["8ABcommon21EventsCalendarManagerC", "EKEventStoreRequestAccessCompletionHandler"]
+- !private ["8ABcommon21EventsCalendarManagerC", "EKRecurrenceRule"]
+- ["8ABcommon21EventsCalendarManagerC", "Event"]
+- ["8ABcommon21EventsCalendarManagerC", "EventsCalendarManagerResponse"]
+- !private ["8ABcommon21EventsCalendarManagerC", "TimeInterval"]
+- !private ["8ABcommon21EventsCalendarManagerC", "UIApplication"]
+- ["8ABcommon21EventsCalendarManagerC", ""]
+- !private ["8ABcommon21EventsCalendarManagerC", "addEvent"]
+- ["8ABcommon21EventsCalendarManagerC", "addEventToCalendar"]
+- ["8ABcommon21EventsCalendarManagerC", "deinit"]
+- !private ["8ABcommon21EventsCalendarManagerC", "eventAlreadyExists"]
+- ["8ABcommon21EventsCalendarManagerC", "eventEditViewController"]
+- ["8ABcommon21EventsCalendarManagerC", "eventEditViewControllerDefaultCalendar"]
+- ["8ABcommon21EventsCalendarManagerC", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- ["8ABcommon21EventsCalendarManagerC", "eventStore"]
+- !private ["8ABcommon21EventsCalendarManagerC", "generateEvent"]
+- !private ["8ABcommon21EventsCalendarManagerC", "getAuthorizationStatus"]
+- ["8ABcommon21EventsCalendarManagerC", "init"]
+- ["8ABcommon21EventsCalendarManagerC", "presentCalendarModalToAddEvent"]
+- ["8ABcommon21EventsCalendarManagerC", "presentEventCalendarDetailModal"]
+- !private ["8ABcommon21EventsCalendarManagerC", "requestAccess"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "contains"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", ""]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "IntegerLiteralType"]
+- !private ["s27ExpressibleByIntegerLiteralP", ""]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "init"]
+- !private ["SF", ""]
+- !private ["SF", "init"]
+- ["SH", "=="]
+- !private ["SH", "Date"]
+- ["SH", "Default_RawValue"]
+- !private ["SH", "EKEntityType"]
+- !private ["SH", "EKEvent"]
+- !private ["SH", "EKEventEditViewController"]
+- ["SH", "EKEventStore"]
+- !private ["SH", "EKRecurrenceRule"]
+- ["SH", "RawValue"]
+- !private ["SH", "TimeInterval"]
+- !private ["SH", "UIApplication"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- ["SH", "_code"]
+- ["SH", "_domain"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_getEmbeddedNSError"]
+- ["SH", "_rawHashValue"]
+- ["SH", "_userInfo"]
+- !private ["SH", "addEvent"]
+- !private ["SH", "addEventToCalendar"]
+- !private ["SH", "authorizationStatus"]
+- ["SH", "authorized"]
+- !private ["SH", "calendar"]
+- !private ["SH", "calendarAccessDeniedOrRestricted"]
+- ["SH", "code"]
+- !private ["SH", "contains"]
+- !private ["SH", "defaultCalendarForNewEvents"]
+- ["SH", "denied"]
+- !private ["SH", "dismiss"]
+- ["SH", "domain"]
+- !private ["SH", "editViewDelegate"]
+- !private ["SH", "endDate"]
+- !private ["SH", "event"]
+- !private ["SH", "eventAlreadyExists"]
+- !private ["SH", "eventAlreadyExistsInCalendar"]
+- ["SH", "eventEditViewController"]
+- ["SH", "eventEditViewControllerDefaultCalendar"]
+- ["SH", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["SH", "eventNotAddedToCalendar"]
+- !private ["SH", "eventStore"]
+- !private ["SH", "events"]
+- !private ["SH", "failure"]
+- !private ["SH", "findStringSwitchCase"]
+- !private ["SH", "generateEvent"]
+- !private ["SH", "getAuthorizationStatus"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- !private ["SH", "keyWindow"]
+- !private ["SH", "monthly"]
+- ["SH", "notDetermined"]
+- !private ["SH", "predicateForEvents"]
+- !private ["SH", "present"]
+- !private ["SH", "presentCalendarModalToAddEvent"]
+- !private ["SH", "presentEventCalendarDetailModal"]
+- ["SH", "rawValue"]
+- !private ["SH", "recurrenceRules"]
+- !private ["SH", "requestAccess"]
+- ["SH", "restricted"]
+- !private ["SH", "rootViewController"]
+- !private ["SH", "save"]
+- !private ["SH", "shared"]
+- !private ["SH", "startDate"]
+- !private ["SH", "success"]
+- !private ["SH", "thisEvent"]
+- !private ["SH", "title"]
+- !private ["SH", "unknown"]
+- ["SH", "userInfo"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["SM", ""]
+- !private ["SM", "contains"]
+- !private ["10Foundation19MutableDataProtocolP", "contains"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "editViewDelegate"]
+- !private ["So8NSCodingP", "event"]
+- !private ["So8NSCodingP", "eventStore"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "present"]
+- !private ["So8NSCodingP", "rootViewController"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "editViewDelegate"]
+- !private ["So26NSExtensionRequestHandlingP", "event"]
+- !private ["So26NSExtensionRequestHandlingP", "eventStore"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "present"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "EKAuthorizationStatus"]
+- !private ["So8NSObjectC", "EKEntityType"]
+- ["So8NSObjectC", "EKEvent"]
+- ["So8NSObjectC", "EKEventEditViewAction"]
+- ["So8NSObjectC", "EKEventEditViewController"]
+- ["So8NSObjectC", "EKEventStore"]
+- ["So8NSObjectC", "EKEventStoreRequestAccessCompletionHandler"]
+- !private ["So8NSObjectC", "EKRecurrenceRule"]
+- ["So8NSObjectC", "Event"]
+- ["So8NSObjectC", "EventsCalendarManagerResponse"]
+- !private ["So8NSObjectC", "TimeInterval"]
+- !private ["So8NSObjectC", "UIApplication"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "addEvent"]
+- ["So8NSObjectC", "addEventToCalendar"]
+- !private ["So8NSObjectC", "authorizationStatus"]
+- !private ["So8NSObjectC", "authorizationStatusForEntityType"]
+- !private ["So8NSObjectC", "calendar"]
+- !private ["So8NSObjectC", "defaultCalendarForNewEvents"]
+- !private ["So8NSObjectC", "dismiss"]
+- !private ["So8NSObjectC", "editViewDelegate"]
+- !private ["So8NSObjectC", "endDate"]
+- !private ["So8NSObjectC", "event"]
+- ["So8NSObjectC", "eventAlreadyExists"]
+- ["So8NSObjectC", "eventEditViewController"]
+- ["So8NSObjectC", "eventEditViewControllerDefaultCalendar"]
+- ["So8NSObjectC", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- ["So8NSObjectC", "eventStore"]
+- !private ["So8NSObjectC", "eventWithEventStore"]
+- !private ["So8NSObjectC", "events"]
+- !private ["So8NSObjectC", "eventsMatchingPredicate"]
+- ["So8NSObjectC", "generateEvent"]
+- ["So8NSObjectC", "getAuthorizationStatus"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "keyWindow"]
+- !private ["So8NSObjectC", "predicateForEvents"]
+- !private ["So8NSObjectC", "predicateForEventsWithStartDate"]
+- !private ["So8NSObjectC", "present"]
+- ["So8NSObjectC", "presentCalendarModalToAddEvent"]
+- ["So8NSObjectC", "presentEventCalendarDetailModal"]
+- !private ["So8NSObjectC", "recurrenceEndWithEndDate"]
+- !private ["So8NSObjectC", "recurrenceEndWithOccurrenceCount"]
+- !private ["So8NSObjectC", "recurrenceRules"]
+- ["So8NSObjectC", "requestAccess"]
+- !private ["So8NSObjectC", "requestAccessToEntityType"]
+- !private ["So8NSObjectC", "rootViewController"]
+- !private ["So8NSObjectC", "save"]
+- !private ["So8NSObjectC", "saveEvent"]
+- !private ["So8NSObjectC", "saveReminder"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "startDate"]
+- !private ["So8NSObjectC", "title"]
+- !private ["So8NSObjectP", "Date"]
+- ["So8NSObjectP", "EKAuthorizationStatus"]
+- !private ["So8NSObjectP", "EKEntityType"]
+- ["So8NSObjectP", "EKEvent"]
+- ["So8NSObjectP", "EKEventEditViewAction"]
+- ["So8NSObjectP", "EKEventEditViewController"]
+- ["So8NSObjectP", "EKEventStore"]
+- ["So8NSObjectP", "EKEventStoreRequestAccessCompletionHandler"]
+- !private ["So8NSObjectP", "EKRecurrenceRule"]
+- ["So8NSObjectP", "Event"]
+- ["So8NSObjectP", "EventsCalendarManagerResponse"]
+- !private ["So8NSObjectP", "TimeInterval"]
+- !private ["So8NSObjectP", "UIApplication"]
+- ["So8NSObjectP", ""]
+- ["So8NSObjectP", "addEvent"]
+- ["So8NSObjectP", "addEventToCalendar"]
+- !private ["So8NSObjectP", "authorizationStatus"]
+- !private ["So8NSObjectP", "authorizationStatusForEntityType"]
+- !private ["So8NSObjectP", "calendar"]
+- !private ["So8NSObjectP", "defaultCalendarForNewEvents"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "editViewDelegate"]
+- !private ["So8NSObjectP", "endDate"]
+- !private ["So8NSObjectP", "event"]
+- ["So8NSObjectP", "eventAlreadyExists"]
+- ["So8NSObjectP", "eventEditViewController"]
+- ["So8NSObjectP", "eventEditViewControllerDefaultCalendar"]
+- ["So8NSObjectP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- ["So8NSObjectP", "eventStore"]
+- !private ["So8NSObjectP", "eventWithEventStore"]
+- !private ["So8NSObjectP", "events"]
+- !private ["So8NSObjectP", "eventsMatchingPredicate"]
+- ["So8NSObjectP", "generateEvent"]
+- ["So8NSObjectP", "getAuthorizationStatus"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "keyWindow"]
+- !private ["So8NSObjectP", "predicateForEvents"]
+- !private ["So8NSObjectP", "predicateForEventsWithStartDate"]
+- !private ["So8NSObjectP", "present"]
+- ["So8NSObjectP", "presentCalendarModalToAddEvent"]
+- ["So8NSObjectP", "presentEventCalendarDetailModal"]
+- !private ["So8NSObjectP", "recurrenceEndWithEndDate"]
+- !private ["So8NSObjectP", "recurrenceEndWithOccurrenceCount"]
+- !private ["So8NSObjectP", "recurrenceRules"]
+- ["So8NSObjectP", "requestAccess"]
+- !private ["So8NSObjectP", "requestAccessToEntityType"]
+- !private ["So8NSObjectP", "rootViewController"]
+- !private ["So8NSObjectP", "save"]
+- !private ["So8NSObjectP", "saveEvent"]
+- !private ["So8NSObjectP", "saveReminder"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "startDate"]
+- !private ["So8NSObjectP", "title"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["Sj", ""]
+- !private ["Sj", "init"]
+- !private ["Sq", "init"]
+- !private ["Sk", ""]
+- !private ["Sk", "contains"]
+- !private ["Sm", ""]
+- !private ["Sm", "contains"]
+- ["SY", "=="]
+- ["SY", "Default_RawValue"]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- ["SY", "_code"]
+- ["SY", "_domain"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_getEmbeddedNSError"]
+- ["SY", "_rawHashValue"]
+- ["SY", "_userInfo"]
+- ["SY", "authorized"]
+- !private ["SY", "calendarAccessDeniedOrRestricted"]
+- ["SY", "code"]
+- ["SY", "denied"]
+- ["SY", "domain"]
+- !private ["SY", "event"]
+- !private ["SY", "eventAlreadyExistsInCalendar"]
+- !private ["SY", "eventNotAddedToCalendar"]
+- !private ["SY", "findStringSwitchCase"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- !private ["SY", "monthly"]
+- ["SY", "notDetermined"]
+- ["SY", "rawValue"]
+- ["SY", "restricted"]
+- !private ["SY", "thisEvent"]
+- !private ["SY", "unknown"]
+- ["SY", "userInfo"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s6ResultO", "failure"]
+- !private ["s6ResultO", "success"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", ""]
+- !private ["ST", "contains"]
+- !private ["s13SignedNumericP", ""]
+- !private ["s13SignedNumericP", "init"]
+- !private ["Sx", ""]
+- !private ["Sx", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
+- !private ["So12UIAppearanceP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "editViewDelegate"]
+- !private ["So21UIAppearanceContainerP", "event"]
+- !private ["So21UIAppearanceContainerP", "eventStore"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "present"]
+- !private ["So21UIAppearanceContainerP", "rootViewController"]
+- !private ["So13UIApplicationC", "keyWindow"]
+- !private ["So13UIApplicationC", "shared"]
+- !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "editViewDelegate"]
+- !private ["So18UIContentContainerP", "event"]
+- !private ["So18UIContentContainerP", "eventStore"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "present"]
+- !private ["So17UICoordinateSpaceP", "rootViewController"]
+- !private ["So13UIDynamicItemP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "editViewDelegate"]
+- !private ["So18UIFocusEnvironmentP", "event"]
+- !private ["So18UIFocusEnvironmentP", "eventStore"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "present"]
+- !private ["So18UIFocusEnvironmentP", "rootViewController"]
+- !private ["So11UIFocusItemP", "rootViewController"]
+- !private ["So20UIFocusItemContainerP", "rootViewController"]
+- !private ["So24UILargeContentViewerItemP", "rootViewController"]
+- ["So22UINavigationControllerC", ""]
+- !private ["So22UINavigationControllerC", "dismiss"]
+- !private ["So22UINavigationControllerC", "editViewDelegate"]
+- !private ["So22UINavigationControllerC", "event"]
+- !private ["So22UINavigationControllerC", "eventStore"]
+- !private ["So22UINavigationControllerC", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "editViewDelegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "event"]
+- !private ["So30UIPasteConfigurationSupportingP", "eventStore"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "keyWindow"]
+- !private ["So30UIPasteConfigurationSupportingP", "present"]
+- !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "dismiss"]
+- !private ["So11UIResponderC", "editViewDelegate"]
+- !private ["So11UIResponderC", "event"]
+- !private ["So11UIResponderC", "eventStore"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "keyWindow"]
+- !private ["So11UIResponderC", "present"]
+- !private ["So11UIResponderC", "rootViewController"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "editViewDelegate"]
+- !private ["So30UIResponderStandardEditActionsP", "event"]
+- !private ["So30UIResponderStandardEditActionsP", "eventStore"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "keyWindow"]
+- !private ["So30UIResponderStandardEditActionsP", "present"]
+- !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "editViewDelegate"]
+- !private ["So16UIStateRestoringP", "event"]
+- !private ["So16UIStateRestoringP", "eventStore"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "present"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "editViewDelegate"]
+- !private ["So18UITraitEnvironmentP", "event"]
+- !private ["So18UITraitEnvironmentP", "eventStore"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "present"]
+- !private ["So18UITraitEnvironmentP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "editViewDelegate"]
+- !private ["So23UIUserActivityRestoringP", "event"]
+- !private ["So23UIUserActivityRestoringP", "eventStore"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "keyWindow"]
+- !private ["So23UIUserActivityRestoringP", "present"]
+- !private ["So23UIUserActivityRestoringP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "shared"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "rootViewController"]
+- ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "dismiss"]
+- !private ["So16UIViewControllerC", "editViewDelegate"]
+- !private ["So16UIViewControllerC", "event"]
+- !private ["So16UIViewControllerC", "eventStore"]
+- !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "present"]
+- !private ["So8UIWindowC", "rootViewController"]
+- !private ["s14_ArrayProtocolP", "contains"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "contains"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "contains"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "EKEntityType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "EKEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "EKEventEditViewController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "EKEventStore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "EKRecurrenceRule"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "TimeInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addEventToCalendar"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "authorizationStatus"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "calendar"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultCalendarForNewEvents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "editViewDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "endDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "event"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "eventAlreadyExists"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "eventEditViewController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "eventEditViewControllerDefaultCalendar"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "eventStore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "events"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "generateEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getAuthorizationStatus"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "keyWindow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "predicateForEvents"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "presentCalendarModalToAddEvent"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "presentEventCalendarDetailModal"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "recurrenceRules"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requestAccess"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Date"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EKEntityType"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EKEvent"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EKEventEditViewController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EKEventStore"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "EKRecurrenceRule"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "TimeInterval"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIApplication"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addEvent"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addEventToCalendar"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "authorizationStatus"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "calendar"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "defaultCalendarForNewEvents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "dismiss"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "editViewDelegate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "endDate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "event"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventAlreadyExists"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventEditViewController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventEditViewControllerDefaultCalendar"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventEditViewControllerDefaultCalendarForNewEvents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "eventStore"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "events"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "generateEvent"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getAuthorizationStatus"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "keyWindow"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "predicateForEvents"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentCalendarModalToAddEvent"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "presentEventCalendarDetailModal"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "recurrenceRules"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "requestAccess"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "rootViewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "save"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "startDate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "title"]
+- !private ["s21_ObjectiveCBridgeableP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "SB"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- "8ABcommon11CustomErrorO"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "10Foundation4DateV"
+- !private "Se"
+- !private "Sd"
+- "So21EKAuthorizationStatusV"
+- "So14EKCalendarItemC"
+- !private "So12EKEntityTypeV"
+- !private "So7EKEventC"
+- !private "So25EKEventEditViewControllerC"
+- "So23EKEventEditViewDelegateP"
+- "So12EKEventStoreC"
+- "So8EKObjectC"
+- !private "So15EKRecurrenceEndC"
+- !private "So21EKRecurrenceFrequencyV"
+- !private "So16EKRecurrenceRuleC"
+- !private "So6EKSpanV"
+- !private "SE"
+- "SQ"
+- "s5ErrorP"
+- "8ABcommon5EventV"
+- "8ABcommon21EventsCalendarManagerC"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "SF"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sj"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s6ResultO"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "s13SignedNumericP"
+- !private "Sx"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So13UIApplicationC"
+- !private "So18UIContentContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So24UILargeContentViewerItemP"
+- "So22UINavigationControllerC"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "So8UIWindowC"
+- !private "s14_ArrayProtocolP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/Pods/Target Support Files/ABcommon/ABcommon-umbrella.h"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/build/Pods.build/Debug-iphonesimulator/ABcommon.build/unextended-module.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKitUI.framework/Headers/EventKitUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/Darwin.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NetworkExtension.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "094a5cfcd70f532ef4a5bf4be6efb2f2"

@@ -1,0 +1,366 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NEHotspotCallback"
+- "NEPlatform"
+- "NEHotspotError"
+- "NEHotspotManager"
+provides-nominal:
+- "8ABcommon17NEHotspotCallbackV"
+- "8ABcommon10NEPlatformV"
+- "8ABcommon14NEHotspotErrorO"
+- "8ABcommon16NEHotspotManagerC"
+provides-member:
+- ["8ABcommon17NEHotspotCallbackV", ""]
+- ["8ABcommon10NEPlatformV", ""]
+- ["8ABcommon14NEHotspotErrorO", ""]
+- ["8ABcommon16NEHotspotManagerC", ""]
+provides-dynamic-lookup:
+- "advanceConnectionToWifi"
+- "apply"
+- "currentSSIDs"
+- "remove"
+- "simpleConnectionToWifi"
+depends-top-level:
+- !private "!"
+- !private "!="
+- "=="
+- "AnyObject"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CFString"
+- "CNCopyCurrentNetworkInfo"
+- !private "CNCopySupportedInterfaces"
+- "CastingPrecedence"
+- "Error"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- "NEHotspotCallback"
+- "NEHotspotConfiguration"
+- !private "NEHotspotConfigurationManager"
+- "NEHotspotError"
+- "NEHotspotManager"
+- "NEPlatform"
+- "NSError"
+- "String"
+- !private "TARGET_OS_SIMULATOR"
+- "Void"
+- !private "apply"
+- "currentSSIDs"
+- "kCNNetworkInfoKeySSID"
+depends-member:
+- !private ["Sa", "compactMap"]
+- !private ["Sa", "first"]
+- !private ["SK", ""]
+- !private ["SK", "compactMap"]
+- !private ["SK", "first"]
+- !private ["s7CVarArgP", "apply"]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "compactMap"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "joinOnce"]
+- !private ["s7CVarArgP", "removeConfiguration"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "ssid"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["Sl", ""]
+- !private ["Sl", "compactMap"]
+- !private ["Sl", "first"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["10Foundation15ContiguousBytesP", "compactMap"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "apply"]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "compactMap"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "joinOnce"]
+- !private ["s28CustomDebugStringConvertibleP", "removeConfiguration"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "ssid"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "compactMap"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "apply"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "compactMap"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "joinOnce"]
+- !private ["s23CustomStringConvertibleP", "removeConfiguration"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "ssid"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "compactMap"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["Se", "compactMap"]
+- !private ["Se", "first"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- !private ["SE", "compactMap"]
+- !private ["SE", "first"]
+- !private ["SE", "subscript"]
+- !private ["SQ", ""]
+- !private ["SQ", "apply"]
+- !private ["SQ", "code"]
+- !private ["SQ", "compactMap"]
+- !private ["SQ", "first"]
+- !private ["SQ", "init"]
+- !private ["SQ", "joinOnce"]
+- !private ["SQ", "removeConfiguration"]
+- !private ["SQ", "shared"]
+- !private ["SQ", "ssid"]
+- !private ["SQ", "subscript"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_getEmbeddedNSError"]
+- ["s5ErrorP", "_userInfo"]
+- ["s5ErrorP", "code"]
+- ["s5ErrorP", "domain"]
+- !private ["s5ErrorP", "generic"]
+- !private ["s5ErrorP", "unknown"]
+- ["s5ErrorP", "userInfo"]
+- !private ["s5ErrorP", "usingSimulator"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "compactMap"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["SH", ""]
+- !private ["SH", "apply"]
+- !private ["SH", "code"]
+- !private ["SH", "compactMap"]
+- !private ["SH", "first"]
+- !private ["SH", "init"]
+- !private ["SH", "joinOnce"]
+- !private ["SH", "removeConfiguration"]
+- !private ["SH", "shared"]
+- !private ["SH", "ssid"]
+- !private ["SH", "subscript"]
+- !private ["SM", ""]
+- !private ["SM", "compactMap"]
+- !private ["SM", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "compactMap"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- ["8ABcommon17NEHotspotCallbackV", "NEHotspotError"]
+- ["8ABcommon17NEHotspotCallbackV", "Void"]
+- ["8ABcommon17NEHotspotCallbackV", "init"]
+- ["8ABcommon17NEHotspotCallbackV", "onError"]
+- ["8ABcommon17NEHotspotCallbackV", "onSuccess"]
+- !private ["So22NEHotspotConfigurationC", "init"]
+- !private ["So22NEHotspotConfigurationC", "joinOnce"]
+- !private ["So22NEHotspotConfigurationC", "ssid"]
+- !private ["So29NEHotspotConfigurationManagerC", "apply"]
+- !private ["So29NEHotspotConfigurationManagerC", "removeConfiguration"]
+- !private ["So29NEHotspotConfigurationManagerC", "shared"]
+- ["8ABcommon14NEHotspotErrorO", "Error"]
+- ["8ABcommon14NEHotspotErrorO", ""]
+- ["8ABcommon14NEHotspotErrorO", "_code"]
+- ["8ABcommon14NEHotspotErrorO", "_domain"]
+- ["8ABcommon14NEHotspotErrorO", "_getEmbeddedNSError"]
+- ["8ABcommon14NEHotspotErrorO", "_userInfo"]
+- ["8ABcommon14NEHotspotErrorO", "code"]
+- ["8ABcommon14NEHotspotErrorO", "domain"]
+- ["8ABcommon14NEHotspotErrorO", "generic"]
+- ["8ABcommon14NEHotspotErrorO", "unknown"]
+- ["8ABcommon14NEHotspotErrorO", "userInfo"]
+- ["8ABcommon14NEHotspotErrorO", "usingSimulator"]
+- !private ["8ABcommon16NEHotspotManagerC", "AnyObject"]
+- ["8ABcommon16NEHotspotManagerC", "Bool"]
+- !private ["8ABcommon16NEHotspotManagerC", "CFString"]
+- !private ["8ABcommon16NEHotspotManagerC", "CNCopyCurrentNetworkInfo"]
+- !private ["8ABcommon16NEHotspotManagerC", "CNCopySupportedInterfaces"]
+- ["8ABcommon16NEHotspotManagerC", "NEHotspotCallback"]
+- ["8ABcommon16NEHotspotManagerC", "NEHotspotConfiguration"]
+- !private ["8ABcommon16NEHotspotManagerC", "NEHotspotConfigurationManager"]
+- !private ["8ABcommon16NEHotspotManagerC", "NEHotspotError"]
+- !private ["8ABcommon16NEHotspotManagerC", "NEPlatform"]
+- !private ["8ABcommon16NEHotspotManagerC", "NSError"]
+- ["8ABcommon16NEHotspotManagerC", "String"]
+- ["8ABcommon16NEHotspotManagerC", "advanceConnectionToWifi"]
+- !private ["8ABcommon16NEHotspotManagerC", "apply"]
+- ["8ABcommon16NEHotspotManagerC", "currentSSIDs"]
+- ["8ABcommon16NEHotspotManagerC", "deinit"]
+- ["8ABcommon16NEHotspotManagerC", "init"]
+- !private ["8ABcommon16NEHotspotManagerC", "kCNNetworkInfoKeySSID"]
+- ["8ABcommon16NEHotspotManagerC", "remove"]
+- ["8ABcommon16NEHotspotManagerC", "simpleConnectionToWifi"]
+- ["8ABcommon10NEPlatformV", "Bool"]
+- !private ["8ABcommon10NEPlatformV", "TARGET_OS_SIMULATOR"]
+- ["8ABcommon10NEPlatformV", "init"]
+- ["8ABcommon10NEPlatformV", "isSimulator"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "code"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "joinOnce"]
+- !private ["So8NSCodingP", "ssid"]
+- !private ["So9NSCopyingP", "code"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "joinOnce"]
+- !private ["So9NSCopyingP", "ssid"]
+- !private ["So7NSErrorC", "code"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "apply"]
+- !private ["So8NSObjectC", "applyConfiguration"]
+- !private ["So8NSObjectC", "code"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "joinOnce"]
+- !private ["So8NSObjectC", "removeConfiguration"]
+- !private ["So8NSObjectC", "removeConfigurationForHS20DomainName"]
+- !private ["So8NSObjectC", "removeConfigurationForSSID"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "ssid"]
+- !private ["So8NSObjectP", "apply"]
+- !private ["So8NSObjectP", "applyConfiguration"]
+- !private ["So8NSObjectP", "code"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "joinOnce"]
+- !private ["So8NSObjectP", "removeConfiguration"]
+- !private ["So8NSObjectP", "removeConfigurationForHS20DomainName"]
+- !private ["So8NSObjectP", "removeConfigurationForSSID"]
+- !private ["So8NSObjectP", "shared"]
+- !private ["So8NSObjectP", "ssid"]
+- !private ["So14NSSecureCodingP", "code"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "joinOnce"]
+- !private ["So14NSSecureCodingP", "ssid"]
+- !private ["Sj", ""]
+- !private ["Sk", ""]
+- !private ["Sk", "compactMap"]
+- !private ["Sk", "first"]
+- !private ["Sm", ""]
+- !private ["Sm", "compactMap"]
+- !private ["Sm", "first"]
+- !private ["ST", ""]
+- !private ["ST", "compactMap"]
+- !private ["ST", "first"]
+- !private ["ST", "subscript"]
+- !private ["Sx", ""]
+- !private ["s14_ArrayProtocolP", "compactMap"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s24_DestructorSafeContainerP", "compactMap"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "compactMap"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "compactMap"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apply"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "joinOnce"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeConfiguration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ssid"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "apply"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "code"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "joinOnce"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "removeConfiguration"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "shared"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "ssid"]
+- !private ["s21_ObjectiveCBridgeableP", "_ObjectiveCType"]
+- !private ["s21_ObjectiveCBridgeableP", "_bridgeToObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_conditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_forceBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "_unconditionallyBridgeFromObjectiveC"]
+- !private ["s21_ObjectiveCBridgeableP", "compactMap"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SD"
+- !private "SE"
+- !private "SQ"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "SH"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "8ABcommon17NEHotspotCallbackV"
+- !private "So22NEHotspotConfigurationC"
+- !private "So29NEHotspotConfigurationManagerC"
+- "8ABcommon14NEHotspotErrorO"
+- "8ABcommon16NEHotspotManagerC"
+- "8ABcommon10NEPlatformV"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "Sj"
+- !private "Sk"
+- !private "Sm"
+- !private "ST"
+- !private "Sx"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Network.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/Pods/Target Support Files/ABcommon/ABcommon-umbrella.h"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/francescoleoni/Desktop/ABcommon.ios/Example/build/Pods.build/Debug-iphonesimulator/ABcommon.build/unextended-module.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKitUI.framework/Headers/EventKitUI.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Network.framework/Headers/Network.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/usr/include/Darwin.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/NetworkExtension.framework/Headers/NetworkExtension.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/EventKit.framework/Headers/EventKit.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Users/francescoleoni/Downloads/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d381a84477535b6889f8c323f6337cb3"

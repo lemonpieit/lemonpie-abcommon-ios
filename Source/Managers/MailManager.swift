@@ -9,56 +9,62 @@
 import MessageUI
 
 protocol MailManagerDelegate: class {
-    func errorOccurred(_ error: Error)
+  func errorOccurred(_ error: Error)
 }
 
 class MailManager: NSObject, MFMailComposeViewControllerDelegate {
-        
-    // MARK: - Properties
-    private var viewController: UIViewController?
+  
+  // MARK: - Properties
+  /// The view controller in which to present the mail view controller.
+  private var viewController: UIViewController?
+  
+  // MARK: - Delegate
+  weak var delegate: MailManagerDelegate?
+  
+  // MARK: - Init
+  init(viewController: UIViewController) {
+    self.viewController = viewController
+  }
+  
+  // MARK: - Actions
+  /// Presents a new `MailViewController` with prefilled fields.
+  /// - Parameters:
+  ///   - emails: The email address of the recipients.
+  ///   - subject: The subject of the email.
+  ///   - body: The body of the email.
+  func sendEmail(to emails: [String], with subject: String = "", and body: String = "") {
+    guard MFMailComposeViewController.canSendMail() else { return }
     
-    // MARK: - Delegate
-    weak var delegate: MailManagerDelegate?
-
-    // MARK: - Init
-    init(viewController: UIViewController) {
-        self.viewController = viewController
+    let composer = MFMailComposeViewController()
+    composer.mailComposeDelegate = self
+    composer.setToRecipients(emails)
+    composer.setSubject(subject)
+    composer.setMessageBody(body, isHTML: false)
+    
+    viewController?.present(composer, animated: true)
+  }
+  
+  // MARK: - MFMailComposeViewControllerDelegate
+  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    if let error = error {
+      controller.dismiss(animated: true)
+      delegate?.errorOccurred(error)
+      return
     }
     
-    // MARK: - Actions
-    func sendEmail(to emails: [String], with subject: String = "", and body: String = "") {
-        guard MFMailComposeViewController.canSendMail() else { return }
-        
-        let composer = MFMailComposeViewController()
-        composer.mailComposeDelegate = self
-        composer.setToRecipients(emails)
-        composer.setSubject(subject)
-        composer.setMessageBody(body, isHTML: false)
-        
-        viewController?.present(composer, animated: true)
+    switch result {
+    case .cancelled:
+      print("Email cancelled")
+    case .failed:
+      print("Email failed")
+    case .saved:
+      print("Email saved")
+    case .sent:
+      print("Email sent")
+    @unknown default:
+      print("Email fatal error")
     }
     
-    // MARK: - MFMailComposeViewControllerDelegate
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        if let error = error {
-            controller.dismiss(animated: true)
-            delegate?.errorOccurred(error)
-            return
-        }
-        
-        switch result {
-        case .cancelled:
-            print("Email cancelled")
-        case .failed:
-            print("Email failed")
-        case .saved:
-            print("Email saved")
-        case .sent:
-            print("Email sent")
-        @unknown default:
-            print("Email fatal error")
-        }
-        
-        controller.dismiss(animated: true)
-    }
+    controller.dismiss(animated: true)
+  }
 }
