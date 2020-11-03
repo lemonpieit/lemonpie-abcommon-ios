@@ -19,6 +19,25 @@ public extension UIViewController {
   func removeBackButton() {
     navigationItem.hidesBackButton = true
   }
+  
+  /// Adds a `UIViewController` as a child to the parent `UIViewController`.
+  /// - Parameter child: The child `UIViewController` to add.
+  func add(_ child: UIViewController) {
+    addChild(child)
+    view.addSubview(child.view)
+    child.didMove(toParent: self)
+  }
+  
+  /// Removes a child `UIViewController` from the parent `UIViewController`.
+  func remove() {
+    guard parent != nil else {
+      return
+    }
+    
+    willMove(toParent: nil)
+    view.removeFromSuperview()
+    removeFromParent()
+  }
 
   /// Dismisses the keyboard
   func dismissKeyboard() {
