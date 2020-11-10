@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABcommon'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'ABenergie iOS library.'
   
 # This description is used to generate tags and improve search results.
@@ -40,6 +40,14 @@ Pod::Spec.new do |s|
     managers.source_files = 'Source/Managers/*.swift'
   end
   
+  s.subspec 'Protocols' do |protocols|
+    extensions.source_files = 'Source/Protocols/*.swift'
+  end
+
+  s.subspec 'Helpers' do |helpers|
+    extensions.source_files = 'Source/Helpers/*.swift'
+  end
+
   # s.subspec 'MyLibrary' do |libOne|
   #    libOne.source_files  = 'Headers", "Headers/**/*.h'
   #    libOne.exclude_files = 'Headers/Exclude'
