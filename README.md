@@ -21,6 +21,13 @@ iOS 11.0 or newer
 ABcommon is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+Add at line 3 to preserve the pod folder structure.
+```
+install! 'cocoapods',
+  :preserve_pod_file_structure => true
+
+```
+
 ```ruby
 pod 'ABcommon', :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios'
 ```
