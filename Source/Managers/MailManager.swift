@@ -8,11 +8,11 @@
 
 import MessageUI
 
-protocol MailManagerDelegate: class {
+public protocol MailManagerDelegate: class {
   func errorOccurred(_ error: Error)
 }
 
-class MailManager: NSObject, MFMailComposeViewControllerDelegate {
+public class MailManager: NSObject, MFMailComposeViewControllerDelegate {
   // MARK: - Properties
 
   /// The view controller in which to present the mail view controller.
@@ -20,12 +20,13 @@ class MailManager: NSObject, MFMailComposeViewControllerDelegate {
 
   // MARK: - Delegate
 
-  weak var delegate: MailManagerDelegate?
+  private weak var delegate: MailManagerDelegate?
 
   // MARK: - Init
 
-  init(viewController: UIViewController) {
-    self.viewController = viewController
+  public init(delegate: UIViewController & MailManagerDelegate) {
+    self.viewController = delegate
+    self.delegate = delegate
   }
 
   // MARK: - Actions
@@ -35,7 +36,7 @@ class MailManager: NSObject, MFMailComposeViewControllerDelegate {
   ///   - emails: The email address of the recipients.
   ///   - subject: The subject of the email.
   ///   - body: The body of the email.
-  func sendEmail(to emails: [String], with subject: String = "", and body: String = "") {
+  public func sendEmail(to emails: [String], with subject: String = "", and body: String = "") {
     guard MFMailComposeViewController.canSendMail() else { return }
 
     let composer = MFMailComposeViewController()
@@ -49,7 +50,7 @@ class MailManager: NSObject, MFMailComposeViewControllerDelegate {
 
   // MARK: - MFMailComposeViewControllerDelegate
 
-  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+  public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
     if let error = error {
       controller.dismiss(animated: true)
       delegate?.errorOccurred(error)

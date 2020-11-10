@@ -9,18 +9,18 @@
 import CoreLocation
 import UIKit
 
-protocol LocationManagerDelegate: class {
+public protocol LocationManagerDelegate: class {
   func authorizationStatus(_ status: Bool)
 }
 
-class LocationManager: NSObject, CLLocationManagerDelegate {
+public class LocationManager: NSObject, CLLocationManagerDelegate {
   private static var privateShared: LocationManager?
   weak var delegate: LocationManagerDelegate?
   var locationManager = CLLocationManager()
 
   // MARK: - Auth
 
-  func getLocationAuth(always: Bool) {
+  public func getLocationAuth(always: Bool) {
     locationManager.delegate = self
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
 
@@ -35,7 +35,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
   // MARK: - CLLocationManagerDelegate
 
-  func locationManager(_: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+  public func locationManager(_: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     switch status {
     case .authorizedWhenInUse:
       locationManager.requestLocation()
@@ -51,7 +51,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
   }
 
-  func checkLocationEnabled() {
+  public func checkLocationEnabled() {
     if CLLocationManager.locationServicesEnabled() {
       switch CLLocationManager.authorizationStatus() {
       case .authorizedAlways, .authorizedWhenInUse:
@@ -68,18 +68,18 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
   }
 
   // Called by startUpdatingLocation() and requestLocation()
-  func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+  public func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     guard let location = locations.first else { return }
     print(location.coordinate)
   }
 
-  func locationManager(_: CLLocationManager, didFailWithError error: Error) {
+  public func locationManager(_: CLLocationManager, didFailWithError error: Error) {
     print(error.localizedDescription)
   }
 
   // MARK: - Singleton helpers
 
-  class func shared() -> LocationManager {
+  public class func shared() -> LocationManager {
     guard let shared = privateShared else {
       privateShared = LocationManager()
       return privateShared!
@@ -87,7 +87,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     return shared
   }
 
-  class func destroySingleton() {
+  public class func destroySingleton() {
     privateShared = nil
   }
 }

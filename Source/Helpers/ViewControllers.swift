@@ -23,7 +23,7 @@ public protocol ViewModel: BaseViewModel {
   init(delegate: Delegate)
 }
 
-extension ViewModel {
+public extension ViewModel {
   init(delegate: Delegate) {
     self.init()
     self.delegate = delegate
@@ -40,7 +40,7 @@ public protocol DataSource: BaseViewModel {
   init(delegate: DataSourceDelegate)
 }
 
-extension DataSource {
+public extension DataSource {
   init(delegate: DataSourceDelegate) {
     self.init()
     self.delegate = delegate
@@ -54,7 +54,7 @@ public protocol HasBaseViewModel: class {
   var viewModel: BVM! { get set }
 }
 
-extension HasBaseViewModel {
+public extension HasBaseViewModel {
   func configureBaseViewModel() {
     viewModel = BVM()
   }
@@ -67,7 +67,7 @@ public protocol HasViewModel: class {
   var viewModel: VM! { get set }
 }
 
-extension HasViewModel {
+public extension HasViewModel {
   func configureViewModel() {
     guard let delegate = self as? VM.Delegate else {
       viewModel = VM()
@@ -78,13 +78,13 @@ extension HasViewModel {
 }
 
 /// Use this protocol if a class must have a `DataSource` with an internal `Delegate`.
-private protocol HasDataSource: class {
+public protocol HasDataSource: class {
   associatedtype DS: DataSource
   
   var dataSource: DS! { get set }
 }
 
-extension HasDataSource {
+public extension HasDataSource {
   func configureDataSource() {
     guard let delegate = self as? DS.DataSourceDelegate else {
       dataSource = DS()
@@ -95,45 +95,45 @@ extension HasDataSource {
 }
 
 /// Use this `ViewController` if you need a `ViewModel` without an internal `Delegate`.
-class BaseViewModelVC<BVM: BaseViewModel>: ViewController, HasBaseViewModel {
+open class BaseViewModelVC<BVM: BaseViewModel>: ViewController, HasBaseViewModel {
   
-  var viewModel: BVM!
+  open var viewModel: BVM!
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     configureBaseViewModel()
     super.viewDidLoad()
   }
 }
 
 /// Use this `ViewController` if you need a `ViewModel` with an internal `Delegate`.
-class ViewModelVC<VM: ViewModel>: ViewController, HasViewModel {
+open class ViewModelVC<VM: ViewModel>: ViewController, HasViewModel {
   
-  var viewModel: VM!
+  open var viewModel: VM!
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     configureViewModel()
     super.viewDidLoad()
   }
 }
 
 /// Use this `ViewController` if you need a `DataSource`.
-class DataSourceVC<DS: DataSource>: ViewController, HasDataSource {
+open class DataSourceVC<DS: DataSource>: ViewController, HasDataSource {
   
-  var dataSource: DS!
+  open var dataSource: DS!
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     configureDataSource()
     super.viewDidLoad()
   }
 }
 
 /// Use this `ViewController` if you need a `DataSource` and a `ViewModel` without an internal `Delegate`.
-class BaseViewModelDataSourceVC<BVM: BaseViewModel, DS: DataSource>: ViewController, HasBaseViewModel, HasDataSource {
+open class BaseViewModelDataSourceVC<BVM: BaseViewModel, DS: DataSource>: ViewController, HasBaseViewModel, HasDataSource {
   
-  var viewModel: BVM!
-  var dataSource: DS!
+  open var viewModel: BVM!
+  open var dataSource: DS!
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     configureBaseViewModel()
     configureDataSource()
     super.viewDidLoad()
@@ -141,12 +141,12 @@ class BaseViewModelDataSourceVC<BVM: BaseViewModel, DS: DataSource>: ViewControl
 }
 
 /// Use this `ViewController` if you need a `DataSource` and a `ViewModel` with an internal `Delegate`.
-class ViewModelDataSourceVC<VM: ViewModel, DS: DataSource>: ViewController, HasViewModel, HasDataSource {
+open class ViewModelDataSourceVC<VM: ViewModel, DS: DataSource>: ViewController, HasViewModel, HasDataSource {
   
-  var viewModel: VM!
-  var dataSource: DS!
+  open var viewModel: VM!
+  open var dataSource: DS!
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     configureViewModel()
     configureDataSource()
     super.viewDidLoad()
@@ -154,9 +154,9 @@ class ViewModelDataSourceVC<VM: ViewModel, DS: DataSource>: ViewController, HasV
 }
 
 /// Use this `ViewController` if you don't need a `ViewModel` or even a `DataSource`.
-class ViewController: UIViewController {
+open class ViewController: UIViewController {
   
-  override func viewDidLoad() {
+  open override func viewDidLoad() {
     super.viewDidLoad()
     setUp()
     configureUI()
@@ -165,7 +165,7 @@ class ViewController: UIViewController {
     configureTableView()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
+  open override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     configureNavigationBar()
   }
@@ -174,25 +174,25 @@ class ViewController: UIViewController {
   // MARK: - Configurations
   
   /// Use this method to set up the view controller.
-  func setUp() { }
+  open func setUp() { }
   
   /// Use this method to configure the navigation controller.
   /// This method is called every time the view appear.
   ///
   /// Use `super.configureNavigationBar()` if you want to hide the back button string.
-  func configureNavigationBar() {
+  open func configureNavigationBar() {
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
   }
   
   /// Use this method to configure the graphic elements.
-  func configureUI() { }
+  open func configureUI() { }
   
   /// Use this method to configure every text and localization of the view controller.
-  func configureTexts() { }
+  open func configureTexts() { }
   
   /// Use this method to configure the `collectionView` if needed.
-  func configureCollectionView() { }
+  open func configureCollectionView() { }
   
   /// Use this method to configure the `tableView` if needed.
-  func configureTableView() { }
+  open func configureTableView() { }
 }

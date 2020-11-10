@@ -6,14 +6,14 @@
 
 import UIKit
 
-protocol Inittable {
+public protocol Inittable {
   static var nibName: String { get }
   var nibContentView: UIView { get }
   
   func loadNib()
 }
 
-extension Inittable where Self: UIView {
+public extension Inittable where Self: UIView {
   static var nibName: String {
     return String(describing: self)
   }

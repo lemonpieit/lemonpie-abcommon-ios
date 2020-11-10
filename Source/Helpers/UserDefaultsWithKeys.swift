@@ -7,11 +7,8 @@
 
 import Foundation
 
-/// Use this`enum` to define the `UserDefaults` keys.
-enum UserDefaultsKeys: String, CaseIterable {
-  #warning("Add keys in order to use SwiftDefaults")
-  case addCases
-}
+/// Extend and use this`enum` to define the `UserDefaults` keys.
+public struct Keys { }
 
 /// Use this enum to save an object in `UserDefaults`.
 ///
@@ -23,12 +20,12 @@ enum UserDefaultsKeys: String, CaseIterable {
 ///
 /// ```
 /// // GET
-/// SwiftDefaults.bool[.hasShownOnboarding] // Optional(false)
+/// SwiftDefaults.bool[Keys.hasShownOnboarding] // Optional(false)
 ///
 /// // SET
-/// SwiftDefaults.bool[.hasShownOnboarding] = true
+/// SwiftDefaults.bool[Keys.hasShownOnboarding] = true
 /// ```
-enum SwiftDefaults {
+public enum SwiftDefaults {
   static let string = SwiftDefaultsLogic<String>.self
   static let int = SwiftDefaultsLogic<Int>.self
   static let float = SwiftDefaultsLogic<Float>.self
@@ -42,17 +39,17 @@ enum SwiftDefaults {
 
 /// A helper class that holds a static `UserDefaults`.
 private struct SwiftDefaultsConstants {
-  static let userDefaults = UserDefaults()
+  static let userDefaults = UserDefaults.standard
 }
 
 /// Do not use this class, use instead `SwiftDefaults` class.
-class SwiftDefaultsLogic<Value> {
+internal class SwiftDefaultsLogic<Value> {
   
   /// Removes an object at a specified key.
   ///
   /// - Parameter key: The key to use.
-  static func removeObject(forKey key: UserDefaultsKeys) {
-    SwiftDefaultsConstants.userDefaults.removeObject(forKey: key.rawValue)
+  static func removeObject(forKey key: String) {
+    SwiftDefaultsConstants.userDefaults.removeObject(forKey: key)
   }
   
   /// Get or set a `Value` for a `UserDefaultsKeys`.
@@ -73,12 +70,12 @@ class SwiftDefaultsLogic<Value> {
   /// userDefaults[.hasShownOnboarding] = true
   /// ```
   ///
-  static subscript(key: UserDefaultsKeys) -> Value? {
+  static subscript(key: String) -> Value? {
     get {
-      SwiftDefaultsConstants.userDefaults.object(forKey: key.rawValue) as? Value
+      SwiftDefaultsConstants.userDefaults.object(forKey: key) as? Value
     }
     set {
-      SwiftDefaultsConstants.userDefaults.setValue(newValue, forKey: key.rawValue)
+      SwiftDefaultsConstants.userDefaults.setValue(newValue, forKey: key)
     }
   }
 }

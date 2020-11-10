@@ -9,7 +9,7 @@ import Foundation
 import os
 
 /// Defines the basic function of a `Logger`.
-protocol Logging {
+public protocol Logging {
   
   /// Prints to the `Debug area` and to the `Console` a custom message.
   ///
@@ -54,7 +54,7 @@ protocol Logging {
   static func printInDebugger(type: Logger.Level, _ message: Any, line: UInt, funcName: String, filePath: String)
 }
 
-extension Logging {
+public extension Logging {
   
   /// Prints an `Info` message to the `Debug area` and to the `Console`.
   ///
@@ -146,9 +146,9 @@ extension Logging {
   }
 }
 
-class Logger: Logging {
+public class Logger: Logging {
   
-  enum Level: String {
+  public enum Level: String {
     case info = "INFO ⚪️"
     case debug = "DEBUG 🐛"
     case api = "API 🐝"
@@ -161,21 +161,21 @@ class Logger: Logging {
   
   // MARK: - Generic
   
-  static func print(type: Level, _ message: Any, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
+  public static func print(type: Level, _ message: Any, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
     //    #if DEVELOPMENT || STAGING
     let osMessage = "\(type.rawValue) [\(sourceFileName(filePath: filePath)).\(funcName)] line \(line) -> \(message)"
     os_log("%{public}@", log: OSLog.from(loggerLevel: type), type: OSLogType.from(loggerLevel: type), osMessage as NSString)
     //    #endif
   }
   
-  static func osLog(type: Level, log: OSLog, _ message: Any, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
+  public static func osLog(type: Level, log: OSLog, _ message: Any, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
     //    #if DEVELOPMENT || STAGING
     let osMessage = "\(type.rawValue) [\(sourceFileName(filePath: filePath)).\(funcName)] line \(line) -> \(message)"
     os_log("%{public}@", log: log, type: OSLogType.from(loggerLevel: type), osMessage as NSString)
     //    #endif
   }
   
-  static func printLocalized(_ error: Error, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
+  public static func printLocalized(_ error: Error, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
     print(type: .error, error.localizedDescription, line: line, funcName: funcName, filePath: filePath)
   }
 }
@@ -191,7 +191,7 @@ extension Logger {
 
 extension Logger {
   @available(*, deprecated, message: "Use print(type:_:line:funcName:filePath:) instead")
-  static func printInDebugger(type: Level, _ message: Any, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
+  public static func printInDebugger(type: Level, _ message: Any, line: UInt = #line, funcName: String = #function, filePath: String = #file) {
     let messageComp = "\(Date()) - \(type.rawValue) [\(sourceFileName(filePath: filePath)).\(funcName)] line \(line) -> \(message)"
     print(messageComp)
   }
@@ -202,7 +202,7 @@ extension Logger {
   }
 }
 
-extension OSLog {
+public extension OSLog {
   private static var subsystem = Bundle.main.bundleIdentifier!
   
   static let debug = OSLog(subsystem: subsystem, category: "debug")
@@ -224,7 +224,7 @@ extension OSLog {
   }
 }
 
-extension OSLogType {
+public extension OSLogType {
   static func from(loggerLevel: Logger.Level) -> Self {
     switch loggerLevel {
     case .debug:

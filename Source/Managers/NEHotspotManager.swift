@@ -31,7 +31,7 @@ public enum NEHotspotError: Error {
   case unknown
 }
 
-enum NEHotspotManager {
+public enum NEHotspotManager {
   // MARK: - Public Methods
 
   public static func simpleConnectionToWifi(ssid: String, password: String, isWEP: Bool, completionHandler: NEHotspotCallback?) {

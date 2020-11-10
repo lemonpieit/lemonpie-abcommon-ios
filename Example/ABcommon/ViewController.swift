@@ -9,7 +9,7 @@
 import UIKit
 import ABcommon
 
-class ViewController: UIViewController {
+class NViewController: ViewController {
   
   enum Style: Navigatable {
     case first
@@ -33,8 +33,18 @@ class ViewController: UIViewController {
     }
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  lazy var mm = MailManager(delegate: self)
+  
+  override func setUp() {
+    mm.sendEmail(to: [""])
     navigationController?.configureNavigationBar(style: Style.first)
   }
+}
+
+extension NViewController: MailManagerDelegate {
+  func errorOccurred(_ error: Error) {
+    
+  }
+  
+  
 }

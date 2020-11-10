@@ -195,7 +195,6 @@ public struct Gradient: Equatable {
     view.layer.masksToBounds = true
     view.layer.insertSublayer(layer, at: 0)
   }
-  
 }
 
 public extension Gradient {
