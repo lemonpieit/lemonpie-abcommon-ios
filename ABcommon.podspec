@@ -32,8 +32,8 @@ Pod::Spec.new do |s|
   s.swift_version = '5.2'
   s.platform = :ios, '11.0'
   
-  s.subspec 'ABcommon' do |ABcommon|
-    ABcommon.source_files = 'Source/*.swift'
+  s.subspec 'All' do |all|
+    all.source_files = 'Source/*.swift'
   end
 
   s.subspec 'Extensions' do |extensions|
