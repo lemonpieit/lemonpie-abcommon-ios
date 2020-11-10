@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://abenergie.visualstudio.com/ABcommon.ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Luigi Aiello' => 'luigi.aiello@abenergie.it', 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
-  s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v1.0.0' }
+  s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v1.1.1' }
   s.social_media_url = 'https://github.com/fraleo2406'
   s.social_media_url = 'https://github.com/mo3bius'
   
@@ -41,11 +41,11 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Protocols' do |protocols|
-    extensions.source_files = 'Source/Protocols/*.swift'
+    protocols.source_files = 'Source/Protocols/*.swift'
   end
 
   s.subspec 'Helpers' do |helpers|
-    extensions.source_files = 'Source/Helpers/*.swift'
+    helpers.source_files = 'Source/Helpers/*.swift'
   end
 
   # s.subspec 'MyLibrary' do |libOne|

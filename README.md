@@ -29,6 +29,8 @@ pod 'ABcommon', :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios'
 ```ruby
 pod 'ABcommon/Extensions'
 pod 'ABcommon/Managers'
+pod 'ABcommon/Protocols'
+pod 'ABcommon/Helpers'
 ```
 
 ## Author
