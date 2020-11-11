@@ -24,7 +24,7 @@ it, simply add the following line to your Podfile:
 
 ## Optional
 Add at line 3 to preserve the pod folder structure.
-```
+```ruby
 install! 'cocoapods',
   :preserve_pod_file_structure => true
 ```
