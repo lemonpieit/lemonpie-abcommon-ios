@@ -289,6 +289,7 @@
 				A51B08142422675D009EC533 /* UIButton+XT.swift */,
 				A52A273A242B501F000E22D1 /* UIColor+XT.swift */,
 				A58D8E232428AF6D000A6676 /* UICollectionView+XT.swift */,
+				A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */,
 				A51B08152422675D009EC533 /* UIFont+XT.swift */,
 				A58D8E1F2428AF6D000A6676 /* UIImage+XT.swift */,
 				A58738FE25247C1D005CDC27 /* UINavigationController+XT.swift */,
@@ -297,7 +298,6 @@
 				A51B080F2422675D009EC533 /* UITextField+XT.swift */,
 				A51B08102422675D009EC533 /* UIView+XT.swift */,
 				A51B08172422675D009EC533 /* UIViewController+XT.swift */,
-				A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
