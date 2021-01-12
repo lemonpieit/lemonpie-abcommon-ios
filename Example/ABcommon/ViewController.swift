@@ -9,7 +9,22 @@
 import UIKit
 import ABcommon
 
-class NViewController: ViewController {
+class NViewController: UIViewController, NavigationControllerAppearanceContext {
+  
+  func title(for navigationController: UINavigationController) -> String? {
+    "Me"
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  func preferredAppearance(for navigationController: UINavigationController) -> Appearance? {
+    var app = Appearance()
+    app.navigationBar.backgroundColor = .red
+    app.navigationBar.tintColor = .green
+    return app
+  }
   
   enum Style: Navigatable {
     case first
@@ -32,19 +47,4 @@ class NViewController: ViewController {
       }
     }
   }
-  
-  lazy var mm = MailManager(delegate: self)
-  
-  override func setUp() {
-    mm.sendEmail(to: [""])
-    navigationController?.configureNavigationBar(style: Style.first)
-  }
-}
-
-extension NViewController: MailManagerDelegate {
-  func errorOccurred(_ error: Error) {
-    
-  }
-  
-  
 }

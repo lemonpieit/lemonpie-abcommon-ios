@@ -63,6 +63,7 @@ public extension UIView {
     gradient.colors = colors.map { $0.cgColor }
     gradient.startPoint = CGPoint(x: 1, y: 0)
     gradient.endPoint = CGPoint(x: 0, y: 1)
+    layer.masksToBounds = true
     layer.insertSublayer(gradient, at: 0)
   }
 
