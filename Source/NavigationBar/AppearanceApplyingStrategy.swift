@@ -13,20 +13,19 @@ public class AppearanceApplyingStrategy {
       
       if !navigationController.isNavigationBarHidden {
         if #available(iOS 13.0, *) {
-          let navBarAppearance = UINavigationBarAppearance()
-          navBarAppearance.backgroundColor = appearance.navigationBar.backgroundColor
-          //                navBarAppearance.shadowColor = .clear
-          navBarAppearance.largeTitleTextAttributes = [.foregroundColor: appearance.navigationBar.tintColor]
-          navBarAppearance.titleTextAttributes = [.foregroundColor: appearance.navigationBar.tintColor]
-          navigationBar.standardAppearance = navBarAppearance
-          navigationBar.compactAppearance = navBarAppearance
-          navigationBar.scrollEdgeAppearance = navBarAppearance
+          [navigationBar.standardAppearance,
+           navigationBar.compactAppearance,
+           navigationBar.scrollEdgeAppearance].forEach { app in
+            app?.backgroundColor = appearance.navigationBar.backgroundColor
+            app?.largeTitleTextAttributes = [.foregroundColor: appearance.navigationBar.tintColor]
+            app?.titleTextAttributes = [.foregroundColor: appearance.navigationBar.tintColor]
+          }
+
           navigationBar.tintColor = appearance.navigationBar.tintColor
           navigationBar.barTintColor = appearance.navigationBar.barTintColor
         } else {
           navigationBar.tintColor = appearance.navigationBar.tintColor
           navigationBar.barTintColor = appearance.navigationBar.backgroundColor
-          //                navigationBar.shadowImage = UIImage()
           navigationBar.largeTitleTextAttributes = [.foregroundColor: appearance.navigationBar.tintColor]
           navigationBar.titleTextAttributes = [.foregroundColor: appearance.navigationBar.tintColor]
         }

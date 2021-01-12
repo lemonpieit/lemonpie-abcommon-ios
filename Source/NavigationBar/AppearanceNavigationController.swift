@@ -71,9 +71,11 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   
   private func hideShadow() {
     if #available(iOS 13.0, *) {
-      self.navigationBar.standardAppearance.shadowColor = .clear
-      self.navigationBar.compactAppearance?.shadowColor = .clear
-      self.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
+      [navigationBar.standardAppearance,
+       navigationBar.compactAppearance,
+       navigationBar.scrollEdgeAppearance].forEach { app in
+        app?.shadowColor = nil
+      }
     } else {
       self.navigationBar.shadowImage = UIImage()
     }
@@ -100,20 +102,32 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     
   // MAKR: - Apperanace Update
   
+  func updateAppearance(with context: NavigationControllerAppearanceContext,
+                        animated: Bool) {
+    self.children.last?.title = context.title(for: self)
+    
+    if let prefersLargeTitle = context.prefersLargeTitle(for: self) {
+      self.navigationBar.prefersLargeTitles = prefersLargeTitle
+    }
+    
+    self.children.last?.navigationItem.largeTitleDisplayMode = context.largeTitleDisplayMode(for: self)
+    
+    if context.isShadowHidden(for: self) {
+      hideShadow()
+    }
+    
+    self.setNavigationBarHidden(context.prefersNavigationbarHidden(for: self), animated: true)
+    self.setToolbarHidden(context.prefersToolbarHidden(for: self), animated: true)
+    applyAppearance(appearance: context.preferredAppearance(for: self), animated: true)
+  }
+  
   func updateAppearance(for viewController: UIViewController) {
     if let context = viewController as? NavigationControllerAppearanceContext,
        viewController == topViewController && transitionCoordinator == nil {
-      self.children.last?.title = context.title(for: self)
-      if let prefersLargeTitle = context.prefersLargeTitle(for: self) {
-        self.navigationBar.prefersLargeTitles = prefersLargeTitle
-      }
-      self.children.last?.navigationItem.largeTitleDisplayMode = context.largeTitleDisplayMode(for: self)
-      self.setNavigationBarHidden(context.prefersNavigationbarHidden(for: self), animated: true)
-      self.setToolbarHidden(context.prefersToolbarHidden(for: self), animated: true)
-      applyAppearance(appearance: context.preferredAppearance(for: self), animated: true)
+      updateAppearance(with: context, animated: true)
     }
   }
-  
+
   public func updateAppearance() {
     if let top = topViewController {
       updateAppearance(for: top)

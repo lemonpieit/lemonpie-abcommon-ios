@@ -2,7 +2,6 @@
 import Foundation
 import UIKit
 
-
 public struct Appearance: Equatable {
   
   static var defaultAppearance: Appearance?
