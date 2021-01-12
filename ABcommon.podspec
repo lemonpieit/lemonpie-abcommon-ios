@@ -40,6 +40,10 @@ Pod::Spec.new do |s|
     managers.source_files = 'Source/Managers/*.swift'
   end
   
+  s.subspec 'NavigationBar' do |navigationBar|
+    navigationBar.source_files = 'Source/NavigationBar/*.swift'
+  end
+
   s.subspec 'Protocols' do |protocols|
     protocols.source_files = 'Source/Protocols/*.swift'
   end

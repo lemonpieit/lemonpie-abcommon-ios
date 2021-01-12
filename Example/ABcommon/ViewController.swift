@@ -9,23 +9,12 @@
 import UIKit
 import ABcommon
 
-class NViewController: UIViewController, NavigationControllerAppearanceContext {
-  
-  func title(for navigationController: UINavigationController) -> String? {
-    "Me"
-  }
-  
+class NViewController: UIViewController {
+    
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-  
-  func preferredAppearance(for navigationController: UINavigationController) -> Appearance? {
-    var app = Appearance()
-    app.navigationBar.backgroundColor = .red
-    app.navigationBar.tintColor = .green
-    return app
-  }
-  
+    
   enum Style: Navigatable {
     case first
     
