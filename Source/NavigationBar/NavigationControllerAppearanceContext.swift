@@ -29,6 +29,11 @@ public protocol NavigationControllerAppearanceContext: class {
   /// - Parameter navigationController: The `UINavigationController` to which apply this property.
   func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode
   
+  /// Defines whether the navigation bar has the bottom shadow.
+  ///
+  /// - Parameter navigationController: The `UINavigationController` to which apply this property.
+  func isShadowHidden(for navigationController: UINavigationController) -> Bool
+
   /// Sets whether the navigation bar is hidden.
   /// The default value is `false`.
   ///
@@ -52,12 +57,20 @@ public protocol NavigationControllerAppearanceContext: class {
 
 public extension NavigationControllerAppearanceContext {
     
+  func title(for navigationController: UINavigationController) -> String? {
+    return nil
+  }
+  
   func prefersLargeTitle(for navigationController: UINavigationController) -> Bool? {
     return nil
   }
   
   func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode {
     return .automatic
+  }
+
+  func isShadowHidden(for navigationController: UINavigationController) -> Bool {
+    return Appearance.isShadowHidden
   }
 
   func prefersNavigationbarHidden(for navigationController: UINavigationController) -> Bool {

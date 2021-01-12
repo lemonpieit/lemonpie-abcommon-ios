@@ -31,11 +31,19 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   public func navigationController(_ navigationController: UINavigationController,
                                    willShow viewController: UIViewController, animated: Bool) {
     guard let appearanceContext = viewController as? NavigationControllerAppearanceContext else { return }
+    
     self.children.last?.title = appearanceContext.title(for: self)
+    
     if let prefersLargeTitle = appearanceContext.prefersLargeTitle(for: self) {
       self.navigationBar.prefersLargeTitles = prefersLargeTitle
     }
+    
     self.children.last?.navigationItem.largeTitleDisplayMode = appearanceContext.largeTitleDisplayMode(for: self)
+    
+    if appearanceContext.isShadowHidden(for: self) {
+      hideShadow()
+    }
+
     self.setNavigationBarHidden(appearanceContext.prefersNavigationbarHidden(for: self), animated: animated)
     self.setToolbarHidden(appearanceContext.prefersToolbarHidden(for: self), animated: animated)
     applyAppearance(appearance: appearanceContext.preferredAppearance(for: self), animated: animated)
@@ -61,6 +69,16 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     }
   }
   
+  private func hideShadow() {
+    if #available(iOS 13.0, *) {
+      self.navigationBar.standardAppearance.shadowColor = .clear
+      self.navigationBar.compactAppearance?.shadowColor = .clear
+      self.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
+    } else {
+      self.navigationBar.shadowImage = UIImage()
+    }
+  }
+
   // MARK: - Appearance Applying
   
   private var appliedAppearance: Appearance?

@@ -6,6 +6,7 @@ import UIKit
 public struct Appearance: Equatable {
   
   static var defaultAppearance: Appearance?
+  static var isShadowHidden: Bool = true
 
   public struct Bar: Equatable {
     
@@ -34,6 +35,15 @@ public struct Appearance: Equatable {
   /// - Parameter appearance: The new default appearance.
   public static func setDefaultAppearance(to appearance: Appearance) {
     self.defaultAppearance = appearance
+  }
+  
+  /// Set the default value for the navigation bar shadow.
+  ///
+  /// - Note: You should set the default appearance only once,
+  /// if you assign a new default appearance multiple times the old appearance will be overridden.
+  /// - Parameter isHidden: The new default value.
+  public static func setIsShadowHidden(_ isHidden: Bool) {
+    self.isShadowHidden = isHidden
   }
 }
 
