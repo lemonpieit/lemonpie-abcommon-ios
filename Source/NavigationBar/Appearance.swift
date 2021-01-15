@@ -5,7 +5,7 @@ import UIKit
 public struct Appearance: Equatable {
   
   static var defaultAppearance: Appearance?
-  static var isShadowHidden: Bool = true
+  static var shadowMode: ShadowMode = .alwaysVisible
 
   public struct Bar: Equatable {
     
@@ -28,21 +28,27 @@ public struct Appearance: Equatable {
   public init() { }
 
   /// Set the default appearance for the navigation bar.
+  /// Use this method inside the `AppDelegate`.
   ///
-  /// - Note: You should set the default appearance only once,
+  /// You should set the default appearance only once,
   /// if you assign a new default appearance multiple times the old appearance will be overridden.
+  ///
+  /// Instead of setting the default value multiple times, override the `preferredAppearance(for:)` method inside a specific `UIViewController`.
   /// - Parameter appearance: The new default appearance.
   public static func setDefaultAppearance(to appearance: Appearance) {
     self.defaultAppearance = appearance
   }
-  
-  /// Set the default value for the navigation bar shadow.
+    
+  /// Set the default shadow mode for the navigation bar shadow visibility.
+  /// Use this method inside the `AppDelegate`.
   ///
-  /// - Note: You should set the default appearance only once,
+  /// You should set the default appearance only once,
   /// if you assign a new default appearance multiple times the old appearance will be overridden.
-  /// - Parameter isHidden: The new default value.
-  public static func setIsShadowHidden(_ isHidden: Bool) {
-    self.isShadowHidden = isHidden
+  ///
+  /// Instead of setting the default value multiple times, override the `shadowMode` property inside a specific `UIViewController`.
+  /// - Parameter shadowMode: The new default shadow mode.
+  public static func setShadowVisibility(_ shadowMode: ShadowMode) {
+    self.shadowMode = shadowMode
   }
 }
 

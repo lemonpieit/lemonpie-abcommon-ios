@@ -2,9 +2,49 @@
 import Foundation
 import UIKit
 
+public enum ShadowMode {
+  case alwaysVisible
+  case alwaysHidden
+  case onlyForLargeTitle
+  case onlyForSmallTitle
+  case onlyIfCanScroll
+  
+  func isHidden(for viewController: UIViewController) -> Bool {
+    let largeTitle = viewController.navigationItem.largeTitleDisplayMode
+    
+    switch self {
+    case .alwaysVisible: return false
+    case .alwaysHidden: return true
+    case .onlyForLargeTitle:
+      switch largeTitle {
+      case .always, .automatic: return false
+      case .never: return true
+      @unknown default: return false
+      }
+    case .onlyForSmallTitle:
+      switch largeTitle {
+      case .always, .automatic: return true
+      case .never: return false
+      @unknown default: return false
+      }
+    case .onlyIfCanScroll:
+      if viewController is UITableViewDataSource ||
+          viewController is UICollectionViewDataSource ||
+          viewController is UIScrollViewDelegate {
+        return false
+      } else {
+        return true
+      }
+    }
+  }
+}
+
 /// Conform to `NavigationControllerAppearanceContext` to define the behaviour of the `UINavigationBar` and `UITollbar`.
 public protocol NavigationControllerAppearanceContext: class {
   
+  /// Defines when to show the navbar shadow.
+  var shadowMode: ShadowMode { get }
+
   /// Sets the title of the current navigation item.
   ///
   /// - Parameter navigationController: The `UINavigationController` to which apply this property.
@@ -29,11 +69,6 @@ public protocol NavigationControllerAppearanceContext: class {
   /// - Parameter navigationController: The `UINavigationController` to which apply this property.
   func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode
   
-  /// Defines whether the navigation bar has the bottom shadow.
-  ///
-  /// - Parameter navigationController: The `UINavigationController` to which apply this property.
-  func isShadowHidden(for navigationController: UINavigationController) -> Bool
-
   /// Sets whether the navigation bar is hidden.
   /// The default value is `false`.
   ///
@@ -57,6 +92,10 @@ public protocol NavigationControllerAppearanceContext: class {
 
 public extension NavigationControllerAppearanceContext {
     
+  var shadowMode: ShadowMode {
+    return Appearance.shadowMode
+  }
+
   func title(for navigationController: UINavigationController) -> String? {
     return nil
   }
@@ -67,10 +106,6 @@ public extension NavigationControllerAppearanceContext {
   
   func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode {
     return .automatic
-  }
-
-  func isShadowHidden(for navigationController: UINavigationController) -> Bool {
-    return Appearance.isShadowHidden
   }
 
   func prefersNavigationbarHidden(for navigationController: UINavigationController) -> Bool {

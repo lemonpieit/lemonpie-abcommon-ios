@@ -7,6 +7,7 @@
 3. Use this methods to modify the navigation bar:
 
 ```swift
+var shadowMode: ShadowMode
 func title(for navigationController: UINavigationController) -> String?
 func prefersLargeTitle(for navigationController: UINavigationController) -> Bool?
 func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode

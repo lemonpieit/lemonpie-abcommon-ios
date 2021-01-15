@@ -29,24 +29,11 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   // MARK: - UINavigationControllerDelegate
   
   public func navigationController(_ navigationController: UINavigationController,
-                                   willShow viewController: UIViewController, animated: Bool) {
+                                   willShow viewController: UIViewController,
+                                   animated: Bool) {
     guard let appearanceContext = viewController as? NavigationControllerAppearanceContext else { return }
     
-    self.children.last?.title = appearanceContext.title(for: self)
-    
-    if let prefersLargeTitle = appearanceContext.prefersLargeTitle(for: self) {
-      self.navigationBar.prefersLargeTitles = prefersLargeTitle
-    }
-    
-    self.children.last?.navigationItem.largeTitleDisplayMode = appearanceContext.largeTitleDisplayMode(for: self)
-    
-    if appearanceContext.isShadowHidden(for: self) {
-      hideShadow()
-    }
-
-    self.setNavigationBarHidden(appearanceContext.prefersNavigationbarHidden(for: self), animated: animated)
-    self.setToolbarHidden(appearanceContext.prefersToolbarHidden(for: self), animated: animated)
-    applyAppearance(appearance: appearanceContext.preferredAppearance(for: self), animated: animated)
+    updateAppearance(with: appearanceContext, animated: animated)
     
     // interactive gesture requires more complex logic.
     guard let coordinator = viewController.transitionCoordinator, coordinator.isInteractive else { return }
@@ -69,18 +56,6 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     }
   }
   
-  private func hideShadow() {
-    if #available(iOS 13.0, *) {
-      [navigationBar.standardAppearance,
-       navigationBar.compactAppearance,
-       navigationBar.scrollEdgeAppearance].forEach { app in
-        app?.shadowColor = nil
-      }
-    } else {
-      self.navigationBar.shadowImage = UIImage()
-    }
-  }
-
   // MARK: - Appearance Applying
   
   private var appliedAppearance: Appearance?
@@ -112,10 +87,12 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     
     self.children.last?.navigationItem.largeTitleDisplayMode = context.largeTitleDisplayMode(for: self)
     
-    if context.isShadowHidden(for: self) {
+    if let lastVc = children.last, context.shadowMode.isHidden(for: lastVc) {
       hideShadow()
+    } else {
+      showShadow()
     }
-    
+        
     self.setNavigationBarHidden(context.prefersNavigationbarHidden(for: self), animated: true)
     self.setToolbarHidden(context.prefersToolbarHidden(for: self), animated: true)
     applyAppearance(appearance: context.preferredAppearance(for: self), animated: true)
@@ -140,5 +117,36 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   
   public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
     appliedAppearance != nil ? .fade : super.preferredStatusBarUpdateAnimation
+  }
+  
+  private func hideShadow() {
+    if #available(iOS 13.0, *) {
+      editAppearances(for: navigationBar) { appearance in
+        appearance?.shadowColor = nil
+      }
+    } else {
+      self.navigationBar.shadowImage = UIImage()
+    }
+  }
+  
+  private func showShadow() {
+    if #available(iOS 13.0, *) {
+      editAppearances(for: navigationBar) { appearance in
+        appearance?.shadowColor = .systemGray
+      }
+    } else {
+      self.navigationBar.shadowImage = nil
+    }
+  }
+}
+
+extension UIViewController {
+  @available(iOS 13.0, *)
+  func editAppearances(for navigationBar: UINavigationBar, _ edits: (UINavigationBarAppearance?) -> Void) {
+    [navigationBar.standardAppearance,
+     navigationBar.compactAppearance,
+     navigationBar.scrollEdgeAppearance].forEach { appearance in
+      edits(appearance)
+     }
   }
 }

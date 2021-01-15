@@ -9,19 +9,26 @@
 import UIKit
 import ABcommon
 
-class NViewController: UIViewController, NavigationControllerAppearanceContext {
+class NViewController: UITableViewController, NavigationControllerAppearanceContext {
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-  }
-    
-  func preferredAppearance(for navigationController: UINavigationController) -> Appearance? {
-    var app = Appearance()
-    app.navigationBar.backgroundColor = .green
-    return app
+  func title(for navigationController: UINavigationController) -> String? {
+    "Title"
   }
   
+  func prefersLargeTitle(for navigationController: UINavigationController) -> Bool? {
+    true
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = .red
+    tableView.alwaysBounceVertical = true
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      self.navigationController?.pushViewController(NextVc(), animated: true)
+    }
+  }
+    
   enum Style: Navigatable {
     case first
     
@@ -43,4 +50,21 @@ class NViewController: UIViewController, NavigationControllerAppearanceContext {
       }
     }
   }
+}
+
+class NextVc: UIViewController, NavigationControllerAppearanceContext {
+  
+  func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode {
+    .always
+  }
+  
+  func title(for navigationController: UINavigationController) -> String? {
+    "Next"
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = .blue
+  }  
+
 }
