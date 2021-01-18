@@ -105,7 +105,7 @@ public extension NavigationControllerAppearanceContext {
   }
   
   func largeTitleDisplayMode(for navigationController: UINavigationController) -> UINavigationItem.LargeTitleDisplayMode {
-    return .automatic
+    return Appearance.defaultDisplayMode
   }
 
   func prefersNavigationbarHidden(for navigationController: UINavigationController) -> Bool {

@@ -5,6 +5,7 @@ import UIKit
 public struct Appearance: Equatable {
   
   static var defaultAppearance: Appearance?
+  static var defaultDisplayMode: UINavigationItem.LargeTitleDisplayMode = .automatic
   static var shadowMode: ShadowMode = .alwaysVisible
 
   public struct Bar: Equatable {
@@ -39,6 +40,18 @@ public struct Appearance: Equatable {
     self.defaultAppearance = appearance
   }
     
+  /// Set the default display mode for the navigation bar.
+  /// Use this method inside the `AppDelegate`.
+  ///
+  /// You should set the default display mode only once,
+  /// if you assign a new default display mode multiple times the old value will be overridden.
+  ///
+  /// Instead of setting the default value multiple times, override the `largeTitleDisplayMode(for:)` method inside a specific `UIViewController`.
+  /// - Parameter appearance: The new default appearance.
+  public static func setDefaultLargeTitleDisplayMode(_ displayMode: UINavigationItem.LargeTitleDisplayMode) {
+    self.defaultDisplayMode = displayMode
+  }
+
   /// Set the default shadow mode for the navigation bar shadow visibility.
   /// Use this method inside the `AppDelegate`.
   ///

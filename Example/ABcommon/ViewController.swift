@@ -21,7 +21,7 @@ class NViewController: UITableViewController, NavigationControllerAppearanceCont
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .red
+//    view.backgroundColor = .red
     tableView.alwaysBounceVertical = true
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

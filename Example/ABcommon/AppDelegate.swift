@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
       var app = Appearance()
-      app.navigationBar.barTintColor = .green
-      app.navigationBar.tintColor = .white
-      app.navigationBar.backgroundColor = .red
+//      app.navigationBar.barTintColor = .green
+//      app.navigationBar.tintColor = .white
+//      app.navigationBar.backgroundColor = .black
       Appearance.setDefaultAppearance(to: app)
       Appearance.setShadowVisibility(.onlyIfCanScroll)
       return true

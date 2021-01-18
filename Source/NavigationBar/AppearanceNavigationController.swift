@@ -132,7 +132,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   private func showShadow() {
     if #available(iOS 13.0, *) {
       editAppearances(for: navigationBar) { appearance in
-        appearance?.shadowColor = .systemGray
+        appearance?.shadowColor = .systemGray2
       }
     } else {
       self.navigationBar.shadowImage = nil
