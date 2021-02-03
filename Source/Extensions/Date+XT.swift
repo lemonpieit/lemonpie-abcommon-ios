@@ -190,6 +190,25 @@ public enum DateFormat {
 }
 
 public extension Date {
+  
+  /// Compares two date and returns whether is the same month.
+  /// - Parameter date: The date to compare.
+  func inTheSameMonth(of date: Date) -> Bool {
+    return self.component(.month) == date.component(.month)
+  }
+  
+  /// Compares two date and returns whether is the same year.
+  /// - Parameter date: The date to compare.
+  func inTheSameYear(of date: Date) -> Bool {
+    return self.component(.year) == date.component(.year)
+  }
+  
+  /// Compares two date and returns whether is the same month and year.
+  /// - Parameter date: The date to compare.
+  func inTheSamePeriod(of date: Date) -> Bool {
+    return inTheSameYear(of: date) && inTheSameMonth(of: date)
+  }
+  
   /// Converts a `Date` object to a `String`.
   /// - Parameters:
   ///   - format: The format of the date.

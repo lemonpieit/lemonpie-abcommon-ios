@@ -9,15 +9,109 @@
 import UIKit
 
 public extension UIView {
+  
+  enum Edge {
+    case top(CGFloat = 0)
+    case leading(CGFloat = 0)
+    case bottom(CGFloat = 0)
+    case trailing(CGFloat = 0)
+    
+    public enum Anchor {
+      case top(to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
+      case leading(to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
+      case bottom(to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
+      case trailing(to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
+    }
+  }
+  
+  func pin(_ anchors: [Edge.Anchor]) {
+    translatesAutoresizingMaskIntoConstraints = false
+    
+    for anchor in anchors {
+      switch anchor {
+      case .top(let anchor, let padding):
+        if let anchor = anchor {
+          topAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
+        }
+      case .leading(let anchor, let padding):
+        if let anchor = anchor {
+          leadingAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
+        }
+      case .bottom(let anchor, let padding):
+        if let anchor = anchor {
+          bottomAnchor.constraint(equalTo: anchor, constant: -padding).isActive = true
+        }
+      case .trailing(let anchor, let padding):
+        if let anchor = anchor {
+          trailingAnchor.constraint(equalTo: anchor, constant: -padding).isActive = true
+        }
+      }
+    }
+  }
+  
+  func pinToSuperview(edges: [Edge]) {
+    guard let superview = superview else { return }
+    
+    translatesAutoresizingMaskIntoConstraints = false
+    
+    for edge in edges {
+      switch edge {
+      case .top(let padding):
+        pin([.top(to: superview.topAnchor, pad: padding)])
+        
+      case .leading(let padding):
+        pin([.leading(to: superview.leadingAnchor, pad: padding)])
+        
+      case .bottom(let padding):
+        pin([.bottom(to: superview.bottomAnchor, pad: padding)])
+        
+      case .trailing(let padding):
+        pin([.trailing(to: superview.trailingAnchor, pad: padding)])
+      }
+    }
+  }
+  
+  func size(width: CGFloat? = nil, height: CGFloat? = nil) {
+    if let width = width {
+      widthAnchor.constraint(equalToConstant: width).isActive = true
+    }
+    
+    if let height = height {
+      heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+  }
+  
+  /// Removes every separator line in the current view.
+  func removeEverySeparator() {
+    subviews.forEach { view in
+      if String(describing: type(of: view)) == "_UITableViewCellSeparatorView" {
+        view.removeFromSuperview()
+      }
+    }
+  }
+  
+  
+  /// Defines whether the user switched between dark modes and performs updates.
+  /// - Parameters:
+  ///   - previousTraitCollection: The previous interface style.
+  ///   - updates: The updates to perform.
+  func shouldUpdate(for previousTraitCollection: UITraitCollection?, updates: () -> Void) {
+    if #available(iOS 12.0, *) {
+      if traitCollection.userInterfaceStyle != previousTraitCollection?.userInterfaceStyle {
+        updates()
+      }
+    }
+  }
+  
   /// Creates a dash border.
   /// - Parameter cornerRadius: The `cornerRadius` of the `CGRect`.
   func addDashedBorder(cornerRadius: CGFloat = 0) {
     let color = UIColor.black.cgColor
-
+    
     let shapeLayer = CAShapeLayer()
     let frameSize = frame.size
     let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
-
+    
     shapeLayer.bounds = shapeRect
     shapeLayer.position = CGPoint(x: frameSize.width / 2, y: frameSize.height / 2)
     shapeLayer.fillColor = UIColor.clear.cgColor
@@ -26,10 +120,10 @@ public extension UIView {
     shapeLayer.lineJoin = CAShapeLayerLineJoin.round
     shapeLayer.lineDashPattern = [6, 3]
     shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: cornerRadius).cgPath
-
+    
     layer.addSublayer(shapeLayer)
   }
-
+  
   /// Set the corner radius with a ratio.
   /// - Parameter ratio: The ratio used to calculate the corner radius. it is multiplied by the width of the view.
   func setRoundedCorners(ratio: Double?) {
@@ -47,14 +141,14 @@ public extension UIView {
       }
     }
   }
-
+  
   /// Set the value for corner radius.
   /// - Parameter value: The corner radius value.
   func setRoundedCorners(value: CGFloat) {
     layer.masksToBounds = true
     layer.cornerRadius = value
   }
-
+  
   /// Add a gradient layer to the view sublayer.
   /// - Parameter colors: An array of colors used by the gradient layer.
   func applyGradient(colors: [UIColor]) {
@@ -66,7 +160,7 @@ public extension UIView {
     layer.masksToBounds = true
     layer.insertSublayer(gradient, at: 0)
   }
-
+  
   /// Renders a UIView as an UIImage.
   func asImage() -> UIImage {
     let renderer = UIGraphicsImageRenderer(bounds: bounds)
@@ -74,7 +168,7 @@ public extension UIView {
       layer.render(in: rendererContext.cgContext)
     }
   }
-
+  
   /// Returns the constraint with the specified identifier.
   /// - Parameter identifier: The identifier of the constraint.
   func constraint(withIdentifier identifier: String) -> NSLayoutConstraint? {
@@ -82,7 +176,7 @@ public extension UIView {
       $0.identifier == identifier
     }.first
   }
-
+  
   /// Loads a `Nib` file.
   /// - Parameters:
   ///   - nibName: The name of the `Nib` file.
@@ -90,12 +184,12 @@ public extension UIView {
   func load<T>(fromNibNamed nibName: String, withType _: T.Type) -> T? {
     return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)?.first as? T ?? nil
   }
-
+  
   /// Dismisses the receiver's  keyboard.
   func dismissKeyboard() {
     endEditing(true)
   }
-
+  
   /// Blurs out the view.
   /// - Parameter style: The blur effect style.
   func addBlur(style: UIBlurEffect.Style = .regular) -> UIVisualEffectView {
@@ -104,42 +198,42 @@ public extension UIView {
     blurEffectView.frame = bounds
     blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     addSubview(blurEffectView)
-
+    
     return blurEffectView
   }
-
+  
   // Anchors
   struct AnchoredConstraints {
     public var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
   }
-
+  
   @discardableResult
   func anchor(top: NSLayoutYAxisAnchor? = nil, leading: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, trailing: NSLayoutXAxisAnchor? = nil, padding: UIEdgeInsets = .zero, size: CGSize = .zero) -> AnchoredConstraints {
     translatesAutoresizingMaskIntoConstraints = false
     var anchoredConstraints = AnchoredConstraints()
-
+    
     if let top = top { anchoredConstraints.top = topAnchor.constraint(equalTo: top, constant: padding.top) }
-
+    
     if let leading = leading { anchoredConstraints.leading = leadingAnchor.constraint(equalTo: leading, constant: padding.left) }
-
+    
     if let bottom = bottom { anchoredConstraints.bottom = bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom) }
-
+    
     if let trailing = trailing { anchoredConstraints.trailing = trailingAnchor.constraint(equalTo: trailing, constant: -padding.right) }
-
+    
     if size.width != 0 { anchoredConstraints.width = widthAnchor.constraint(equalToConstant: size.width) }
-
+    
     if size.height != 0 { anchoredConstraints.height = heightAnchor.constraint(equalToConstant: size.height) }
-
+    
     [anchoredConstraints.top, anchoredConstraints.leading, anchoredConstraints.bottom, anchoredConstraints.trailing, anchoredConstraints.width, anchoredConstraints.height].forEach { $0?.isActive = true }
-
+    
     return anchoredConstraints
   }
-
+  
   @discardableResult
   func fillSuperview(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
     translatesAutoresizingMaskIntoConstraints = false
     let anchoredConstraints = AnchoredConstraints()
-
+    
     guard let superviewTopAnchor = superview?.topAnchor,
           let superviewBottomAnchor = superview?.bottomAnchor,
           let superviewLeadingAnchor = superview?.leadingAnchor,
@@ -147,14 +241,14 @@ public extension UIView {
     else {
       return anchoredConstraints
     }
-
+    
     return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
   }
-
+  
   @discardableResult
   func fillSuperviewSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
     let anchoredConstraints = AnchoredConstraints()
-
+    
     guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
           let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
           let superviewLeadingAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
@@ -164,35 +258,35 @@ public extension UIView {
     }
     return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
   }
-
+  
   func centerToSuperview() {
     translatesAutoresizingMaskIntoConstraints = false
     if let superviewCenterXAnchor = superview?.centerXAnchor {
       centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
     }
-
+    
     if let superviewCenterYAnchor = superview?.centerYAnchor {
       centerYAnchor.constraint(equalTo: superviewCenterYAnchor).isActive = true
     }
   }
-
+  
   func centerXTo(_ anchor: NSLayoutXAxisAnchor) {
     translatesAutoresizingMaskIntoConstraints = false
     centerXAnchor.constraint(equalTo: anchor).isActive = true
   }
-
+  
   func centerYTo(_ anchor: NSLayoutYAxisAnchor) {
     translatesAutoresizingMaskIntoConstraints = false
     centerYAnchor.constraint(equalTo: anchor).isActive = true
   }
-
+  
   func centerXToSuperview() {
     translatesAutoresizingMaskIntoConstraints = false
     if let superviewCenterXAnchor = superview?.centerXAnchor {
       centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
     }
   }
-
+  
   func centerYToSuperview() {
     translatesAutoresizingMaskIntoConstraints = false
     if let superviewCenterYAnchor = superview?.centerYAnchor {

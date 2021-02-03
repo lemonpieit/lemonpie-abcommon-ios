@@ -10,6 +10,16 @@ import SafariServices
 import UIKit.UIViewController
 
 public extension UIViewController {
+  
+  /// The frame of the status bar.
+  var statusBarFrame: CGRect {
+    if #available(iOS 13.0, *) {
+      return view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
+    } else {
+      return UIApplication.shared.statusBarFrame
+    }
+  }
+  
   /// Removes back button item string.
   func removeBackButtonString() {
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
