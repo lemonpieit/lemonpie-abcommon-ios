@@ -1,0 +1,9 @@
+/* 
+  AlertTranslation.strings
+  ABcommon
+
+  Created by Francesco Leoni on 23/02/21.
+  Copyright © 2021 CocoaPods. All rights reserved.
+*/
+
+"alert_controller_cancel_button" = "Ciao";

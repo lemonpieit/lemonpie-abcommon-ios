@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A56B144C25E55C5A00BCF08C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A56B144E25E55C5A00BCF08C /* Localizable.strings */; };
 		AA616E9D11BD43865E058654 /* Pods_ABcommon_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD97BBF82E51C9468AA7CCA /* Pods_ABcommon_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8B9A1867C71D96DA05560740 /* ABcommon.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ABcommon.podspec; path = ../ABcommon.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A56B144D25E55C5A00BCF08C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B2B6866AC9B483D0802B7887 /* Pods_ABcommon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABcommon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB19EBBEBA829592805C38EF /* Pods-ABcommon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABcommon_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D59695FC728EF3D2945DD8A7 /* Pods-ABcommon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABcommon_Example.debug.xcconfig"; path = "Target Support Files/Pods-ABcommon_Example/Pods-ABcommon_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				A56B144E25E55C5A00BCF08C /* Localizable.strings */,
 			);
 			name = "Example for ABcommon";
 			path = ABcommon;
@@ -250,6 +253,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				A56B144C25E55C5A00BCF08C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +374,14 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		A56B144E25E55C5A00BCF08C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A56B144D25E55C5A00BCF08C /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

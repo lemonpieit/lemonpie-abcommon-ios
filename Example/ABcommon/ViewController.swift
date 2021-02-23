@@ -21,6 +21,7 @@ class NViewController: UITableViewController, NavigationControllerAppearanceCont
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    createAlertController(title: "Titlo", message: "messagio", tintColor: .brown, showCancel: true, actions: [])
 //    view.backgroundColor = .red
     tableView.alwaysBounceVertical = true
     

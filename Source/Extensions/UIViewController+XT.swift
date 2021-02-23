@@ -206,20 +206,14 @@ public extension UIViewController {
   ///   - title: The title of the `UIAlertController`.
   ///   - message: The message of the `UIAlertController`.
   ///   - actions: The `UIAlertAction` to perform.
-  func createActionSheet(title: String? = nil, message: String? = nil, tintColor: UIColor, actions: [UIAlertAction]) {
-    createAlertController(title: title, message: message, style: .actionSheet, tintColor: tintColor, showCancel: true, actions: actions)
-  }
-
-  /// Creates an `AlertController`.
-  /// - Parameters:
-  ///   - title: The title of the `UIAlertController`.
-  ///   - message: The message of the `UIAlertController`.
-  ///   - actions: The `UIAlertAction` to perform.
-  func createAlertController(title: String? = nil, message: String? = nil, tintColor: UIColor, actions: [UIAlertAction] = []) {
-    createAlertController(title: title, message: message, style: .alert, tintColor: tintColor, showCancel: true, actions: actions)
+  func createActionSheet(title: String? = nil, message: String? = nil, tintColor: UIColor, showCancel: Bool = true, actions: [UIAlertAction]) {
+    createAlertController(title: title, message: message, style: .actionSheet, tintColor: tintColor, showCancel: showCancel, actions: actions)
   }
 
   /// Creates an `UIAlertController` with multiple actions.
+  ///
+  /// Add the key `alert_controller_cancel_button` to your `Localizable.strings` file to localize the cancel button title.
+  ///
   /// - Parameters:
   ///   - title: The title of the `UIAlertController`.
   ///   - message: The message of the `UIAlertController`.
@@ -227,7 +221,7 @@ public extension UIViewController {
   ///   - style: The style of the `UIAlertController`.
   ///   - tintColor: The tiint color of the `UIAlertController`.
   ///   - actions: The `UIAlertAction` to perform.
-  func createAlertController(title: String? = nil, message: String? = nil, style: UIAlertController.Style, tintColor: UIColor? = nil, showCancel: Bool, actions: [UIAlertAction]) {
+  func createAlertController(title: String? = nil, message: String? = nil, style: UIAlertController.Style = .alert, tintColor: UIColor? = nil, showCancel: Bool = true, actions: [UIAlertAction] = []) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: style)
     alert.view.tintColor = tintColor
     alert.pruneNegativeWidthConstraints()
@@ -237,7 +231,7 @@ public extension UIViewController {
     }
 
     if showCancel {
-      let button = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+      let button = UIAlertAction(title: NSLocalizedString("alert_controller_cancel_button", value: "Cancel", comment: "Cancel"), style: .cancel) { _ in
         alert.dismiss(animated: true, completion: nil)
       }
       alert.addAction(button)
