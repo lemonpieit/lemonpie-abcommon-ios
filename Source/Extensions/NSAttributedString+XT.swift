@@ -13,7 +13,7 @@ public extension NSAttributedString {
     /// - Parameters:
     ///   - strings: The attributed text strings.
     ///   - attributes: The attributed text attributes.
-    @available(*, deprecated, message: "Use configureAttributedText(with:) instead.")
+    @available(*, deprecated, message: "Use static method 'configureAttributedText(with:)' instead.")
     func configureAttributedText(withStrings strings: [String], attributes: [[NSAttributedString.Key: Any]]) -> NSAttributedString {
         let attributedText = NSMutableAttributedString(string: strings[0], attributes: attributes[0])
         
