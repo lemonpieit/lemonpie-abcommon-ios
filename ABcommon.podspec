@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABcommon'
-  s.version          = '1.3.4'
+  s.version          = '1.3.5'
   s.summary          = 'ABenergie iOS library.'
   
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://abenergie.visualstudio.com/ABcommon.ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Luigi Aiello' => 'luigi.aiello@abenergie.it', 'Francesco Leoni' => 'francesco.leoni@abenergie.it' }
-  s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v1.3.4' }
+  s.source           = { :git => 'https://abenergie.visualstudio.com/_git/ABcommon.ios', :tag => 'v1.3.5' }
   s.social_media_url = 'https://github.com/fraleo2406'
   s.social_media_url = 'https://github.com/mo3bius'
   
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'BottomSheet' do |bottomSheet|
-    bottomSheet.source_files = 'Source/BottomSheet/*.swift'
+    bottomSheet.source_files = 'Source/BottomSheet/**'
   end
 
   s.subspec 'NavigationBar' do |navigationBar|
