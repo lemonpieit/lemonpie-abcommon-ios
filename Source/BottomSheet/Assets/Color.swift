@@ -12,7 +12,7 @@ public class Color {
     private static var bundle: Bundle {
         Bundle(for: self)
     }
-    
+
     public static var white = UIColor(named: "white", in: bundle, compatibleWith: nil)!
         
     public static var gray = UIColor(named: "gray", in: bundle, compatibleWith: nil)!

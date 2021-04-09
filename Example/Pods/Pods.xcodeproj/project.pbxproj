@@ -16,7 +16,6 @@
 		8DEC35663D8B784E7019C3CB4B550792 /* Pods-ABcommon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CEFEB21365CDD62202D146B8327C1C3 /* Pods-ABcommon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DA71CE275DEFA4DAFD4360F27E33C54 /* Pods-ABcommon_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E117560C7E1406F14BCF07ABF57F89 /* Pods-ABcommon_Example-dummy.m */; };
 		A505623D26209DE200C4E619 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A505623A26209DE200C4E619 /* Colors.xcassets */; };
-		A505623E26209DE200C4E619 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = A505623B26209DE200C4E619 /* .gitkeep */; };
 		A505623F26209DE200C4E619 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A505623C26209DE200C4E619 /* Color.swift */; };
 		A51B08182422675D009EC533 /* CALayer+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B080D2422675C009EC533 /* CALayer+XT.swift */; };
 		A51B081A2422675D009EC533 /* UITextField+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51B080F2422675D009EC533 /* UITextField+XT.swift */; };
@@ -106,7 +105,6 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A04DD3695F5C9E2ECB65E2F316AEA240 /* ABcommon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ABcommon-Info.plist"; sourceTree = "<group>"; };
 		A505623A26209DE200C4E619 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		A505623B26209DE200C4E619 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		A505623C26209DE200C4E619 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A51B080D2422675C009EC533 /* CALayer+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+XT.swift"; sourceTree = "<group>"; };
 		A51B080F2422675D009EC533 /* UITextField+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+XT.swift"; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 		5DB0D00AEDD9376AEE4CDDA8413A1D76 /* ABcommon */ = {
 			isa = PBXGroup;
 			children = (
-				A505623926209DE200C4E619 /* Assets */,
 				A51B080C24226703009EC533 /* Source */,
 				B82B2E618C89671E78D5CC90963F5712 /* Pod */,
 				9A55D60580EEBB21A389C0ED22518C75 /* Support Files */,
@@ -265,15 +262,13 @@
 			path = "Example/Pods/Target Support Files/ABcommon";
 			sourceTree = "<group>";
 		};
-		A505623926209DE200C4E619 /* Assets */ = {
+		A50562AC2620A1F700C4E619 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A505623A26209DE200C4E619 /* Colors.xcassets */,
-				A505623B26209DE200C4E619 /* .gitkeep */,
 				A505623C26209DE200C4E619 /* Color.swift */,
+				A505623A26209DE200C4E619 /* Colors.xcassets */,
 			);
-			name = Assets;
-			path = ABcommon/Assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		A51B080C24226703009EC533 /* Source */ = {
@@ -369,6 +364,7 @@
 		A58E77C826208F3B00CE96B6 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				A50562AC2620A1F700C4E619 /* Assets */,
 				A58E77C926208F5000CE96B6 /* BottomSheet.swift */,
 			);
 			path = BottomSheet;
@@ -547,7 +543,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A505623E26209DE200C4E619 /* .gitkeep in Resources */,
 				A5B815EE25AD9FF4004A0E44 /* NavigationBarReadme.md in Resources */,
 				A505623D26209DE200C4E619 /* Colors.xcassets in Resources */,
 			);
@@ -674,7 +669,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.4;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -741,7 +736,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.4;
 				MODULEMAP_FILE = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -933,7 +928,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.4;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -967,7 +962,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3.3;
+				MARKETING_VERSION = 1.3.4;
 				MODULEMAP_FILE = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
