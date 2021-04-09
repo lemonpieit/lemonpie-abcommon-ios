@@ -8,6 +8,32 @@
 
 import Foundation
 
+public extension Array where Element == NSLayoutConstraint {
+    
+    /// Activates every contraint in the array.
+    func activate() {
+        self.forEach { $0.isActive = true }
+    }
+    
+    /// Deactivates every contraint in the array.
+    func deactivate() {
+        self.forEach { $0.isActive = false }
+    }
+}
+
+public extension Array where Element == UIView {
+    
+    /// Adds every view to the specified UIView.
+    func addTo(_ view: UIView) {
+        self.forEach(view.addSubview)
+    }
+    
+    /// Adds every view to the specified UIStackView.
+    func addTo(_ view: UIStackView) {
+        self.forEach(view.addArrangedSubview)
+    }
+}
+
 public extension Array where Element: Equatable {
   /// Removes `object` from the array.
   /// - Parameter object: The object to remove.
