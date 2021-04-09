@@ -65,6 +65,14 @@ class NextVc: UIViewController, NavigationControllerAppearanceContext {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    if #available(iOS 13.0, *) {
+        let bottomSheetVC = BottomSheet()
+        bottomSheetVC.embeddedViewController = UIViewController()
+        bottomSheetVC.maxHeight = 300
+        bottomSheetVC.minHeight = 300
+        bottomSheetVC.present(in: self)
+    }
+
     view.backgroundColor = .blue
   }  
 

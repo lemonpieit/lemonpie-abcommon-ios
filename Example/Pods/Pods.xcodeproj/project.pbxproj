@@ -55,6 +55,9 @@
 		A58D8E352428AF6E000A6676 /* Array+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E262428AF6E000A6676 /* Array+XT.swift */; };
 		A58D8E362428AF6E000A6676 /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E272428AF6E000A6676 /* UIStoryboard+XT.swift */; };
 		A58D8E382428B384000A6676 /* UIAlertController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E372428B384000A6676 /* UIAlertController+XT.swift */; };
+		A58E77CA26208F5000CE96B6 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58E77C926208F5000CE96B6 /* BottomSheet.swift */; };
+		A58E77D92620902500CE96B6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58E77D82620902500CE96B6 /* Colors.xcassets */; };
+		A58E77DE2620918100CE96B6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58E77DD2620918100CE96B6 /* Color.swift */; };
 		A5B815EE25AD9FF4004A0E44 /* NavigationBarReadme.md in Resources */ = {isa = PBXBuildFile; fileRef = A5B815ED25AD9FF4004A0E44 /* NavigationBarReadme.md */; };
 		CC22710E61E19D259F0947398A8E186E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +143,9 @@
 		A58D8E262428AF6E000A6676 /* Array+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+XT.swift"; sourceTree = "<group>"; };
 		A58D8E272428AF6E000A6676 /* UIStoryboard+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+XT.swift"; sourceTree = "<group>"; };
 		A58D8E372428B384000A6676 /* UIAlertController+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+XT.swift"; sourceTree = "<group>"; };
+		A58E77C926208F5000CE96B6 /* BottomSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		A58E77D82620902500CE96B6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A58E77DD2620918100CE96B6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A5B815ED25AD9FF4004A0E44 /* NavigationBarReadme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NavigationBarReadme.md; sourceTree = "<group>"; };
 		A605A36237BC3879B036166F7D9C87C8 /* Pods-ABcommon_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ABcommon_Tests-dummy.m"; sourceTree = "<group>"; };
 		AEF4634415D8639E49A5CADBA0BD080D /* Pods-ABcommon_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ABcommon_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -257,11 +263,13 @@
 		A51B080C24226703009EC533 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A58E77D72620901B00CE96B6 /* Assets */,
+				A58E77C826208F3B00CE96B6 /* BottomSheet */,
 				A526701E244080C50030065E /* Extensions */,
+				A583D4BB255AAD83001BB380 /* Helpers */,
 				A526701D244080BC0030065E /* Managers */,
 				A53E69B525AD9A57006FE79D /* NavigationBar */,
 				A583D4C2255AADC3001BB380 /* Protocols */,
-				A583D4BB255AAD83001BB380 /* Helpers */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -340,6 +348,23 @@
 				A583D4C4255AADCC001BB380 /* ReusableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A58E77C826208F3B00CE96B6 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				A58E77C926208F5000CE96B6 /* BottomSheet.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		A58E77D72620901B00CE96B6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A58E77D82620902500CE96B6 /* Colors.xcassets */,
+				A58E77DD2620918100CE96B6 /* Color.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		B82B2E618C89671E78D5CC90963F5712 /* Pod */ = {
@@ -516,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B815EE25AD9FF4004A0E44 /* NavigationBarReadme.md in Resources */,
+				A58E77D92620902500CE96B6 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +590,7 @@
 				A51B081D2422675D009EC533 /* String+XT.swift in Sources */,
 				A53E69BC25AD9A80006FE79D /* AppearanceNavigationController.swift in Sources */,
 				A535482F254B08AC001FA311 /* Int+XT.swift in Sources */,
+				A58E77CA26208F5000CE96B6 /* BottomSheet.swift in Sources */,
 				A58738FA25247A8E005CDC27 /* MailManager.swift in Sources */,
 				A58739042524826F005CDC27 /* Collection+XT.swift in Sources */,
 				A52A273B242B501F000E22D1 /* UIColor+XT.swift in Sources */,
@@ -574,6 +601,7 @@
 				A58D8E282428AF6E000A6676 /* UIBarButtonItem+XT.swift in Sources */,
 				A51B08222422675D009EC533 /* UIViewController+XT.swift in Sources */,
 				032A7C9958802F548879EFFEBDD301A4 /* ABcommon-dummy.m in Sources */,
+				A58E77DE2620918100CE96B6 /* Color.swift in Sources */,
 				A58D8E302428AF6E000A6676 /* CLLocationCoordinate2D+XT.swift in Sources */,
 				A51B082624227804009EC533 /* NSAttributedString+XT.swift in Sources */,
 				A51B081A2422675D009EC533 /* UITextField+XT.swift in Sources */,
@@ -637,7 +665,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.2.6;
+				MARKETING_VERSION = 1.3.0;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -704,7 +732,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.2.6;
+				MARKETING_VERSION = 1.3.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -896,7 +924,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.2.6;
+				MARKETING_VERSION = 1.3.0;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -930,7 +958,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.2.6;
+				MARKETING_VERSION = 1.3.0;
 				MODULEMAP_FILE = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";

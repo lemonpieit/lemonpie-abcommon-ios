@@ -10,7 +10,7 @@ import SafariServices
 import UIKit.UIViewController
 
 public extension UIViewController {
-  
+
   /// The frame of the status bar.
   var statusBarFrame: CGRect {
     if #available(iOS 13.0, *) {
