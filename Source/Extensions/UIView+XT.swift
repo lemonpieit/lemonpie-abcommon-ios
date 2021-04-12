@@ -11,45 +11,103 @@ import UIKit
 public extension UIView {
   
   enum Edge {
+    case top
+    case leading
+    case bottom
+    case trailing
+    
+    public enum Set {
+      case top
+      case leading
+      case bottom
+      case trailing
+      case all
+      case horizontal
+      case vertical
+    }
+  }
+  
+  enum Alignment {
+    case center
+    case leading
+    case trailing
+    case top
+    case bottom
+    case topLeading
+    case topTrailing
+    case bottomLeading
+    case bottomTrailing
+  }
+  
+  enum BorderStyle {
+    case inside
+    case outside
+    case middle
+  }
+  
+  enum AnchorRelation {
+    case equalTo
+    case greaterThanOrEqualTo
+    case lessThanOrEqualTo
+  }
+  
+  enum ViewEdge {
     case top(CGFloat = 0)
     case leading(CGFloat = 0)
     case bottom(CGFloat = 0)
     case trailing(CGFloat = 0)
     
     public enum Anchor {
-      case top(to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
-      case leading(to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
-      case bottom(to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
-      case trailing(to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
+      case top(_ relation: AnchorRelation = .equalTo, to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
+      case leading(_ relation: AnchorRelation = .equalTo, to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
+      case bottom(_ relation: AnchorRelation = .equalTo, to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
+      case trailing(_ relation: AnchorRelation = .equalTo, to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
     }
   }
   
-  func pin(_ anchors: [Edge.Anchor]) {
+  enum SizeAnchor {
+    case width(_ relation: AnchorRelation = .equalTo, _ costant: CGFloat)
+    case height(_ relation: AnchorRelation = .equalTo, _ costant: CGFloat)
+  }
+  
+  enum Center {
+    case x(CGFloat = 0)
+    case y(CGFloat = 0)
+    
+    public enum Anchor {
+      case x(to: NSLayoutXAxisAnchor?, pad: CGFloat = 0)
+      case y(to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
+    }
+  }
+  
+  /// Pin a UIView to the defined anchors.
+  func pin(_ anchors: ViewEdge.Anchor...) {
     translatesAutoresizingMaskIntoConstraints = false
     
     for anchor in anchors {
       switch anchor {
-      case .top(let anchor, let padding):
+      case .top(let relation, let anchor, let constant):
         if let anchor = anchor {
-          topAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
+          assign(toAnchor: topAnchor, itemAnchor: anchor, relation: relation, constant: constant)
         }
-      case .leading(let anchor, let padding):
+      case .leading(let relation, let anchor, let constant):
         if let anchor = anchor {
-          leadingAnchor.constraint(equalTo: anchor, constant: padding).isActive = true
+          assign(toAnchor: leadingAnchor, itemAnchor: anchor, relation: relation, constant: constant)
         }
-      case .bottom(let anchor, let padding):
+      case .bottom(let relation, let anchor, let constant):
         if let anchor = anchor {
-          bottomAnchor.constraint(equalTo: anchor, constant: -padding).isActive = true
+          assign(toAnchor: bottomAnchor, itemAnchor: anchor, relation: relation, constant: -constant)
         }
-      case .trailing(let anchor, let padding):
+      case .trailing(let relation, let anchor, let constant):
         if let anchor = anchor {
-          trailingAnchor.constraint(equalTo: anchor, constant: -padding).isActive = true
+          assign(toAnchor: trailingAnchor, itemAnchor: anchor, relation: relation, constant: -constant)
         }
       }
     }
   }
   
-  func pinToSuperview(edges: [Edge]) {
+  /// Pin a UIView to the defined anchors superview.
+  func pinToSuperview(edges: ViewEdge...) {
     guard let superview = superview else { return }
     
     translatesAutoresizingMaskIntoConstraints = false
@@ -57,29 +115,110 @@ public extension UIView {
     for edge in edges {
       switch edge {
       case .top(let padding):
-        pin([.top(to: superview.topAnchor, pad: padding)])
+        pin(.top(to: superview.topAnchor, pad: padding))
         
       case .leading(let padding):
-        pin([.leading(to: superview.leadingAnchor, pad: padding)])
+        pin(.leading(to: superview.leadingAnchor, pad: padding))
         
       case .bottom(let padding):
-        pin([.bottom(to: superview.bottomAnchor, pad: padding)])
+        pin(.bottom(to: superview.bottomAnchor, pad: padding))
         
       case .trailing(let padding):
-        pin([.trailing(to: superview.trailingAnchor, pad: padding)])
+        pin(.trailing(to: superview.trailingAnchor, pad: padding))
       }
     }
   }
   
-  func size(width: CGFloat? = nil, height: CGFloat? = nil) {
-    if let width = width {
-      widthAnchor.constraint(equalToConstant: width).isActive = true
-    }
+  /// Center a UIView to the defined anchors.
+  func center(_ axes: Center.Anchor...) {
+    translatesAutoresizingMaskIntoConstraints = false
     
-    if let height = height {
-      heightAnchor.constraint(equalToConstant: height).isActive = true
+    for axis in axes {
+      switch axis {
+      case .x(let anchor, let constant):
+        if let anchor = anchor {
+          centerXAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+        }
+      case .y(let anchor, let constant):
+        if let anchor = anchor {
+          centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+        }
+      }
     }
   }
+  
+  /// Center a UIView to the defined anchors superview.
+  func centerToSuperview(_ axes: Center...) {
+    translatesAutoresizingMaskIntoConstraints = false
+    
+    for axis in axes {
+      switch axis {
+      case .x(let padding):
+        center(.x(to: superview?.centerXAnchor, pad: padding))
+        
+      case .y(let padding):
+        center(.y(to: superview?.centerYAnchor, pad: padding))
+      }
+    }
+  }
+  
+  /// Defines the size of a UIView.
+  func size(_ sizes: SizeAnchor...) {
+    translatesAutoresizingMaskIntoConstraints = false
+    
+    for size in sizes {
+      switch size {
+      case .width(let relation, let constant):
+        assign(toAnchor: widthAnchor, relation: relation, constant: constant)
+        
+      case .height(let relation, let constant):
+        assign(toAnchor: heightAnchor, relation: relation, constant: constant)
+      }
+    }
+  }
+  
+  // MARK: - Helpers
+  
+  private func assign(toAnchor anchor: NSLayoutDimension, relation: AnchorRelation, constant: CGFloat) {
+    switch relation {
+    case .equalTo:
+      anchor.constraint(equalToConstant: constant).isActive = true
+      
+    case .greaterThanOrEqualTo:
+      anchor.constraint(greaterThanOrEqualToConstant: constant).isActive = true
+      
+    case .lessThanOrEqualTo:
+      anchor.constraint(lessThanOrEqualToConstant: constant).isActive = true
+    }
+  }
+  
+  private func assign(toAnchor anchor: NSLayoutXAxisAnchor, itemAnchor: NSLayoutXAxisAnchor, relation: AnchorRelation, constant: CGFloat) {
+    switch relation {
+    case .equalTo:
+      anchor.constraint(equalTo: itemAnchor, constant: constant).isActive = true
+      
+    case .greaterThanOrEqualTo:
+      anchor.constraint(greaterThanOrEqualTo: itemAnchor, constant: constant).isActive = true
+      
+    case .lessThanOrEqualTo:
+      anchor.constraint(lessThanOrEqualTo: itemAnchor, constant: constant).isActive = true
+    }
+  }
+  
+  private func assign(toAnchor anchor: NSLayoutYAxisAnchor, itemAnchor: NSLayoutYAxisAnchor, relation: AnchorRelation, constant: CGFloat) {
+    switch relation {
+    case .equalTo:
+      anchor.constraint(equalTo: itemAnchor, constant: constant).isActive = true
+      
+    case .greaterThanOrEqualTo:
+      anchor.constraint(greaterThanOrEqualTo: itemAnchor, constant: constant).isActive = true
+      
+    case .lessThanOrEqualTo:
+      anchor.constraint(lessThanOrEqualTo: itemAnchor, constant: constant).isActive = true
+    }
+  }
+  
+  /* General extensions */
   
   /// Removes every separator line in the current view.
   func removeEverySeparator() {
@@ -89,7 +228,6 @@ public extension UIView {
       }
     }
   }
-  
   
   /// Defines whether the user switched between dark modes and performs updates.
   /// - Parameters:
@@ -227,70 +365,5 @@ public extension UIView {
     [anchoredConstraints.top, anchoredConstraints.leading, anchoredConstraints.bottom, anchoredConstraints.trailing, anchoredConstraints.width, anchoredConstraints.height].forEach { $0?.isActive = true }
     
     return anchoredConstraints
-  }
-  
-  @discardableResult
-  func fillSuperview(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
-    translatesAutoresizingMaskIntoConstraints = false
-    let anchoredConstraints = AnchoredConstraints()
-    
-    guard let superviewTopAnchor = superview?.topAnchor,
-          let superviewBottomAnchor = superview?.bottomAnchor,
-          let superviewLeadingAnchor = superview?.leadingAnchor,
-          let superviewTrailingAnchor = superview?.trailingAnchor
-    else {
-      return anchoredConstraints
-    }
-    
-    return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
-  }
-  
-  @discardableResult
-  func fillSuperviewSafeAreaLayoutGuide(padding: UIEdgeInsets = .zero) -> AnchoredConstraints {
-    let anchoredConstraints = AnchoredConstraints()
-    
-    guard let superviewTopAnchor = superview?.safeAreaLayoutGuide.topAnchor,
-          let superviewBottomAnchor = superview?.safeAreaLayoutGuide.bottomAnchor,
-          let superviewLeadingAnchor = superview?.safeAreaLayoutGuide.leadingAnchor,
-          let superviewTrailingAnchor = superview?.safeAreaLayoutGuide.trailingAnchor
-    else {
-      return anchoredConstraints
-    }
-    return anchor(top: superviewTopAnchor, leading: superviewLeadingAnchor, bottom: superviewBottomAnchor, trailing: superviewTrailingAnchor, padding: padding)
-  }
-  
-  func centerToSuperview() {
-    translatesAutoresizingMaskIntoConstraints = false
-    if let superviewCenterXAnchor = superview?.centerXAnchor {
-      centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
-    }
-    
-    if let superviewCenterYAnchor = superview?.centerYAnchor {
-      centerYAnchor.constraint(equalTo: superviewCenterYAnchor).isActive = true
-    }
-  }
-  
-  func centerXTo(_ anchor: NSLayoutXAxisAnchor) {
-    translatesAutoresizingMaskIntoConstraints = false
-    centerXAnchor.constraint(equalTo: anchor).isActive = true
-  }
-  
-  func centerYTo(_ anchor: NSLayoutYAxisAnchor) {
-    translatesAutoresizingMaskIntoConstraints = false
-    centerYAnchor.constraint(equalTo: anchor).isActive = true
-  }
-  
-  func centerXToSuperview() {
-    translatesAutoresizingMaskIntoConstraints = false
-    if let superviewCenterXAnchor = superview?.centerXAnchor {
-      centerXAnchor.constraint(equalTo: superviewCenterXAnchor).isActive = true
-    }
-  }
-  
-  func centerYToSuperview() {
-    translatesAutoresizingMaskIntoConstraints = false
-    if let superviewCenterYAnchor = superview?.centerYAnchor {
-      centerYAnchor.constraint(equalTo: superviewCenterYAnchor).isActive = true
-    }
   }
 }

@@ -9,8 +9,8 @@
 import UIKit
 
 public class BottomSheet: UIViewController {
-    
-    private enum State {
+
+  private enum State {
         case partial
         case full
         case dismiss
