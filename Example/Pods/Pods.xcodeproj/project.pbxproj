@@ -355,9 +355,9 @@
 		A58E77C826208F3B00CE96B6 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				A58E77C926208F5000CE96B6 /* BottomSheet.swift */,
 				A505623C26209DE200C4E619 /* Color.swift */,
 				A505623A26209DE200C4E619 /* Colors.xcassets */,
-				A58E77C926208F5000CE96B6 /* BottomSheet.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -661,7 +661,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.3.7;
+				MARKETING_VERSION = 1.3.8;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -728,7 +728,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3.7;
+				MARKETING_VERSION = 1.3.8;
 				MODULEMAP_FILE = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -920,7 +920,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.3.7;
+				MARKETING_VERSION = 1.3.8;
 				MODULEMAP_FILE = "Target Support Files/ABcommon/ABcommon.modulemap";
 				PRODUCT_MODULE_NAME = ABcommon;
 				PRODUCT_NAME = ABcommon;
@@ -954,7 +954,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 1.3.7;
+				MARKETING_VERSION = 1.3.8;
 				MODULEMAP_FILE = "Target Support Files/Pods-ABcommon_Tests/Pods-ABcommon_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
