@@ -9,6 +9,7 @@
 
 <br/>
 
+This library contains useful extensions, managers and navigation bar methods.
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example folder first.
