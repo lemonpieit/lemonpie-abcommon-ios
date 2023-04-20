@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+ABcommon in Pods, no dependencies
+Pods-ABcommon_Example in Pods, depends on:
+ABcommon in Pods (explicit)
+Pods-ABcommon_Tests in Pods, depends on:
+Pods-ABcommon_Example in Pods (explicit)

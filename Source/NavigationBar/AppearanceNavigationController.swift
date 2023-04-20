@@ -1,5 +1,10 @@
+//
+//  AppearanceNavigationController.swift
+//  ABcommon
+//
+//  Created by Francesco Leoni on 28/10/21.
+//
 
-import Foundation
 import UIKit
 
 public class AppearanceNavigationController: UINavigationController, UINavigationControllerDelegate {
@@ -31,7 +36,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   public func navigationController(_ navigationController: UINavigationController,
                                    willShow viewController: UIViewController,
                                    animated: Bool) {
-    guard let appearanceContext = viewController as? NavigationControllerAppearanceContext else { return }
+    guard let appearanceContext = viewController as? NavBarAppearanceContext else { return }
     
     updateAppearance(with: appearanceContext, animated: animated)
     
@@ -40,7 +45,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     
     coordinator.animate(alongsideTransition: { _ in }) { context in
       if context.isCancelled,
-         let appearanceContext = self.topViewController as? NavigationControllerAppearanceContext {
+         let appearanceContext = self.topViewController as? NavBarAppearanceContext {
         // hiding navigation bar & toolbar within interaction completion will result into inconsistent UI state
         self.setNavigationBarHidden(appearanceContext.prefersNavigationbarHidden(for: self), animated: animated)
         self.setToolbarHidden(appearanceContext.prefersToolbarHidden(for: self), animated: animated)
@@ -49,7 +54,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     
     coordinator.notifyWhenInteractionChanges { context in
       if context.isCancelled,
-         let from = context.viewController(forKey: .from) as? NavigationControllerAppearanceContext {
+         let from = context.viewController(forKey: .from) as? NavBarAppearanceContext {
         // changing navigation bar & toolbar appearance within animate completion will result into UI glitch
         self.applyAppearance(appearance: from.preferredAppearance(for: self), animated: animated)
       }
@@ -58,7 +63,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   
   // MARK: - Appearance Applying
   
-  private var appliedAppearance: Appearance?
+  private var appliedAppearance: NavBarAppearance?
   
   public var appearanceApplyingStrategy = AppearanceApplyingStrategy() {
     didSet {
@@ -66,7 +71,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     }
   }
 
-  private func applyAppearance(appearance: Appearance?, animated: Bool) {
+  private func applyAppearance(appearance: NavBarAppearance?, animated: Bool) {
     if appearance != nil && appliedAppearance != appearance {
       appliedAppearance = appearance
       
@@ -77,7 +82,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
     
   // MAKR: - Apperanace Update
   
-  func updateAppearance(with context: NavigationControllerAppearanceContext,
+  func updateAppearance(with context: NavBarAppearanceContext,
                         animated: Bool) {
     self.children.last?.title = context.title(for: self)
     
@@ -99,7 +104,7 @@ public class AppearanceNavigationController: UINavigationController, UINavigatio
   }
   
   func updateAppearance(for viewController: UIViewController) {
-    if let context = viewController as? NavigationControllerAppearanceContext,
+    if let context = viewController as? NavBarAppearanceContext,
        viewController == topViewController && transitionCoordinator == nil {
       updateAppearance(with: context, animated: true)
     }

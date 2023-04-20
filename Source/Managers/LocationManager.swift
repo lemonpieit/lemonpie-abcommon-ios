@@ -9,11 +9,12 @@
 import CoreLocation
 import UIKit
 
-public protocol LocationManagerDelegate: class {
+public protocol LocationManagerDelegate: AnyObject {
   func authorizationStatus(_ status: Bool)
 }
 
 public class LocationManager: NSObject, CLLocationManagerDelegate {
+    
   private static var privateShared: LocationManager?
   weak var delegate: LocationManagerDelegate?
   var locationManager = CLLocationManager()
@@ -51,6 +52,9 @@ public class LocationManager: NSObject, CLLocationManagerDelegate {
     }
   }
 
+  /// Checks if the location services are enabled.
+  ///
+  /// Catch the results in the delegate method `authorizationStatus(_:)`.
   public func checkLocationEnabled() {
     if CLLocationManager.locationServicesEnabled() {
       switch CLLocationManager.authorizationStatus() {

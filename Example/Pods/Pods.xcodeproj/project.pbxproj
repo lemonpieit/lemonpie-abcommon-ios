@@ -31,7 +31,7 @@
 		A535482D254B071E001FA311 /* UIEdgeInsets+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */; };
 		A535482F254B08AC001FA311 /* Int+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535482E254B08AC001FA311 /* Int+XT.swift */; };
 		A5354831254B0981001FA311 /* DateComponents+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5354830254B0981001FA311 /* DateComponents+XT.swift */; };
-		A53E69BA25AD9A80006FE79D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E69B625AD9A80006FE79D /* Appearance.swift */; };
+		A53E69BA25AD9A80006FE79D /* NavBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E69B625AD9A80006FE79D /* NavBarAppearance.swift */; };
 		A53E69BB25AD9A80006FE79D /* AppearanceApplyingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E69B725AD9A80006FE79D /* AppearanceApplyingStrategy.swift */; };
 		A53E69BC25AD9A80006FE79D /* AppearanceNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E69B825AD9A80006FE79D /* AppearanceNavigationController.swift */; };
 		A53E69BD25AD9A80006FE79D /* NavigationControllerAppearanceContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E69B925AD9A80006FE79D /* NavigationControllerAppearanceContext.swift */; };
@@ -46,6 +46,7 @@
 		A58738FF25247C1D005CDC27 /* UINavigationController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58738FE25247C1D005CDC27 /* UINavigationController+XT.swift */; };
 		A58739042524826F005CDC27 /* Collection+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58739032524826F005CDC27 /* Collection+XT.swift */; };
 		A587390925248356005CDC27 /* Number+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587390825248356005CDC27 /* Number+XT.swift */; };
+		A587A8D1272A953C0096A1C3 /* ShadowMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587A8D0272A953C0096A1C3 /* ShadowMode.swift */; };
 		A58A0F222440BC9500D77592 /* UITableView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58A0F212440BC9500D77592 /* UITableView+XT.swift */; };
 		A58A0F242440BD8800D77592 /* Data+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58A0F232440BD8800D77592 /* Data+XT.swift */; };
 		A58D8E282428AF6E000A6676 /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */; };
@@ -120,7 +121,7 @@
 		A535482C254B071E001FA311 /* UIEdgeInsets+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+XT.swift"; sourceTree = "<group>"; };
 		A535482E254B08AC001FA311 /* Int+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+XT.swift"; sourceTree = "<group>"; };
 		A5354830254B0981001FA311 /* DateComponents+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponents+XT.swift"; sourceTree = "<group>"; };
-		A53E69B625AD9A80006FE79D /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		A53E69B625AD9A80006FE79D /* NavBarAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarAppearance.swift; sourceTree = "<group>"; };
 		A53E69B725AD9A80006FE79D /* AppearanceApplyingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceApplyingStrategy.swift; sourceTree = "<group>"; };
 		A53E69B825AD9A80006FE79D /* AppearanceNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceNavigationController.swift; sourceTree = "<group>"; };
 		A53E69B925AD9A80006FE79D /* NavigationControllerAppearanceContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerAppearanceContext.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		A58738FE25247C1D005CDC27 /* UINavigationController+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+XT.swift"; sourceTree = "<group>"; };
 		A58739032524826F005CDC27 /* Collection+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+XT.swift"; sourceTree = "<group>"; };
 		A587390825248356005CDC27 /* Number+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+XT.swift"; sourceTree = "<group>"; };
+		A587A8D0272A953C0096A1C3 /* ShadowMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowMode.swift; sourceTree = "<group>"; };
 		A58A0F212440BC9500D77592 /* UITableView+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+XT.swift"; sourceTree = "<group>"; };
 		A58A0F232440BD8800D77592 /* Data+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+XT.swift"; sourceTree = "<group>"; };
 		A58D8E192428AF6D000A6676 /* UIBarButtonItem+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XT.swift"; sourceTree = "<group>"; };
@@ -324,10 +326,11 @@
 		A53E69B525AD9A57006FE79D /* NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				A53E69B625AD9A80006FE79D /* Appearance.swift */,
-				A53E69B825AD9A80006FE79D /* AppearanceNavigationController.swift */,
-				A53E69B925AD9A80006FE79D /* NavigationControllerAppearanceContext.swift */,
 				A53E69B725AD9A80006FE79D /* AppearanceApplyingStrategy.swift */,
+				A53E69B825AD9A80006FE79D /* AppearanceNavigationController.swift */,
+				A53E69B625AD9A80006FE79D /* NavBarAppearance.swift */,
+				A53E69B925AD9A80006FE79D /* NavigationControllerAppearanceContext.swift */,
+				A587A8D0272A953C0096A1C3 /* ShadowMode.swift */,
 				A5B815ED25AD9FF4004A0E44 /* NavigationBarReadme.md */,
 			);
 			path = NavigationBar;
@@ -573,7 +576,7 @@
 				A583D4BD255AADA3001BB380 /* Logger.swift in Sources */,
 				A58A0F242440BD8800D77592 /* Data+XT.swift in Sources */,
 				A535482D254B071E001FA311 /* UIEdgeInsets+XT.swift in Sources */,
-				A53E69BA25AD9A80006FE79D /* Appearance.swift in Sources */,
+				A53E69BA25AD9A80006FE79D /* NavBarAppearance.swift in Sources */,
 				A58738F525247A56005CDC27 /* LocationManager.swift in Sources */,
 				A58D8E322428AF6E000A6676 /* UICollectionView+XT.swift in Sources */,
 				A583D4C5255AADCC001BB380 /* Inittable.swift in Sources */,
@@ -610,6 +613,7 @@
 				A58A0F222440BC9500D77592 /* UITableView+XT.swift in Sources */,
 				A58D8E342428AF6E000A6676 /* StackView+XT.swift in Sources */,
 				A53E69BB25AD9A80006FE79D /* AppearanceApplyingStrategy.swift in Sources */,
+				A587A8D1272A953C0096A1C3 /* ShadowMode.swift in Sources */,
 				A51B081E2422675D009EC533 /* Date+XT.swift in Sources */,
 				A583D4C8255AAE2D001BB380 /* UserDefaultsWithKeys.swift in Sources */,
 				A51B08182422675D009EC533 /* CALayer+XT.swift in Sources */,

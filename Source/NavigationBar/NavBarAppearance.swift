@@ -1,10 +1,18 @@
+//
+//  NavBarAppearance.swift
+//  ABcommon
+//
+//  Created by Francesco Leoni on 28/10/21.
+//
 
-import Foundation
 import UIKit
 
+public typealias NavBarAppearance = Appearance
+
+@available(*, deprecated, renamed: "NavBarAppearance")
 public struct Appearance: Equatable {
   
-  static var defaultAppearance: Appearance?
+  static var defaultAppearance: NavBarAppearance?
   static var defaultDisplayMode: UINavigationItem.LargeTitleDisplayMode = .automatic
   static var shadowMode: ShadowMode = .alwaysVisible
 
@@ -36,7 +44,7 @@ public struct Appearance: Equatable {
   ///
   /// Instead of setting the default value multiple times, override the `preferredAppearance(for:)` method inside a specific `UIViewController`.
   /// - Parameter appearance: The new default appearance.
-  public static func setDefaultAppearance(to appearance: Appearance) {
+  public static func setDefaultAppearance(to appearance: NavBarAppearance) {
     self.defaultAppearance = appearance
   }
     
@@ -65,13 +73,13 @@ public struct Appearance: Equatable {
   }
 }
 
-public func ==(lhs: Appearance.Bar, rhs: Appearance.Bar) -> Bool {
+public func ==(lhs: NavBarAppearance.Bar, rhs: NavBarAppearance.Bar) -> Bool {
   return lhs.style == rhs.style &&
     lhs.backgroundColor == rhs.backgroundColor &&
     lhs.tintColor == rhs.tintColor &&
     rhs.barTintColor == lhs.barTintColor
 }
 
-public func ==(lhs: Appearance, rhs: Appearance) -> Bool {
+public func ==(lhs: NavBarAppearance, rhs: NavBarAppearance) -> Bool {
   return lhs.statusBarStyle == rhs.statusBarStyle && lhs.navigationBar == rhs.navigationBar && lhs.toolbar == rhs.toolbar
 }

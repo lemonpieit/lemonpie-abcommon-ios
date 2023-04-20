@@ -32,6 +32,7 @@ public enum NEHotspotError: Error {
 }
 
 public enum NEHotspotManager {
+    
   // MARK: - Public Methods
 
   public static func simpleConnectionToWifi(ssid: String, password: String, isWEP: Bool, completionHandler: NEHotspotCallback?) {

@@ -1,10 +1,16 @@
-import Foundation
+//
+//  AppearanceApplyingStrategy.swift
+//  ABcommon
+//
+//  Created by Francesco Leoni on 28/10/21.
+//
+
 import UIKit
 import QuartzCore
 
 public class AppearanceApplyingStrategy {
   
-  public func apply(appearance: Appearance?,
+  public func apply(appearance: NavBarAppearance?,
                     toNavigationController navigationController: UINavigationController,
                     animated: Bool) {
     if let appearance = appearance {

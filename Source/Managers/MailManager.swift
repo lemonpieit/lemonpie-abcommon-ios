@@ -8,11 +8,19 @@
 
 import MessageUI
 
-public protocol MailManagerDelegate: class {
+public protocol MailManagerDelegate: AnyObject {
+  func mailSent()
+  func operationCancelled()
   func errorOccurred(_ error: Error)
 }
 
+public extension MailManagerDelegate {
+    func mailSent() { }
+    func operationCancelled() { }
+}
+
 public class MailManager: NSObject, MFMailComposeViewControllerDelegate {
+    
   // MARK: - Properties
 
   /// The view controller in which to present the mail view controller.
@@ -24,9 +32,12 @@ public class MailManager: NSObject, MFMailComposeViewControllerDelegate {
 
   // MARK: - Init
 
-  public init(delegate: UIViewController & MailManagerDelegate) {
+  public init(delegate: UIViewController) {
     self.viewController = delegate
-    self.delegate = delegate
+    
+    if let delegate = delegate as? MailManagerDelegate {
+        self.delegate = delegate
+    }
   }
 
   // MARK: - Actions
@@ -59,12 +70,14 @@ public class MailManager: NSObject, MFMailComposeViewControllerDelegate {
 
     switch result {
     case .cancelled:
+      delegate?.operationCancelled()
       print("Email cancelled")
     case .failed:
       print("Email failed")
     case .saved:
       print("Email saved")
     case .sent:
+      delegate?.mailSent()
       print("Email sent")
     @unknown default:
       print("Email fatal error")

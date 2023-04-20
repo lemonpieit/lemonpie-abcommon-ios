@@ -81,7 +81,8 @@ public extension UIView {
   }
   
   /// Pin a UIView to the defined anchors.
-  func pin(_ anchors: ViewEdge.Anchor...) {
+  @discardableResult
+  func pin(_ anchors: ViewEdge.Anchor...) -> Self {
     translatesAutoresizingMaskIntoConstraints = false
     
     for anchor in anchors {
@@ -104,11 +105,13 @@ public extension UIView {
         }
       }
     }
+    return self
   }
   
-  /// Pin a UIView to the defined anchors superview.
-  func pinToSuperview(edges: ViewEdge...) {
-    guard let superview = superview else { return }
+  /// Pin a `UIView` to the defined anchors superview.
+  @discardableResult
+  func pinToSuperview(edges: ViewEdge...) -> Self {
+    guard let superview = superview else { return self }
     
     translatesAutoresizingMaskIntoConstraints = false
     
@@ -127,10 +130,19 @@ public extension UIView {
         pin(.trailing(to: superview.trailingAnchor, pad: padding))
       }
     }
+    return self
   }
   
+  /// Adds an anchor on the four edges of the `UIView`.
+  @discardableResult
+  func fillSuperview(padding: CGFloat) -> Self {
+    pinToSuperview(edges: .top(padding), .leading(padding), .bottom(padding), .trailing(padding))
+    return self
+  }
+    
   /// Center a UIView to the defined anchors.
-  func center(_ axes: Center.Anchor...) {
+  @discardableResult
+  func center(_ axes: Center.Anchor...) -> Self {
     translatesAutoresizingMaskIntoConstraints = false
     
     for axis in axes {
@@ -145,10 +157,12 @@ public extension UIView {
         }
       }
     }
+    return self
   }
   
   /// Center a UIView to the defined anchors superview.
-  func centerToSuperview(_ axes: Center...) {
+  @discardableResult
+  func centerToSuperview(_ axes: Center...) -> Self {
     translatesAutoresizingMaskIntoConstraints = false
     
     for axis in axes {
@@ -160,10 +174,12 @@ public extension UIView {
         center(.y(to: superview?.centerYAnchor, pad: padding))
       }
     }
+    return self
   }
   
   /// Defines the size of a UIView.
-  func size(_ sizes: SizeAnchor...) {
+  @discardableResult
+  func size(_ sizes: SizeAnchor...) -> Self {
     translatesAutoresizingMaskIntoConstraints = false
     
     for size in sizes {
@@ -175,6 +191,7 @@ public extension UIView {
         assign(toAnchor: heightAnchor, relation: relation, constant: constant)
       }
     }
+    return self
   }
   
   // MARK: - Helpers
