@@ -6,7 +6,6 @@
 //  Copyright © 2020 ABenergie S.p.A. All rights reserved.
 //
 
-import Foundation.NSString
 import UIKit
 
 /* date_format_you_want_in_string from
@@ -18,16 +17,32 @@ public enum SanitizedError: Error {
 }
 
 public extension String {
-  /// Trims leading and trailing spaces and new lines
-  func sanitized() -> String {
-    return trimmingCharacters(in: .whitespacesAndNewlines)
+  
+  /// Returns the URL from the current string.
+  var url: URL? {
+    URL(string: self)
   }
 
-  /// Trims leading and trailing spaces and new lines and check if the sanitized string is not empty
+  /// Trims leading and trailing spaces and new lines.
+  var trimmed: String {
+    trimmingCharacters(in: .whitespacesAndNewlines)
+  }
+
+  /// Adds a space at the end of the current string.
+  var addSpace: String {
+    self + " "
+  }
+
+  /// Adds ellipsis at the end of the current string.
+  var addEllipsis: String {
+    self + "..."
+  }
+
+  /// Trims leading and trailing spaces and new lines and check if the sanitized string is not empty.
   /// - Throws: If the sanitized string is empty
   /// - Returns: The sanitized string
   func sanitizedNonEmpty() throws -> String {
-    let strippedString = sanitized()
+    let strippedString = trimmed
 
     guard !strippedString.isEmpty else {
       throw SanitizedError.isEmpty
@@ -213,9 +228,9 @@ public extension String {
     let newString = lowercased().trimmingCharacters(in: .whitespaces)
 
     switch newString {
-    case "True", "true", "yes", "1":
+    case "true", "vero", "yes", "y", "1":
       return true
-    case "False", "false", "no", "0":
+    case "false", "falso", "no", "n", "0":
       return false
     default:
       return nil
@@ -259,5 +274,40 @@ public extension String {
   /// Converts a string to a `Base64` encoded string.
   func toBase64() -> String {
     return Data(utf8).base64EncodedString()
+  }
+  
+  /// Generates a `UIImage` instance from this string using a specified
+  /// attributes and size.
+  ///
+  /// - Parameters:
+  ///     - attributes: to draw this string with. Default is `nil`.
+  ///     - size: of the image to return.
+  /// - Returns: a `UIImage` instance from this string using a specified
+  /// attributes and size, or `nil` if the operation fails.
+  func image(background: UIColor = UIColor(white: 0.7, alpha: 1),
+             foreground: UIColor = .black,
+             font: UIFont = .systemFont(ofSize: 20),
+             size: CGSize = CGSize(width: 100, height: 100),
+             padding: CGFloat = 10) -> UIImage? {
+    let backgroundView = UIView(frame: CGRect(origin: .zero, size: size))
+    backgroundView.backgroundColor = background
+    
+    let doublePadding = padding * 2
+    let label = UILabel(frame: CGRect(x: padding, y: padding, width: size.width - doublePadding, height: size.height - doublePadding))
+    label.font = font
+    label.textAlignment = .center
+    label.textColor = foreground
+    label.numberOfLines = 1
+    label.text = self
+    backgroundView.addSubview(label)
+    
+    UIGraphicsBeginImageContext(size)
+    
+    if let currentContext = UIGraphicsGetCurrentContext() {
+      backgroundView.layer.render(in: currentContext)
+      let image = UIGraphicsGetImageFromCurrentImageContext()
+      return image
+    }
+    return nil
   }
 }

@@ -10,12 +10,13 @@ import Foundation
 /// This allows us to transform a literal number in a `DateComponents` and use it in math operations
 /// For example `5.days` will create a new `DateComponents` where `.day = 5`.
 public extension Int {
+  
   /// Internal transformation function.
   ///
   /// - parameter type: component to use.
   ///
   /// - returns: return self value in form of `DateComponents` where given `Calendar.Component` has `self` as value.
-  internal func toDateComponents(type: Calendar.Component) -> DateComponents {
+  func toDateComponents(type: Calendar.Component) -> DateComponents {
     var dateComponents = DateComponents()
     DateComponents.allComponents.forEach { dateComponents.setValue(0, for: $0) }
     dateComponents.setValue(self, for: type)
@@ -70,6 +71,7 @@ public extension Int {
 }
 
 public extension Int {
+  
   /// Create a `TimeInterval` with `self` value set as seconds.
   var seconds: TimeInterval {
     return TimeInterval(self)

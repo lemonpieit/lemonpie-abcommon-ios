@@ -8,12 +8,19 @@
 import UIKit
 
 public extension UITableView {
+  
   /// Returns whether the cell is the last of the `TableView`.
   /// - Parameter indexPath: The `IndexPath` of the cell.
-  func isLastCell(_ indexPath: IndexPath) -> Bool {
+  func isLastCellOfTableView(_ indexPath: IndexPath) -> Bool {
     let indexOfLastSection = numberOfSections > 0 ? numberOfSections - 1 : 0
     let indexOfLastRowInLastSection = numberOfRows(inSection: indexOfLastSection) - 1
 
     return indexPath.section == indexOfLastSection && indexPath.row == indexOfLastRowInLastSection
+  }
+  
+  /// Returns whether the cell is the last of the indexPath section.
+  /// - Parameter indexPath: The `IndexPath` of the cell.
+  func isLastCellInSection(for indexPath: IndexPath) -> Bool {
+      return indexPath.row == numberOfRows(inSection: indexPath.section) - 1
   }
 }

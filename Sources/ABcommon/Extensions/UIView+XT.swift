@@ -56,6 +56,8 @@ public extension UIView {
     case leading(CGFloat = 0)
     case bottom(CGFloat = 0)
     case trailing(CGFloat = 0)
+    case vertical(CGFloat = 0)
+    case horizontal(CGFloat = 0)
     
     public enum Anchor {
       case top(_ relation: AnchorRelation = .equalTo, to: NSLayoutYAxisAnchor?, pad: CGFloat = 0)
@@ -128,6 +130,12 @@ public extension UIView {
         
       case .trailing(let padding):
         pin(.trailing(to: superview.trailingAnchor, pad: padding))
+        
+      case .vertical(let padding):
+        pin(.top(to: superview.topAnchor, pad: padding), .bottom(to: superview.bottomAnchor, pad: padding))
+
+      case .horizontal(let padding):
+        pin(.leading(to: superview.leadingAnchor, pad: padding), .trailing(to: superview.trailingAnchor, pad: padding))
       }
     }
     return self
@@ -135,11 +143,51 @@ public extension UIView {
   
   /// Adds an anchor on the four edges of the `UIView`.
   @discardableResult
-  func fillSuperview(padding: CGFloat) -> Self {
-    pinToSuperview(edges: .top(padding), .leading(padding), .bottom(padding), .trailing(padding))
+  func fillSuperview(insets: UIEdgeInsets = .zero) -> Self {
+    pinToSuperview(edges: .top(insets.top), .leading(insets.left), .bottom(insets.bottom), .trailing(insets.right))
     return self
   }
     
+  /// Pin a `UIView` to the defined anchors safe layout guide.
+  @discardableResult
+  func pinToSafeLayoutGuide(edges: ViewEdge...) -> Self {
+      guard let superview = superview else { return self }
+      
+      translatesAutoresizingMaskIntoConstraints = false
+      
+      for edge in edges {
+          switch edge {
+          case .top(let padding):
+              pin(.top(to: superview.safeAreaLayoutGuide.topAnchor, pad: padding))
+              
+          case .leading(let padding):
+              pin(.leading(to: superview.safeAreaLayoutGuide.leadingAnchor, pad: padding))
+              
+          case .bottom(let padding):
+              pin(.bottom(to: superview.safeAreaLayoutGuide.bottomAnchor, pad: padding))
+              
+          case .trailing(let padding):
+              pin(.trailing(to: superview.safeAreaLayoutGuide.trailingAnchor, pad: padding))
+              
+          case .vertical(let padding):
+              pin(.top(to: superview.safeAreaLayoutGuide.topAnchor, pad: padding),
+                  .bottom(to: superview.safeAreaLayoutGuide.bottomAnchor, pad: padding))
+
+          case .horizontal(let padding):
+              pin(.leading(to: superview.safeAreaLayoutGuide.leadingAnchor, pad: padding),
+                  .trailing(to: superview.safeAreaLayoutGuide.trailingAnchor, pad: padding))
+          }
+      }
+      return self
+  }
+  
+  /// Adds an anchor on the four edges of the `UIView`.
+  @discardableResult
+  func fillSafeLayoutGuide(padding: UIEdgeInsets = .zero) -> Self {
+      pinToSafeLayoutGuide(edges: .top(padding.top), .leading(padding.left), .bottom(padding.bottom), .trailing(padding.right))
+      return self
+  }
+  
   /// Center a UIView to the defined anchors.
   @discardableResult
   func center(_ axes: Center.Anchor...) -> Self {
@@ -191,6 +239,21 @@ public extension UIView {
         assign(toAnchor: heightAnchor, relation: relation, constant: constant)
       }
     }
+    
+    return self
+  }
+  
+  /// Defines the size of a UIView.
+  @discardableResult
+  func size(width: CGFloat? = nil, height: CGFloat? = nil) -> Self {
+    if let width {
+      size(.width(.equalTo, width))
+    }
+    
+    if let height {
+      size(.height(.equalTo, height))
+    }
+    
     return self
   }
   

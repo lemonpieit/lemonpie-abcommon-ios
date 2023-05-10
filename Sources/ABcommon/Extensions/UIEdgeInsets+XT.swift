@@ -8,6 +8,7 @@
 import UIKit
 
 public extension UIEdgeInsets {
+  
   init(top: CGFloat) {
     self.init(top: top, left: 0, bottom: 0, right: 0)
   }
@@ -24,22 +25,27 @@ public extension UIEdgeInsets {
     self.init(top: 0, left: 0, bottom: 0, right: right)
   }
 
-  init(tops: CGFloat) {
-    self.init(top: tops, left: 0, bottom: tops, right: 0)
+  init(vertical: CGFloat) {
+    self.init(top: vertical, left: 0, bottom: vertical, right: 0)
   }
 
-  init(sides: CGFloat) {
-    self.init(top: 0, left: sides, bottom: 0, right: sides)
+  init(horizontal: CGFloat) {
+    self.init(top: 0, left: horizontal, bottom: 0, right: horizontal)
   }
 
-  init(tops: CGFloat, sides: CGFloat) {
-    self.init(top: tops, left: sides, bottom: tops, right: sides)
+  init(vertical: CGFloat, horizontal: CGFloat) {
+    self.init(top: vertical, left: horizontal, bottom: vertical, right: horizontal)
   }
 
   init(all: CGFloat) {
     self.init(top: all, left: all, bottom: all, right: all)
   }
 
-  var sides: CGFloat { return left + right }
-  var tops: CGFloat { return top + bottom }
+  var horizontal: CGFloat { return left + right }
+  
+  var vertical: CGFloat { return top + bottom }
+  
+  static func all(_ value: CGFloat) -> UIEdgeInsets {
+    UIEdgeInsets(all: value)
+  }
 }

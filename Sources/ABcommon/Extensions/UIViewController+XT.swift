@@ -7,7 +7,44 @@
 //
 
 import SafariServices
-import UIKit.UIViewController
+import UIKit
+
+public extension UIViewController {
+  
+  var currentWindow: UIWindow? {
+    UIApplication.shared.windows.filter { $0.isKeyWindow }.first
+  }
+
+  func push<Controller: UIViewController>(_ viewController: Controller?, hidesBottomBar: Bool = true, configure: ((Controller) -> Void)? = nil) {
+    guard let viewController = viewController else { return }
+    
+    configure?(viewController)
+    viewController.hidesBottomBarWhenPushed = hidesBottomBar
+    self.navigationController?.pushViewController(viewController, animated: true)
+  }
+  
+  func present<Controller: UIViewController>(_ viewController: Controller?, embedInNavigation: Bool = true, configure: ((Controller) -> Void)? = nil) {
+    guard let viewController = viewController else { return }
+    
+    configure?(viewController)
+    
+    if embedInNavigation {
+      self.present(UINavigationController(rootViewController: viewController), animated: true)
+    } else {
+      self.present(viewController, animated: true)
+    }
+  }
+  
+  func popViewController() {
+    self.navigationController?.popViewController(animated: true)
+  }
+  
+  func popToViewController<Controller: UIViewController>(_ type: Controller.Type) {
+    if let vc = self.navigationController?.viewControllers.first(where: { ($0 as? Controller) != nil }) {
+      self.navigationController?.popToViewController(vc, animated: true)
+    }
+  }
+}
 
 public extension UIViewController {
 

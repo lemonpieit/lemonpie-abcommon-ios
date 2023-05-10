@@ -14,7 +14,7 @@ import Foundation.NSDate
 
 public enum TimeZoneType {
   case local, `default`, utc, secondsFromGMT(Int)
-
+  
   var timeZone: TimeZone {
     switch self {
     case .local: return NSTimeZone.local
@@ -28,31 +28,31 @@ public enum TimeZoneType {
 public enum DateFormatType {
   /// The ISO8601 formatted year "yyyy" i.e. 1997
   case isoYear
-
+  
   /// The ISO8601 formatted year and month "yyyy-MM" i.e. 1997-07
   case isoYearMonth
-
+  
   /// The ISO8601 formatted date "yyyy-MM-dd" i.e. 1997-07-16
   case isoDate
-
+  
   /// The ISO8601 formatted date and time "yyyy-MM-dd'T'HH:mmZ" i.e. 1997-07-16T19:20+01:00
   case isoDateTime
-
+  
   /// The ISO8601 formatted date, time and sec "yyyy-MM-dd'T'HH:mm:ssZ" i.e. 1997-07-16T19:20:30+01:00
   case isoDateTimeSec
-
+  
   /// The ISO8601 formatted date, time and millisec "yyyy-MM-dd'T'HH:mm:ss.SSSZ" i.e. 1997-07-16T19:20:30.45+01:00
   case isoDateTimeMilliSec
-
+  
   /// The http header formatted date "EEE, dd MM yyyy HH:mm:ss ZZZ" i.e. "Tue, 15 Nov 1994 12:45:26 GMT"
   case httpHeader
-
+  
   /// A generic standard format date i.e. "EEE MMM dd HH:mm:ss Z yyyy"
   case standard
-
+  
   /// A custom date format string
   case custom(DateFormat)
-
+  
   var stringFormat: String {
     switch self {
     case .isoYear: return "yyyy"
@@ -74,7 +74,7 @@ public enum Separator {
   case slash
   case colum
   case custom(String)
-
+  
   var stringFormat: String {
     switch self {
     case .dot: return "."
@@ -89,7 +89,7 @@ public enum Separator {
 public enum DayComponent: String {
   /// 2
   case d
-
+  
   /// 02
   case dd
 }
@@ -97,13 +97,13 @@ public enum DayComponent: String {
 public enum MonthComponent: String {
   /// 6
   case m
-
+  
   /// 06
   case mm
-
+  
   /// Jun
   case mmm
-
+  
   /// June
   case mmmm
 }
@@ -111,7 +111,7 @@ public enum MonthComponent: String {
 public enum YearComponent: String {
   /// 98
   case yy
-
+  
   /// 1998
   case yyyy
 }
@@ -119,7 +119,7 @@ public enum YearComponent: String {
 public enum SecondComponent: String {
   /// 2
   case s
-
+  
   /// 02
   case ss
 }
@@ -127,7 +127,7 @@ public enum SecondComponent: String {
 public enum MinuteComponent: String {
   /// 6
   case m
-
+  
   /// 06
   case mm
 }
@@ -135,23 +135,24 @@ public enum MinuteComponent: String {
 public enum HourComponent: String {
   /// 1 (1-12)
   case h
-
+  
   /// 12 (1-12)
   case hh
-
+  
   /// 0 (0-23)
   case H
-
+  
   /// 23 (0-23)
   case HH
 }
 
 public enum DateFormat {
+  
   case onlyDate(DayComponent?, MonthComponent?, YearComponent?, Separator)
   case onlyTime(HourComponent, MinuteComponent, SecondComponent?)
   case dateAndTime(separator: String)
   case custom(String)
-
+  
   var stringFormat: String {
     switch self {
     case let .onlyDate(day, month, year, separator):
@@ -175,14 +176,14 @@ public enum DateFormat {
         }
       }
       return ""
-
+      
     case let .onlyTime(hours, minutes, seconds):
       if let seconds = seconds {
         return hours.rawValue + ":" + minutes.rawValue + ":" + seconds.rawValue
       } else {
         return hours.rawValue + ":" + minutes.rawValue
       }
-
+      
     case let .dateAndTime(separator): return "dd\(separator)MM\(separator)yyyy, HH:mm"
     case let .custom(dateFormat): return dateFormat
     }
@@ -191,22 +192,30 @@ public enum DateFormat {
 
 public extension Date {
   
+  static var today: Date {
+    Date()
+  }
+  
+  func isBetween(_ date1: Date, and date2: Date) -> Bool {
+    (min(date1, date2) ... max(date1, date2)).contains(self)
+  }
+  
   /// Compares two date and returns whether is the same month.
   /// - Parameter date: The date to compare.
-  func inTheSameMonth(of date: Date) -> Bool {
-    return self.component(.month) == date.component(.month)
+  func isInTheSameMonth(of date: Date) -> Bool {
+    self.component(.month) == date.component(.month)
   }
   
   /// Compares two date and returns whether is the same year.
   /// - Parameter date: The date to compare.
-  func inTheSameYear(of date: Date) -> Bool {
-    return self.component(.year) == date.component(.year)
+  func isInTheSameYear(of date: Date) -> Bool {
+    self.component(.year) == date.component(.year)
   }
   
   /// Compares two date and returns whether is the same month and year.
   /// - Parameter date: The date to compare.
-  func inTheSamePeriod(of date: Date) -> Bool {
-    return inTheSameYear(of: date) && inTheSameMonth(of: date)
+  func isInTheSameMonthYear(of date: Date) -> Bool {
+    isInTheSameYear(of: date) && isInTheSameMonth(of: date)
   }
   
   /// Converts a `Date` object to a `String`.
@@ -228,16 +237,16 @@ public extension Date {
     formatter.dateFormat = format.stringFormat
     formatter.locale = locale
     formatter.timeZone = timeZone.timeZone
-
+    
     return formatter.string(from: self)
   }
-
+  
   var ticks: UInt64 {
     return UInt64((timeIntervalSince1970 + 62_135_596_800) * 10_000_000)
   }
-
+  
   // MARK: - From String to Date
-
+  
   /// Converts from String to a Date object.
   /// - Parameters:
   ///   - string: The string representation of a date.
@@ -248,9 +257,9 @@ public extension Date {
     dateFormatter.dateFormat = format
     return dateFormatter.date(from: string)
   }
-
+  
   // MARK: - From Date to String
-
+  
   /// Converts from Date to a String.
   /// - Parameters:
   ///   - format: The desired format of the returned date.
@@ -260,7 +269,7 @@ public extension Date {
     dateFormatter.dateFormat = format
     return dateFormatter.string(from: self)
   }
-
+  
   /// Converts from Date to a String with the current receiver Locale.
   /// - Parameters:
   ///   - format: The desired format of the returned date.
@@ -270,7 +279,7 @@ public extension Date {
     dateFormatter.dateFormat = format
     return dateFormatter.string(from: self)
   }
-
+  
   /// Returns a given date and time without considering the current time zone with the specified styles.
   /// - Parameter dateStyle: The style of the time.
   /// - Returns: Wednesday, March 18, 2020
@@ -287,24 +296,24 @@ public extension Date {
     dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
     dateFormatter.dateStyle = dateStyle
     dateFormatter.timeStyle = .none
-
+    
     return dateFormatter.string(from: self)
   }
-
+  
   /// Returns the  day of the week of a given date in full.
   func dayInWeek() -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE" // "EE" to get short style
     return dateFormatter.string(from: self)
   }
-
+  
   /// Returns the month name of a given date.
   func getMonthName() -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "LLLL" // "LL" to get short style
     return dateFormatter.string(from: self)
   }
-
+  
   /// Returns a given date with the specified styles.
   /// - Parameter style: The style of the time.
   /// - Returns: Wednesday, March 18, 2020
@@ -319,7 +328,7 @@ public extension Date {
   func localizedString(dateWithStyle style: DateFormatter.Style) -> String {
     return localizedString(withDateStyle: style, timeStyle: .none)
   }
-
+  
   /// Returns a given time with the specified styles.
   /// - Parameter style: The style of the date.
   /// - Returns: 5:25:01 PM Central European Standard Time
@@ -334,7 +343,7 @@ public extension Date {
   func localizedString(timeWithStyle style: DateFormatter.Style) -> String {
     return localizedString(withDateStyle: .none, timeStyle: style)
   }
-
+  
   /// Returns a given date and time with the specified styles.
   /// - Parameters:
   ///   - dateStyle: The style of the date.
@@ -353,10 +362,18 @@ public extension Date {
     dateFormatter.locale = Locale.current
     dateFormatter.dateStyle = dateStyle
     dateFormatter.timeStyle = timeStyle
-
+    
     return dateFormatter.string(from: self)
   }
-
+  
+  func add(_ value: Int, _ component: Calendar.Component) -> Date {
+    Calendar.current.date(byAdding: component, value: value, to: self) ?? Date()
+  }
+  
+  func subtract(_ value: Int, _ component: Calendar.Component) -> Date {
+    Calendar.current.date(byAdding: component, value: -value, to: self) ?? Date()
+  }
+  
   /// Adds the parameters components to the given date.
   /// - Parameters:
   ///   - seconds: The seconds component.
@@ -370,10 +387,10 @@ public extension Date {
     timeInterval += 60 * 60 * Double(hours)
     timeInterval += 24 * 60 * 60 * Double(days)
     timeInterval += 24 * 60 * 60 * 365 * Double(years)
-
+    
     return addingTimeInterval(timeInterval)
   }
-
+  
   /// Removes the parameters components from the given date.
   /// - Parameters:
   ///   - seconds: The seconds component.
@@ -383,15 +400,15 @@ public extension Date {
   ///   - years: The years component.
   func removing(seconds: Int, minutes: Int = 0, hours: Int = 0, days: Int = 0, years: Int = 0) -> Date {
     var timeInterval = Double(-seconds)
-
+    
     timeInterval -= 60 * Double(minutes)
     timeInterval -= 60 * 60 * Double(hours)
     timeInterval -= 24 * 60 * 60 * Double(days)
     timeInterval -= 24 * 60 * 60 * 365 * Double(years)
-
+    
     return addingTimeInterval(timeInterval)
   }
-
+  
   /// Returns multiple components of a given date.
   /// - Parameters:
   ///   - calendarUnits: The various components of a calendar date.
@@ -409,7 +426,7 @@ public extension Date {
     }
     return result
   }
-
+  
   /// Returns one component of a given date.
   /// - Parameters:
   ///   - calendarUnits: The various components of a calendar date.
@@ -420,11 +437,11 @@ public extension Date {
   /// Month: 3
   ///
   /// Year: 202
-
+  
   func component(_ calendarUnit: Calendar.Component) -> Int {
     return Calendar.current.component(calendarUnit, from: self)
   }
-
+  
   /// Returns a date created from the specified components.
   /// - Parameters:
   ///   - calendar: The user's calendar.
@@ -449,7 +466,7 @@ public extension Date {
                                         yearForWeekOfYear: units[.yearForWeekOfYear])
     return Calendar.current.date(from: dateComponents)
   }
-
+  
   /// Combines a given date with the time of another give date.
   /// - Parameters:
   ///   - date: The date to combine.
@@ -458,12 +475,12 @@ public extension Date {
     guard let date = date, let time = time else {
       return nil
     }
-
+    
     let calendar = NSCalendar.current
-
+    
     let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
     let timeComponents = calendar.dateComponents([.hour, .minute, .second], from: time)
-
+    
     var mergedComponments = DateComponents()
     mergedComponments.year = dateComponents.year!
     mergedComponments.month = dateComponents.month!
@@ -471,21 +488,21 @@ public extension Date {
     mergedComponments.hour = timeComponents.hour!
     mergedComponments.minute = timeComponents.minute!
     mergedComponments.second = timeComponents.second!
-
+    
     return calendar.date(from: mergedComponments)
   }
-
+  
   /// Returns the beginning of the next hour of a given date.
   func nextHourDate() -> Date? {
     let calendar = Calendar.current
     var comps = calendar.dateComponents([.era, .year, .day, .hour], from: self)
-
+    
     repeat {
       guard let date = comps.day, let hour = comps.hour else {
         return nil
       }
       var newHour = hour + 1
-
+      
       if newHour > 23 {
         newHour = 0
         let newDay = date + 1
@@ -493,20 +510,20 @@ public extension Date {
       }
       comps.hour = newHour
     } while comps.hour! % 3 != 0
-
+    
     let newMinute = 0
     comps.minute = newMinute
-
+    
     guard let newDate = calendar.date(from: comps) else {
       return nil
     }
     return newDate
   }
-
+  
   func rounded(minutes: TimeInterval, rounding: DateRoundingType = .round) -> Date {
     return rounded(seconds: minutes * 60, rounding: rounding)
   }
-
+  
   func rounded(seconds: TimeInterval, rounding: DateRoundingType = .round) -> Date {
     var roundedInterval: TimeInterval = 0
     switch rounding {

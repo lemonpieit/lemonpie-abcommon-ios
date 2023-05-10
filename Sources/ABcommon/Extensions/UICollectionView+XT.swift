@@ -19,7 +19,7 @@ public extension UICollectionView {
     let lastIndexPath = IndexPath(item: item, section: section)
     scrollToItem(at: lastIndexPath, at: postion, animated: animated)
   }
-
+  
   /// Returns the last cell index of a given section.
   /// - Parameter section: The section to use.
   /// - Returns: The last index path of a section.
@@ -29,25 +29,34 @@ public extension UICollectionView {
     }
     return nil
   }
+  
+  /// Deselect all the selected items.
+  func deselectAllItems(animated: Bool) {
+    guard let selectedItems = indexPathsForSelectedItems else { return }
+    
+    for indexPath in selectedItems {
+      deselectItem(at: indexPath, animated: animated)
+    }
+  }
 }
 
 extension UICollectionViewCell {
   /// The index path of the cell.
   var indexPath: IndexPath? {
     var superview = self.superview
-
+    
     while superview != nil {
       if superview is UICollectionView { break }
       superview = superview?.superview
     }
-
+    
     guard let collectionView = superview as? UICollectionView else { return nil }
-
+    
     for path in collectionView.indexPathsForVisibleItems {
       guard
         let cell = collectionView.cellForItem(at: path), cell == self
       else { continue }
-
+      
       return path
     }
     return nil

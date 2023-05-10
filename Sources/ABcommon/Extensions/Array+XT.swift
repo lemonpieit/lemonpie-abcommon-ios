@@ -8,6 +8,14 @@
 
 import UIKit
 
+public extension Array {
+  
+  /// Maps the array to a specific key path.
+  func map<T>(_ value: KeyPath<Element, T>) -> [T] {
+      self.map { $0[keyPath: value] }
+  }
+}
+
 public extension Array where Element == NSLayoutConstraint {
     
     /// Activates every contraint in the array.
