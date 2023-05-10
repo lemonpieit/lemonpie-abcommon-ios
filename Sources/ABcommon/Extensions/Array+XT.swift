@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mindtek srl. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension Array where Element == NSLayoutConstraint {
     

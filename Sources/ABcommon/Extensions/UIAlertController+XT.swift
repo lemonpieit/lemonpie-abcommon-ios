@@ -5,7 +5,7 @@
 //  Created by Francesco Leoni on 23/03/2020.
 //
 
-import Foundation
+import UIKit
 
 public extension UIAlertController {
   // Bug fix

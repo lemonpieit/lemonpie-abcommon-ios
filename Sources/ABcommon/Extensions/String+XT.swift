@@ -7,6 +7,7 @@
 //
 
 import Foundation.NSString
+import UIKit
 
 /* date_format_you_want_in_string from
  * http://userguide.icu-project.org/formatparse/datetime

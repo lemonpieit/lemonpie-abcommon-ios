@@ -5,7 +5,7 @@
 //  Created by Francesco Leoni on 10/04/2020.
 //
 
-import Foundation
+import UIKit
 
 public extension UITableView {
   /// Returns whether the cell is the last of the `TableView`.

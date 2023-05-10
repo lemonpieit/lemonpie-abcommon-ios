@@ -5,7 +5,7 @@
 //  Created by Francesco Leoni on 29/10/2020.
 //
 
-import Foundation
+import UIKit
 
 public extension UIEdgeInsets {
   init(top: CGFloat) {

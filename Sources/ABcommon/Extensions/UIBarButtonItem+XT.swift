@@ -6,7 +6,7 @@
 //  Copyright © 2017 Mindtek srl. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIBarButtonItem {
   /// Hides the bar item.

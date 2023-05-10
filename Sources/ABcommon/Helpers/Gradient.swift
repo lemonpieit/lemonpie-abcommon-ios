@@ -5,6 +5,8 @@
 //  Created by Francesco Leoni on 20/10/2020.
 //
 
+import UIKit
+
 /// Wrapper around the information needed to define a gradient.
 public struct Gradient: Equatable {
   
