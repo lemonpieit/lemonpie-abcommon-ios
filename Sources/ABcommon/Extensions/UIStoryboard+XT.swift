@@ -14,7 +14,7 @@ public extension UIStoryboard {
   ///   - identifier: The identifier of the `UIViewController` that should be instantiated and defined in the storyboard.
   ///   - storyboardName: The name of the storyboard that should include the view controller.
   /// - Returns: An instance of `UIViewController`.
-  func viewController(withIdentifier identifier: String, fromStoryboardNamed storyboardName: String) -> UIViewController {
+  static func viewController(withIdentifier identifier: String, fromStoryboardNamed storyboardName: String) -> UIViewController {
     return UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier)
   }
 
@@ -22,7 +22,7 @@ public extension UIStoryboard {
   /// - Parameters:
   ///   - parameter StoryboardName: The name of the storyboard that should include the view controller.
   /// - Returns: An instance of `UIViewController`, `nil` if the storyboard does not define an initial view controller.
-  func initialViewController(withStoryboardNamed storyboardName: String) -> UIViewController? {
+  static func initialViewController(withStoryboardNamed storyboardName: String) -> UIViewController? {
     return UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()
   }
 }
